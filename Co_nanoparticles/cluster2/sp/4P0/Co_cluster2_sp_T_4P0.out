@@ -1,0 +1,1481 @@
+==================================================================================
+It's Fri 28 Mar 2025 10:56:59 PM GMT.
+*** Starting onetep_launcher (node nid006047, PIDs 93731 93732 93733 93734 93735 93736 93737 93738 93739 93740 93741 93742 93743)...
+    - ONETEP arguments: Co_cluster2_sp_T_4P0.dat
+    - Current directory: /mnt/lustre/a2fs-work3/work/e89/e89/phsmea/Co_clusters_archer/Co_cluster2/sp/4P0
+    - Launcher executable directory: /mnt/lustre/a2fs-work3/work/e89/e89/phsmea/Co_clusters_archer
+    - (-e) ONETEP executable specified through command-line: /work/e89/e89/phsmea/onetep.archer2_2024_cray
+      ... trying /work/e89/e89/phsmea/onetep.archer2_2024_cray
+          -> looks OK
+*** Setting up environment...
+    - (-s) Process stack size: unlimited
+    - (-t) OMP_NUM_THREADS: 8
+    - (-o) OMP_STACKSIZE: 64M
+    - (-c) Maximum core file size: 2048000
+    - (-d) decfort_dump_flag: n
+    - (-m) I_MPI_OFA_TRANSLATION_CACHE: 0
+    - (-m) I_MPI_DAPL_TRANSLATION_CACHE: 0
+    - (-m) I_MPI_DAPL_UD_TRANSLATION_CACHE: 0
+*** Starting ONETEP...
+    - /work/e89/e89/phsmea/onetep.archer2_2024_cray Co_cluster2_sp_T_4P0.dat
+=================================================================================
+_________________________________________________________________________________
+ +---------------------------------------------------------------+
+ |                                                               |
+ |        ####### #     # ####### ####### ####### ######         |
+ |        #     # ##    # #          #    #       #     #        |
+ |        #     # # #   # #          #    #       #     #        |
+ |        #     # #  #  # #####      #    #####   ######         |
+ |        #     # #   # # #          #    #       #              |
+ |        #     # #    ## #          #    #       #              |
+ |        ####### #     # #######    #    ####### #              |
+ |                                                               |
+ |        Linear-Scaling Ab Initio Total Energy Program          |
+ |                                                               |
+ |          Release for academic collaborators of ODG            |
+ |                                             Version 7.3.0     |
+ | Remote: git@github.com:Miesaz/onetep_mea.git                  |
+ | Local branch: master                                          |
+ | Commit ID: 4af45e89288c8df5499704252eec3e032ee3d0c8           |
+ | Date: Tue Aug 6 11:28:44 2024 +0100                           |
+ | Working tree clean                                            |
+ |                                                               |
+ +---------------------------------------------------------------+
+ |                                                               |
+ |  Authors:                                                     |
+ |  Jacek Dziedzic, Peter D. Haynes, Nicholas D. M. Hine,        |
+ |  Arash A. Mostofi, Mike C. Payne and Chris-Kriton Skylaris    |
+ |                                                               |
+ |  Contributors:                                                |
+ |  J. Aarons, L. Andrinopoulos, P. W. Avraam, R. A. Bell,       |
+ |  A. Bhandari, G. A. Bramley, R. J. Charlton, S. J. Clark,     |
+ |  R. J. Clements, G. C. Constantinescu, F. Corsetti,           |
+ |  N. Corsini, O. Dieguez, S. M. M. Dubois, K. K. B. Duff,      |
+ |  J. M. Escartin, M. Escobar Azor, A. Greco,                   |
+ |  H. Helal, Q. O. Hill, L. P. Lee, J.-H. Li,                   |
+ |  T. Li, E. B. Linscott, G. Moynihan, D. D. O`Regan,           |
+ |  O. K. Okan, E. Parkinson, M. J. S. Phipps,                   |
+ |  C. J. Pickard, J. C. A. Prentice, M. I. J. Probert,          |
+ |  L. E. Ratcliff, M. Robinson, A. Ruiz Serrano,                |
+ |  M. dos Santos Dias, J. S. Spencer, E. W. Tait,               |
+ |  G. Teobaldi, D. Turban, V. Vitale, K. A. Wilkinson,          |
+ |  C. Weber, J. C. Womack, Chengcheng Xiao, N. Yeung,           |
+ |  and T. J. Zuehlsdorff.                                       |
+ |                                                               |
+ |                                   Copyright (c) 2004-2024     |
+ |                                                               |
+ |  Please cite:                                                 |
+ |  "The ONETEP linear-scaling density functional theory program"|
+ |   J. Chem. Phys. 152(17) 174111 (2020)                        |
+ |                                                               |
+ |          in all publications arising from your use of ONETEP. |
+ |                                                               |
+ +---------------------------------------------------------------+
+ |                                                               |
+ |   ONETEP is based on developments described in the following  |
+ |   publications:                                               |
+ |                                                               |
+ |  "Nonorthogonal generalized Wannier function pseudopotential  |
+ |   plane-wave method".                                         |
+ |   C.-K. Skylaris, A. A. Mostofi, P. D. Haynes, O. Dieguez,    |
+ |   M. C. Payne.                                                |
+ |   Phys. Rev. B 66 035119 (2002).                              |
+ |                                                               |
+ |  "Preconditioned iterative minimization for linear-scaling    |
+ |   electronic structure calculations".                         |
+ |   A. A. Mostofi, P. D. Haynes, C.-K. Skylaris, M. C. Payne.   |
+ |   J. Chem. Phys. 119(17), pp.8842-8848 (2003).                |
+ |                                                               |
+ |  "Total-energy calculations on a real space grid with         |
+ |   localized functions and a plane-wave basis".                |
+ |   A. A. Mostofi, C.-K. Skylaris, P. D. Haynes, M. C. Payne.   |
+ |   Comput. Phys. Commun. 147, pp.788-802 (2002).               |
+ |                                                               |
+ |  "Accurate kinetic energy evaluation in electronic structure  |
+ |   calculations with localized functions on real space grids"  |
+ |   C.-K. Skylaris, A. A. Mostofi, P. D. Haynes, C. J. Pickard, |
+ |   M. C. Payne.                                                |
+ |   Comput. Phys. Commun. 140, pp.315-322 (2001).               |
+ |                                                               |
+ |  "Accurate ionic forces and geometry optimization in linear-  |
+ |   scaling density-functional theory with local orbitals"      |
+ |   N. D. M. Hine, M. Robinson, P. D. Haynes, C.-K. Skylaris,   |
+ |   M. C. Payne, and A. A. Mostofi.                             |
+ |   Phys. Rev. B 83 195102 (2011).                              |
+ |                                                               |
+ +---------------------------------------------------------------+
+
+Job started: 28-03-2025 22:57 (+0000)
+ 
+Reading parameters from file "Co_cluster2_sp_T_4P0.dat" ...... done
+
+If your calculation crashes here, before "Checking processes and threads..."
+is displayed, then your stack size is insufficient.
+If so, use "ulimit -s unlimited" at runtime.
+You can disable this check with "check_stack_size F".
+
+Checking processes and threads...
+   Running with 55 MPI processes.
+   There are 14 MPI processes running on the same node as the root process.
+   Each MPI process is using: 
+               1 threads for simulation cell FFTs.
+               1 threads for threaded FFT box operations.
+               8 threads for loops over batched FFT box operations.
+               8 threads in other parallel regions.
+   MPI Interface: S1 (use mpi_f08) (-DMPI -DUSE_MPI_F08).
+   MPI_ASYNC_PROTECTS_NONBLOCKING: Yes. MPI_SUBARRAYS_SUPPORTED: Yes.
+   FFTW Interface: OMP-capable and MODERN. (-DUSE_MODERN_FFTW specified).
+   GPU Interface: None.
+   GPU FFT Backend: None.
+... done
+
+Basic input checks...WARNING in get_rundat: Comms group size is incompatible with number of procs
+ WARNING in get_rundat: Overriding to comms_group_size : -1
+
+Resetting ngwf_cg_rotate to TRUE for EDFT calculations
+... done
+
+Reading geometry and species blocks from file "Co_cluster2_sp_T_4P0.dat" ...... done
+
+
+--------------------------------------------------------------------------------
+---------------------------------- INPUT FILE ----------------------------------
+--------------------------------------------------------------------------------
+
+charge : 0                                                                      
+comms_group_size : 8                                                            
+cutoff_energy : 600 eV                                                          
+delta_e_conv : F                                                                
+do_properties : T                                                               
+edft : T                                                                        
+edft_maxit : 15                                                                 
+edft_spin_fix : 0                                                               
+fine_grid_scale : 4                                                             
+forces_output_detail : VERBOSE                                                  
+maxit_ngwf_cg : 100                                                             
+ngwf_threshold_orig : 1e-06                                                     
+ngwfs_spin_polarized : T                                                        
+output_detail : BRIEF                                                           
+paw : T                                                                         
+pseudo_path : ../../..                                                          
+read_denskern : F                                                               
+read_hamiltonian : F                                                            
+read_tightbox_ngwfs : F                                                         
+run_time : 86000                                                                
+spin : 165                                                                      
+task : SINGLEPOINT                                                              
+write_denskern : T                                                              
+write_forces : T                                                                
+write_hamiltonian : T                                                           
+write_tightbox_ngwfs : T                                                        
+xc_functional : PBE                                                             
+%BLOCK LATTICE_CART                                                             
+ang                                                                             
+18.46913345       0.00000000       0.00000000                                   
+0.00000000      18.46913345       0.00000000                                    
+0.00000000       0.00000000      18.46913345                                    
+%ENDBLOCK LATTICE_CART                                                          
+%BLOCK POSITIONS_ABS                                                            
+ang                                                                             
+Co1       9.23449       9.23449       9.23449                                   
+Co2      11.25276       9.23483       7.98445                                   
+Co2      11.25198       9.23485      10.48463                                   
+Co2       7.21558       9.23490       7.98357                                   
+Co2       7.21634       9.23496      10.48560                                   
+Co2       7.98445      11.25276       9.23483                                   
+Co2      10.48463      11.25198       9.23485                                   
+Co2       7.98357       7.21558       9.23490                                   
+Co2      10.48560       7.21634       9.23496                                   
+Co2       9.23483       7.98445      11.25276                                   
+Co2       9.23485      10.48463      11.25198                                   
+Co2       9.23490       7.98357       7.21558                                   
+Co2       9.23496      10.48560       7.21634                                   
+Co3      13.23345       9.23458       6.75726                                   
+Co3      13.25201       9.23484       9.23491                                   
+Co3      13.23321       9.23458      11.71134                                   
+Co3       5.23488       9.23459       6.75713                                   
+Co3       5.21651       9.23485       9.23493                                   
+Co3       5.23513       9.23458      11.71147                                   
+Co3       6.75725      13.23345       9.23458                                   
+Co3       9.23491      13.25201       9.23484                                   
+Co3      11.71134      13.23320       9.23458                                   
+Co3       6.75713       5.23489       9.23459                                   
+Co3       9.23493       5.21651       9.23485                                   
+Co3      11.71147       5.23514       9.23458                                   
+Co3       9.23458       6.75726      13.23345                                   
+Co3       9.23484       9.23491      13.25201                                   
+Co3       9.23458      11.71134      13.23320                                   
+Co3       9.23458       6.75713       5.23489                                   
+Co3       9.23485       9.23493       5.21651                                   
+Co3       9.23458      11.71147       5.23514                                   
+Co3      11.24532       7.99146      12.48612                                   
+Co3      11.24505      10.47815      12.48597                                   
+Co3      11.24579       7.99131       5.98266                                   
+Co3      11.24552      10.47830       5.98281                                   
+Co3       7.22417       7.99121      12.48657                                   
+Co3       7.22445      10.47840      12.48643                                   
+Co3       7.22371       7.99112       5.98228                                   
+Co3       7.22403      10.47856       5.98239                                   
+Co3      12.48613      11.24532       7.99146                                   
+Co3      12.48597      11.24505      10.47815                                   
+Co3       5.98266      11.24579       7.99131                                   
+Co3       5.98281      11.24552      10.47830                                   
+Co3      12.48657       7.22417       7.99121                                   
+Co3      12.48643       7.22445      10.47840                                   
+Co3       5.98228       7.22371       7.99112                                   
+Co3       5.98239       7.22403      10.47856                                   
+Co3       7.99146      12.48612      11.24532                                   
+Co3      10.47815      12.48597      11.24504                                   
+Co3       7.99131       5.98266      11.24579                                   
+Co3      10.47830       5.98281      11.24552                                   
+Co3       7.99121      12.48657       7.22417                                   
+Co3      10.47840      12.48643       7.22445                                   
+Co3       7.99112       5.98228       7.22371                                   
+Co3      10.47856       5.98239       7.22403                                   
+%ENDBLOCK POSITIONS_ABS                                                         
+%BLOCK SPECIES                                                                  
+Co1 Co 27 -1 10.0                                                               
+Co2 Co 27 -1 10.0                                                               
+Co3 Co 27 -1 10.0                                                               
+%ENDBLOCK SPECIES                                                               
+%BLOCK SPECIES_ATOMIC_SET                                                       
+Co1 "SOLVE INIT SPIN=3"                                                         
+Co2 "SOLVE INIT SPIN=3"                                                         
+Co3 "SOLVE INIT SPIN=3"                                                         
+%ENDBLOCK SPECIES_ATOMIC_SET                                                    
+%BLOCK SPECIES_LDOS_GROUPS                                                      
+Co1                                                                             
+Co2                                                                             
+Co3                                                                             
+%ENDBLOCK SPECIES_LDOS_GROUPS                                                   
+%BLOCK SPECIES_POT                                                              
+Co1 Co.PBE-paw.abinit                                                           
+Co2 Co.PBE-paw.abinit                                                           
+Co3 Co.PBE-paw.abinit                                                           
+%ENDBLOCK SPECIES_POT                                                           
+
+--------------------------------------------------------------------------------
+-------------------------------- END INPUT FILE --------------------------------
+--------------------------------------------------------------------------------
+
+
+ 
+ ESDF WARNING(1): "charge" (esdf_physical) has no units. Assume "e".
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Full system >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<< PAW Dataset information >>>>>>>>>>>>>>>>>>>>>>>>>>>
+File: Co.PBE-paw.abinit; rc = 2.11 bohr; shape type =  2; rshape = 1.60 bohr;
+  Atomic number: 27;  ionic charge: 17.000000
+    Partial Wave 1: l = 0
+    Partial Wave 2: l = 0
+    Partial Wave 3: l = 1
+    Partial Wave 4: l = 1
+    Partial Wave 5: l = 2
+    Partial Wave 6: l = 2
+  Core charge supplied for Nonlinear Core Corrections
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-------------------------- Atom counting information ---------------------------
+Symbol    Natoms    Nngwfs    Nprojs
+  Co        55       715       990
+.......   ......    ......    ......
+Totals:     55       715       990
+--------------------------------------------------------------------------------
+
+=============================== PSINC grid sizes ===============================
+                      Simulation cell:   63 x  63 x  63
+                              FFT-box:   63 x  63 x  63
+                                  PPD:    7 x   7 x   1
+================================================================================
+
+Atom SCF Calculation for Co : Z (AE atom) =  27 : Z (PS atom) =  17
+Config String: 3s2.0 3p6.0 3d7.0 4s2.0 4p0.0 INIT SPIN=3
+Orbitals (num,occ):  5     2.00 6.00 7.00 2.00 0.00
+Orbitals   (num,l):  5        0    1    2    0    1
+Atom SCF converged after  37 iterations to a total energy of   -146.10251041
+Adjusting orbital occupancies:
+Orbitals (num,spin,occ):  5  1     1.00 3.00 5.00 1.00 0.00
+Orbitals   (num,spin,l):  5  1        0    1    2    0    1
+Orbitals (num,spin,occ):  5  2     1.00 3.00 3.00 0.00 0.00
+Orbitals   (num,spin,l):  5  2        0    1    2    0    1
+
+Atom SCF Calculation for Co : Z (AE atom) =  27 : Z (PS atom) =  17
+Config String: 3s2.0 3p6.0 3d7.0 4s2.0 4p0.0 INIT SPIN=3
+Orbitals (num,occ):  5     2.00 6.00 7.00 2.00 0.00
+Orbitals   (num,l):  5        0    1    2    0    1
+Atom SCF converged after  37 iterations to a total energy of   -146.10251041
+Adjusting orbital occupancies:
+Orbitals (num,spin,occ):  5  1     1.00 3.00 5.00 1.00 0.00
+Orbitals   (num,spin,l):  5  1        0    1    2    0    1
+Orbitals (num,spin,occ):  5  2     1.00 3.00 3.00 0.00 0.00
+Orbitals   (num,spin,l):  5  2        0    1    2    0    1
+
+Atom SCF Calculation for Co : Z (AE atom) =  27 : Z (PS atom) =  17
+Config String: 3s2.0 3p6.0 3d7.0 4s2.0 4p0.0 INIT SPIN=3
+Orbitals (num,occ):  5     2.00 6.00 7.00 2.00 0.00
+Orbitals   (num,l):  5        0    1    2    0    1
+Atom SCF converged after  37 iterations to a total energy of   -146.10251041
+Adjusting orbital occupancies:
+Orbitals (num,spin,occ):  5  1     1.00 3.00 5.00 1.00 0.00
+Orbitals   (num,spin,l):  5  1        0    1    2    0    1
+Orbitals (num,spin,occ):  5  2     1.00 3.00 3.00 0.00 0.00
+Orbitals   (num,spin,l):  5  2        0    1    2    0    1
+Calculating Ewald energy ...            17007.249971 Hartree
+
+============================= Charge Augmentation ==============================
+                           Aug box size:   33 x  33 x  33
+================================================================================
+
+================================= Core Density =================================
+               Core den box size:   33 x  33 x  33
+================================================================================
+Density kernel initialisation
+
+################################################################################
+###################### NGWF self-consistent optimisation #######################
+################################################################################
+|ITER|    RMS GRADIENT   |     TOTAL ENERGY    |   step   |     Epredicted      
+   0     0.00037468097802  -8048.37002164892874   0.705883  -8049.24280499505312        
+   1     0.00026597958327  -8049.69077229154209   0.682004  -8050.07930190619754        
+   2     0.00019632983714  -8050.11972476872506   0.580429  -8050.27148056635542        
+   3     0.00010865591251  -8050.26382913906400   0.640244  -8050.31523375657889        
+   4     0.00007305572101  -8050.31450586264236   0.366656  -8050.33174108206822        
+   5     0.00003590421411  -8050.33467154564369   1.294396  -8050.35075834937015        
+   6     0.00004945460812  -8050.33948498838254   0.369764  -8050.34107129613312        
+   7     0.00004481650303  -8050.33869171862534   0.266229  -8050.34177361213915        
+   8     0.00003453856839  -8050.34156238602554   0.849741  -8050.35049020960378        
+   9     0.00003072456339  -8050.34778565261604   0.260475  -8050.34926946158612        
+  10     0.00000783541246  -8050.34928155698617   0.073848  -8050.34932055730314        
+  11     0.00000506238288  -8050.34933035805534   0.063477  -8050.34934468578012        
+  12     0.00000528448821  -8050.34934865689956   0.013216  -8050.34935185169343        
+  13     0.00000164128683  -8050.34935226585185   0.003997  -8050.34935236717047        
+  14     0.00000164190533  -8050.34935377463444   0.006951  -8050.34935393967135        
+  15     0.00000221433578  -8050.34935555299944   0.001689  -8050.34935565406067        
+
+================================================================================
+           ---------------- ENERGY COMPONENTS (Eh) ----------------
+           | Kinetic                    :      645.87421878639509 |
+           | Core Hartree               :   -50582.63830101728670 |
+           | CoreHart (non-coul chg cor):        0.00000000000000
+           | Hartree                    :    23640.24297863247190 |
+           | Exchange-correlation       :     -170.43965339520656 |
+           | Ewald                      :    17007.24997123851790 |
+           | Dij0                       :     1767.47701954158038 |
+           | Dijhartree                 :      444.94308154211154 |
+           | Exc [AE core]              :    -3252.61889648157694 |
+           | Exc DC [AE core]           :    -1165.02470679366024 |
+           | Exc [PS core]              :     -142.36912803381486 |
+           | Exc DC [PS core]           :     -186.60189633574430 |
+           | Exc [Core]                 :    -2307.24800405622500 |
+           | Total [Sphere]             :     1409.41833669215475 |
+           | Total                      :    -8050.29244906295025 |
+           |------------------------------------------------------|
+           | Entropic contribution      :       -0.05690770575893 |
+           | Total free energy          :    -8050.34935676870919 |
+           --------------------------------------------------------
+           Integrated compensation chrg.:      551.80842337728632
+           Integrated density           :      934.99999999970066
+           Integrated spin density      :      102.57326653725124
+           Integrated |spin density|    :       32.10534055093493
+           Fermi level of spin Up       :       -0.06681932044728
+           Fermi level of spin Down     :       -0.06681932044728
+================================================================================
+
+  16     0.00000063840552  -8050.34935676870919  <-- CG                                 
+
+======================== Writing density and potential =========================
+Writing "Co_cluster2_sp_T_4P0_ps_density.cube" ... done
+Writing "Co_cluster2_sp_T_4P0_ps_spindensity.cube" ... done
+Writing "Co_cluster2_sp_T_4P0_ae_density.cube" ... done
+Writing "Co_cluster2_sp_T_4P0_ae_spindensity.cube" ... done
+Writing "Co_cluster2_sp_T_4P0_potential.cube" ... done
+Writing "Co_cluster2_sp_T_4P0_electrostatic_potential.cube" ... done
+================================================================================
+
+    Mulliken Atomic Populations
+    ---------------------------
+Species  Ion    Total   Charge (e)    Spin (hbar)
+=================================================
+  Co     1      17.309     -0.309      0.81
+  Co     2      17.263     -0.263      0.84
+  Co     3      17.262     -0.262      0.84
+  Co     4      17.265     -0.265      0.84
+  Co     5      17.263     -0.263      0.84
+  Co     6      17.263     -0.263      0.84
+  Co     7      17.262     -0.262      0.84
+  Co     8      17.265     -0.265      0.84
+  Co     9      17.263     -0.263      0.84
+  Co    10      17.263     -0.263      0.84
+  Co    11      17.262     -0.262      0.84
+  Co    12      17.265     -0.265      0.84
+  Co    13      17.263     -0.263      0.84
+  Co    14      16.770      0.230      1.06
+  Co    15      16.977      0.023      0.92
+  Co    16      16.770      0.230      1.06
+  Co    17      16.768      0.232      1.06
+  Co    18      16.976      0.024      0.92
+  Co    19      16.769      0.231      1.06
+  Co    20      16.770      0.230      1.06
+  Co    21      16.977      0.023      0.92
+  Co    22      16.770      0.230      1.06
+  Co    23      16.768      0.232      1.06
+  Co    24      16.976      0.024      0.92
+  Co    25      16.769      0.231      1.06
+  Co    26      16.770      0.230      1.06
+  Co    27      16.977      0.023      0.92
+  Co    28      16.770      0.230      1.06
+  Co    29      16.768      0.232      1.06
+  Co    30      16.976      0.024      0.92
+  Co    31      16.769      0.231      1.06
+  Co    32      16.977      0.023      0.92
+  Co    33      16.977      0.023      0.92
+  Co    34      16.977      0.023      0.92
+  Co    35      16.977      0.023      0.92
+  Co    36      16.977      0.023      0.92
+  Co    37      16.977      0.023      0.92
+  Co    38      16.976      0.024      0.92
+  Co    39      16.977      0.023      0.92
+  Co    40      16.977      0.023      0.92
+  Co    41      16.977      0.023      0.92
+  Co    42      16.977      0.023      0.92
+  Co    43      16.977      0.023      0.92
+  Co    44      16.977      0.023      0.92
+  Co    45      16.977      0.023      0.92
+  Co    46      16.976      0.024      0.92
+  Co    47      16.977      0.023      0.92
+  Co    48      16.977      0.023      0.92
+  Co    49      16.977      0.023      0.92
+  Co    50      16.977      0.023      0.92
+  Co    51      16.977      0.023      0.92
+  Co    52      16.977      0.023      0.92
+  Co    53      16.977      0.023      0.92
+  Co    54      16.976      0.024      0.92
+  Co    55      16.977      0.023      0.92
+=================================================
+
+        Bond         Population      Spin       Length (bohr)
+=============================================================
+ Co    8 -- Co   23       -0.12      0.07      4.40241
+ Co   12 -- Co   29       -0.12      0.07      4.40241
+ Co    4 -- Co   17       -0.12      0.07      4.40242
+ Co    9 -- Co   25       -0.12      0.07      4.40266
+ Co   13 -- Co   31       -0.12      0.07      4.40266
+ Co    5 -- Co   19       -0.12      0.07      4.40268
+ Co    2 -- Co   14       -0.12      0.07      4.40315
+ Co   10 -- Co   26       -0.12      0.07      4.40315
+ Co    6 -- Co   20       -0.12      0.07      4.40316
+ Co    7 -- Co   22       -0.12      0.07      4.40353
+ Co   11 -- Co   28       -0.12      0.07      4.40353
+ Co    3 -- Co   16       -0.12      0.07      4.40354
+ Co    5 -- Co   37       -0.01      0.03      4.45171
+ Co   13 -- Co   53       -0.01      0.03      4.45171
+ Co    9 -- Co   45       -0.01      0.03      4.45171
+ Co    9 -- Co   44       -0.01      0.03      4.45224
+ Co   13 -- Co   52       -0.01      0.03      4.45224
+ Co    5 -- Co   36       -0.01      0.03      4.45224
+ Co    7 -- Co   41       -0.01      0.03      4.45238
+ Co    3 -- Co   33       -0.01      0.03      4.45238
+ Co   11 -- Co   49       -0.01      0.03      4.45238
+ Co    8 -- Co   47       -0.01      0.03      4.45249
+ Co   12 -- Co   55       -0.01      0.03      4.45249
+ Co    4 -- Co   39       -0.01      0.03      4.45249
+ Co   11 -- Co   48       -0.01      0.03      4.45271
+ Co    3 -- Co   32       -0.01      0.03      4.45271
+ Co    7 -- Co   40       -0.01      0.03      4.45273
+ Co    8 -- Co   46       -0.01      0.03      4.45279
+ Co   12 -- Co   54       -0.01      0.03      4.45279
+ Co    4 -- Co   38       -0.01      0.03      4.45279
+ Co   10 -- Co   51       -0.01      0.03      4.45304
+ Co    2 -- Co   35       -0.01      0.03      4.45304
+ Co    6 -- Co   43       -0.01      0.03      4.45304
+ Co    6 -- Co   42       -0.01      0.03      4.45332
+ Co   10 -- Co   50       -0.01      0.03      4.45332
+ Co    2 -- Co   34       -0.01      0.03      4.45332
+ Co   10 -- Co   27        0.00      0.03      4.45617
+ Co    2 -- Co   15        0.00      0.03      4.45617
+ Co    6 -- Co   21        0.00      0.03      4.45617
+ Co    3 -- Co   15        0.00      0.03      4.45668
+ Co    7 -- Co   21        0.00      0.03      4.45668
+ Co   11 -- Co   27        0.00      0.03      4.45668
+ Co    4 -- Co   18        0.00      0.03      4.45678
+ Co   12 -- Co   30        0.00      0.03      4.45678
+ Co    8 -- Co   24        0.00      0.03      4.45678
+ Co    6 -- Co   48       -0.01      0.03      4.45723
+ Co   10 -- Co   32       -0.01      0.03      4.45723
+ Co    2 -- Co   40       -0.01      0.03      4.45724
+ Co    9 -- Co   24        0.00      0.03      4.45731
+ Co   13 -- Co   30        0.00      0.03      4.45731
+ Co    5 -- Co   18        0.00      0.03      4.45731
+ Co    7 -- Co   49       -0.01      0.03      4.45737
+ Co    3 -- Co   41       -0.01      0.03      4.45738
+ Co   11 -- Co   33       -0.01      0.03      4.45738
+ Co    4 -- Co   42       -0.01      0.03      4.45744
+ Co    8 -- Co   50       -0.01      0.03      4.45744
+ Co   12 -- Co   34       -0.01      0.03      4.45744
+ Co   13 -- Co   35       -0.01      0.03      4.45751
+ Co    9 -- Co   51       -0.01      0.03      4.45751
+ Co    5 -- Co   43       -0.01      0.03      4.45751
+ Co   10 -- Co   36       -0.01      0.03      4.45795
+ Co    6 -- Co   52       -0.01      0.03      4.45795
+ Co    2 -- Co   44       -0.01      0.03      4.45795
+ Co    3 -- Co   45       -0.01      0.03      4.45816
+ Co   11 -- Co   37       -0.01      0.03      4.45816
+ Co    7 -- Co   53       -0.01      0.03      4.45816
+ Co    4 -- Co   46       -0.01      0.03      4.45830
+ Co   12 -- Co   38       -0.01      0.03      4.45830
+ Co    8 -- Co   54       -0.01      0.03      4.45830
+ Co   13 -- Co   39       -0.01      0.03      4.45852
+ Co    9 -- Co   55       -0.01      0.03      4.45852
+ Co    5 -- Co   47       -0.01      0.03      4.45852
+ Co    1 -- Co   11        0.02      0.01      4.48511
+ Co    1 -- Co    3        0.02      0.01      4.48511
+ Co    1 -- Co    7        0.02      0.01      4.48511
+ Co    1 -- Co    6        0.02      0.01      4.48626
+ Co    1 -- Co    2        0.02      0.01      4.48626
+ Co    1 -- Co   10        0.02      0.01      4.48626
+ Co    1 -- Co    9        0.02      0.01      4.48714
+ Co    1 -- Co   13        0.02      0.01      4.48714
+ Co    1 -- Co    5        0.02      0.01      4.48714
+ Co    1 -- Co    8        0.02      0.01      4.48817
+ Co    1 -- Co   12        0.02      0.01      4.48817
+ Co    1 -- Co    4        0.02      0.01      4.48817
+ Co   20 -- Co   42        0.24     -0.01      4.66594
+ Co   14 -- Co   34        0.24     -0.01      4.66595
+ Co   26 -- Co   50        0.24     -0.01      4.66595
+ Co   28 -- Co   48        0.24     -0.01      4.66625
+ Co   22 -- Co   40        0.24     -0.01      4.66625
+ Co   16 -- Co   32        0.24     -0.01      4.66626
+ Co   20 -- Co   43        0.24     -0.01      4.66669
+ Co   14 -- Co   35        0.24     -0.01      4.66670
+ Co   26 -- Co   51        0.24     -0.01      4.66670
+ Co   22 -- Co   41        0.24     -0.01      4.66700
+ Co   28 -- Co   49        0.24     -0.01      4.66701
+ Co   16 -- Co   33        0.24     -0.01      4.66701
+ Co   29 -- Co   54        0.24     -0.01      4.66804
+ Co   23 -- Co   46        0.24     -0.01      4.66805
+ Co   17 -- Co   38        0.24     -0.01      4.66807
+ Co   31 -- Co   52        0.24     -0.01      4.66842
+ Co   25 -- Co   44        0.24     -0.01      4.66842
+ Co   19 -- Co   36        0.24     -0.01      4.66844
+ Co   23 -- Co   47        0.24     -0.01      4.66895
+ Co   29 -- Co   55        0.24     -0.01      4.66896
+ Co   17 -- Co   39        0.24     -0.01      4.66896
+ Co   31 -- Co   53        0.24     -0.01      4.66919
+ Co   25 -- Co   45        0.24     -0.01      4.66919
+ Co   19 -- Co   37        0.24     -0.01      4.66921
+ Co   28 -- Co   37        0.24     -0.01      4.67432
+ Co   22 -- Co   53        0.24     -0.01      4.67432
+ Co   16 -- Co   45        0.24     -0.01      4.67433
+ Co   31 -- Co   39        0.24     -0.01      4.67521
+ Co   25 -- Co   55        0.24     -0.01      4.67521
+ Co   19 -- Co   47        0.24     -0.01      4.67522
+ Co   22 -- Co   49        0.24     -0.01      4.67533
+ Co   28 -- Co   33        0.24     -0.01      4.67534
+ Co   16 -- Co   41        0.24     -0.01      4.67535
+ Co   14 -- Co   44        0.24     -0.01      4.67577
+ Co   26 -- Co   36        0.24     -0.01      4.67577
+ Co   20 -- Co   52        0.24     -0.01      4.67578
+ Co   31 -- Co   35        0.24     -0.01      4.67630
+ Co   25 -- Co   51        0.24     -0.01      4.67630
+ Co   19 -- Co   43        0.24     -0.01      4.67630
+ Co   14 -- Co   40        0.24     -0.01      4.67676
+ Co   26 -- Co   32        0.24     -0.01      4.67677
+ Co   20 -- Co   48        0.24     -0.01      4.67678
+ Co   29 -- Co   38        0.24     -0.01      4.67680
+ Co   23 -- Co   54        0.24     -0.01      4.67682
+ Co   17 -- Co   46        0.24     -0.01      4.67682
+ Co   23 -- Co   50        0.24     -0.01      4.67771
+ Co   17 -- Co   42        0.24     -0.01      4.67771
+ Co   29 -- Co   34        0.24     -0.01      4.67772
+ Co   15 -- Co   16        0.24     -0.01      4.67991
+ Co   27 -- Co   28        0.24     -0.01      4.67991
+ Co   21 -- Co   22        0.24     -0.01      4.67991
+ Co   18 -- Co   19        0.24     -0.01      4.68011
+ Co   30 -- Co   31        0.24     -0.01      4.68011
+ Co   24 -- Co   25        0.24     -0.01      4.68011
+ Co   14 -- Co   15        0.24     -0.01      4.68221
+ Co   26 -- Co   27        0.24     -0.01      4.68221
+ Co   20 -- Co   21        0.24     -0.01      4.68223
+ Co   17 -- Co   18        0.24     -0.01      4.68249
+ Co   23 -- Co   24        0.24     -0.01      4.68249
+ Co   29 -- Co   30        0.24     -0.01      4.68249
+ Co   41 -- Co   49        0.22     -0.02      4.68993
+ Co   33 -- Co   41        0.22     -0.02      4.68993
+ Co   33 -- Co   49        0.22     -0.02      4.68994
+ Co   32 -- Co   45        0.22     -0.02      4.69002
+ Co   37 -- Co   48        0.22     -0.02      4.69002
+ Co   40 -- Co   53        0.22     -0.02      4.69004
+ Co   32 -- Co   51        0.22     -0.02      4.69097
+ Co   43 -- Co   48        0.22     -0.02      4.69097
+ Co   35 -- Co   40        0.22     -0.02      4.69098
+ Co   42 -- Co   52        0.22     -0.02      4.69106
+ Co   36 -- Co   50        0.22     -0.02      4.69106
+ Co   34 -- Co   44        0.22     -0.02      4.69106
+ Co   44 -- Co   55        0.22     -0.02      4.69120
+ Co   39 -- Co   52        0.22     -0.02      4.69120
+ Co   36 -- Co   47        0.22     -0.02      4.69120
+ Co   45 -- Co   51        0.22     -0.02      4.69122
+ Co   37 -- Co   43        0.22     -0.02      4.69122
+ Co   35 -- Co   53        0.22     -0.02      4.69122
+ Co   47 -- Co   50        0.22     -0.02      4.69223
+ Co   39 -- Co   42        0.22     -0.02      4.69223
+ Co   34 -- Co   55        0.22     -0.02      4.69223
+ Co   46 -- Co   54        0.22     -0.02      4.69227
+ Co   38 -- Co   46        0.22     -0.02      4.69227
+ Co   38 -- Co   54        0.22     -0.02      4.69227
+ Co   21 -- Co   49        0.22     -0.02      4.69526
+ Co   15 -- Co   41        0.22     -0.02      4.69528
+ Co   27 -- Co   33        0.22     -0.02      4.69528
+ Co   15 -- Co   45        0.22     -0.02      4.69552
+ Co   27 -- Co   37        0.22     -0.02      4.69552
+ Co   21 -- Co   53        0.22     -0.02      4.69552
+ Co   15 -- Co   40        0.22     -0.02      4.69580
+ Co   27 -- Co   32        0.22     -0.02      4.69580
+ Co   21 -- Co   48        0.22     -0.02      4.69580
+ Co   15 -- Co   44        0.22     -0.02      4.69607
+ Co   27 -- Co   36        0.22     -0.02      4.69607
+ Co   21 -- Co   52        0.22     -0.02      4.69607
+ Co   30 -- Co   35        0.22     -0.02      4.69626
+ Co   24 -- Co   51        0.22     -0.02      4.69626
+ Co   18 -- Co   43        0.22     -0.02      4.69626
+ Co   30 -- Co   39        0.22     -0.02      4.69649
+ Co   24 -- Co   55        0.22     -0.02      4.69649
+ Co   18 -- Co   47        0.22     -0.02      4.69649
+ Co   30 -- Co   34        0.22     -0.02      4.69682
+ Co   24 -- Co   50        0.22     -0.02      4.69682
+ Co   18 -- Co   42        0.22     -0.02      4.69682
+ Co   30 -- Co   38        0.22     -0.02      4.69708
+ Co   24 -- Co   54        0.22     -0.02      4.69708
+ Co   18 -- Co   46        0.22     -0.02      4.69708
+ Co   32 -- Co   33        0.23     -0.02      4.69916
+ Co   40 -- Co   41        0.23     -0.02      4.69916
+ Co   48 -- Co   49        0.23     -0.02      4.69916
+ Co   50 -- Co   51        0.23     -0.02      4.69973
+ Co   42 -- Co   43        0.23     -0.02      4.69973
+ Co   34 -- Co   35        0.23     -0.02      4.69973
+ Co   52 -- Co   53        0.23     -0.02      4.70011
+ Co   44 -- Co   45        0.23     -0.02      4.70011
+ Co   36 -- Co   37        0.23     -0.02      4.70011
+ Co   54 -- Co   55        0.23     -0.02      4.70058
+ Co   46 -- Co   47        0.23     -0.02      4.70058
+ Co   38 -- Co   39        0.23     -0.02      4.70058
+ Co    3 -- Co   11        0.02      0.01      4.71281
+ Co    3 -- Co    7        0.02      0.01      4.71281
+ Co    7 -- Co   11        0.02      0.01      4.71281
+ Co    6 -- Co   11        0.02      0.01      4.71388
+ Co    3 -- Co   10        0.02      0.01      4.71388
+ Co    2 -- Co    7        0.02      0.01      4.71388
+ Co    5 -- Co   11        0.02      0.01      4.71425
+ Co    3 -- Co    9        0.02      0.01      4.71425
+ Co    7 -- Co   13        0.02      0.01      4.71425
+ Co    5 -- Co    6        0.02      0.01      4.71521
+ Co    9 -- Co   10        0.02      0.01      4.71521
+ Co    2 -- Co   13        0.02      0.01      4.71521
+ Co    6 -- Co   13        0.02      0.01      4.71547
+ Co    5 -- Co   10        0.02      0.01      4.71547
+ Co    2 -- Co    9        0.02      0.01      4.71547
+ Co    2 -- Co   12        0.02      0.01      4.71621
+ Co    4 -- Co    6        0.02      0.01      4.71621
+ Co    8 -- Co   10        0.02      0.01      4.71621
+ Co    5 -- Co    8        0.02      0.01      4.71705
+ Co    9 -- Co   12        0.02      0.01      4.71705
+ Co    4 -- Co   13        0.02      0.01      4.71705
+ Co    4 -- Co    8        0.02      0.01      4.71800
+ Co    8 -- Co   12        0.02      0.01      4.71800
+ Co    4 -- Co   12        0.02      0.01      4.71800
+ Co    6 -- Co    7        0.04      0.00      4.72466
+ Co   10 -- Co   11        0.04      0.00      4.72466
+ Co    2 -- Co    3        0.04      0.00      4.72466
+ Co   12 -- Co   13        0.04      0.00      4.72815
+ Co    4 -- Co    5        0.04      0.00      4.72815
+ Co    8 -- Co    9        0.04      0.00      4.72815
+=============================================================
+
+
+============== Orbital energy and occupancy information for spin 1 =============
+
+      Total number of orbitals:     715
+        Occupancy sum (kernel):     518.786633268
+   Occupancy sum (eigenvalues):     518.786633268
+                 HOMO-LUMO gap:       0.022776887 Eh
+                 Mid-gap level:      -0.058898107 Eh
+
+                        Orbital | Energy (Eh) | Occupancy
+                            1    -3.613198608   1.0000000
+                        .......   ...........   .........
+                          511    -0.096769748   0.9999191
+                          512    -0.096769700   0.9999191
+                          513    -0.087452288   0.9985374
+                          514    -0.087452265   0.9985374
+                          515    -0.087451598   0.9985355
+                          516    -0.070373869   0.7585734
+                          517    -0.070373205   0.7585422
+                          518    -0.070373165   0.7585399
+                          519    -0.070286676   0.7535005
+                          520    -0.070286550   0.7534931
+                        ....... -- gap at 0K -- .........
+                          521    -0.047509664   0.0023052
+                          522    -0.047509630   0.0023052
+                          523    -0.047509466   0.0023047
+                          524    -0.047292064   0.0021525
+                          525    -0.036726327   0.0000773
+                          526    -0.028678612   0.0000075
+                          527    -0.028678553   0.0000077
+                          528    -0.028678481   0.0000089
+                          529    -0.028535220   0.0000077
+                          530    -0.028535064   0.0000077
+                        .......   ...........   .........
+                          715     0.694169941   0.0000000
+
+================================================================================
+
+============== Orbital energy and occupancy information for spin 2 =============
+
+      Total number of orbitals:     715
+        Occupancy sum (kernel):     416.213366731
+   Occupancy sum (eigenvalues):     416.213366731
+                 HOMO-LUMO gap:       0.002527984 Eh
+                 Mid-gap level:      -0.066013526 Eh
+
+                        Orbital | Energy (Eh) | Occupancy
+                            1    -3.534565360   1.0000000
+                        .......   ...........   .........
+                          406    -0.077763475   0.9692761
+                          407    -0.077424160   0.9658082
+                          408    -0.077424115   0.9658080
+                          409    -0.073689310   0.8973542
+                          410    -0.073688217   0.8973712
+                          411    -0.073688139   0.8973687
+                          412    -0.067428123   0.5474250
+                          413    -0.067428104   0.5474249
+                          414    -0.067424888   0.5473968
+                          415    -0.067277518   0.5332190
+                        ....... -- gap at 0K -- .........
+                          416    -0.064749534   0.3402379
+                          417    -0.064748228   0.3404438
+                          418    -0.064748207   0.3404423
+                          419    -0.062885505   0.2245696
+                          420    -0.062885450   0.2245684
+                          421    -0.062764628   0.2166867
+                          422    -0.062764595   0.2166846
+                          423    -0.062760291   0.2169862
+                          424    -0.061743319   0.1673399
+                          425    -0.061741376   0.1674233
+                        .......   ...........   .........
+                          715     0.713906457   0.0000002
+
+================================================================================
+
+===================== Writing canonical molecular orbitals =====================
+    Spin 1
+| Orbital  Energy (eV)  Norm     |
+| HOMO-5   -2.37967907  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-5_UP.cube" ... done
+| HOMO-4   -1.91497042  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-4_UP.cube" ... done
+| HOMO-3   -1.91495236  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-3_UP.cube" ... done
+| HOMO-2   -1.91495125  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-2_UP.cube" ... done
+| HOMO-1   -1.91259778  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-1_UP.cube" ... done
+| HOMO     -1.91259435  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO_UP.cube" ... done
+| LUMO     -1.29280373  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO_UP.cube" ... done
+| LUMO+1   -1.29280280  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+1_UP.cube" ... done
+| LUMO+2   -1.29279836  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+2_UP.cube" ... done
+| LUMO+3   -1.28688254  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+3_UP.cube" ... done
+| LUMO+4   -0.99937420  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+4_UP.cube" ... done
+| LUMO+5   -0.78038475  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+5_UP.cube" ... done
+================================================================================
+
+===================== Writing canonical molecular orbitals =====================
+    Spin 2
+| Orbital  Energy (eV)  Norm     |
+| HOMO-5   -2.00515841  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-5_DN.cube" ... done
+| HOMO-4   -2.00515628  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-4_DN.cube" ... done
+| HOMO-3   -1.83481259  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-3_DN.cube" ... done
+| HOMO-2   -1.83481207  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-2_DN.cube" ... done
+| HOMO-1   -1.83472455  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO-1_DN.cube" ... done
+| HOMO     -1.83071443  1.000000 | Writing "Co_cluster2_sp_T_4P0_HOMO_DN.cube" ... done
+| LUMO     -1.76192447  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO_DN.cube" ... done
+| LUMO+1   -1.76188892  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+1_DN.cube" ... done
+| LUMO+2   -1.76188835  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+2_DN.cube" ... done
+| LUMO+3   -1.71120166  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+3_DN.cube" ... done
+| LUMO+4   -1.71120016  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+4_DN.cube" ... done
+| LUMO+5   -1.70791243  1.000000 | Writing "Co_cluster2_sp_T_4P0_LUMO+5_DN.cube" ... done
+================================================================================
+
+================== Local Density of States (LDOS) calculation ==================
+Writing "Co_cluster2_sp_T_4P0_UP_LDOS.txt" ... done
+================================================================================
+
+================== Local Density of States (LDOS) calculation ==================
+Writing "Co_cluster2_sp_T_4P0_DN_LDOS.txt" ... done
+================================================================================
+ 
+=============== Density of States (DOS) calculation for UP spin ================
+Writing "Co_cluster2_sp_T_4P0_UP_DOS.txt" ... done
+================================================================================
+ 
+============== Density of States (DOS) calculation for DOWN spin ===============
+Writing "Co_cluster2_sp_T_4P0_DN_DOS.txt" ... done
+================================================================================
+ 
+Writing bands to file "Co_cluster2_sp_T_4P0.val_bands" ... done
+
+================================= Core Density =================================
+               Core den box size:   33 x  33 x  33
+================================================================================
+ 
+********************* Unconstrained **********************
+********************** Ewald forces **********************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.06297947  -0.06297444  -0.06298113 *
+*    Co      2     60.67902055  -0.02037336 -37.75317448 *
+*    Co      3     60.69372708  -0.01879720  37.72204060 *
+*    Co      4    -60.69084262  -0.01946918 -37.74058626 *
+*    Co      5    -60.70573240  -0.01837764  37.70916892 *
+*    Co      6    -37.75317566  60.67909454  -0.02044243 *
+*    Co      7     37.72201305  60.69358580  -0.01894594 *
+*    Co      8    -37.74051728 -60.69076290  -0.01946852 *
+*    Co      9     37.70908700 -60.70566036  -0.01837933 *
+*    Co     10     -0.02043639 -37.75314875  60.67904645 *
+*    Co     11     -0.01879640  37.72195485  60.69371531 *
+*    Co     12     -0.01943284 -37.74050502 -60.69078208 *
+*    Co     13     -0.01836265  37.70909365 -60.70566452 *
+*    Co     14    106.88743827   0.00145352 -67.68092000 *
+*    Co     15    122.67887738   0.00076949  -0.00879661 *
+*    Co     16    106.90525632   0.00178654  67.69377675 *
+*    Co     17   -106.85730652   0.00065167 -67.66545895 *
+*    Co     18   -122.63902786  -0.00031037  -0.00973935 *
+*    Co     19   -106.87666078   0.00117278  67.67883972 *
+*    Co     20    -67.68087886 106.88732382   0.00150583 *
+*    Co     21     -0.00897694 122.67898501   0.00075790 *
+*    Co     22     67.69393253 106.90545373   0.00170955 *
+*    Co     23    -67.66560858-106.85749289   0.00065832 *
+*    Co     24     -0.00973659-122.63912936  -0.00029921 *
+*    Co     25     67.67898383-106.87685511   0.00117207 *
+*    Co     26      0.00150559 -67.68086821 106.88748487 *
+*    Co     27      0.00082421  -0.00879985 122.67894826 *
+*    Co     28      0.00185292  67.69395423 106.90538910 *
+*    Co     29      0.00053673 -67.66561082-106.85749263 *
+*    Co     30     -0.00026285  -0.00973864-122.63912176 *
+*    Co     31      0.00118252  67.67898500-106.87684336 *
+*    Co     32     62.85585080 -39.06709243 100.51177682 *
+*    Co     33     62.86672842  39.06911351 100.51853217 *
+*    Co     34     62.83938918 -39.06401861-100.48707474 *
+*    Co     35     62.85147404  39.06478361-100.49409538 *
+*    Co     36    -62.85444549 -39.05764323 100.49579636 *
+*    Co     37    -62.86494904  39.05935237 100.50396459 *
+*    Co     38    -62.83829217 -39.05294518-100.46998707 *
+*    Co     39    -62.84861694  39.05419922-100.47728952 *
+*    Co     40    100.51176317  62.85577803 -39.06711988 *
+*    Co     41    100.51850901  62.86665388  39.06917084 *
+*    Co     42   -100.48695686  62.83938041 -39.06400670 *
+*    Co     43   -100.49406764  62.85141236  39.06482694 *
+*    Co     44    100.49580277 -62.85441104 -39.05772464 *
+*    Co     45    100.50395256 -62.86488871  39.05943409 *
+*    Co     46   -100.47002573 -62.83815238 -39.05308166 *
+*    Co     47   -100.47728347 -62.84854307  39.05427733 *
+*    Co     48    -39.06714752 100.51181986  62.85579351 *
+*    Co     49     39.06905718 100.51857040  62.86675233 *
+*    Co     50    -39.06395712-100.48702173  62.83946362 *
+*    Co     51     39.06477328-100.49413444  62.85149563 *
+*    Co     52    -39.05769652 100.49584049 -62.85434860 *
+*    Co     53     39.05944487 100.50393643 -62.86489918 *
+*    Co     54    -39.05306454-100.47007693 -62.83812790 *
+*    Co     55     39.05425446-100.47730336 -62.84864605 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00000000  -0.00000000  -0.00000000
+ 
+********************* Unconstrained **********************
+***************** Local potential forces *****************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.06218066   0.06216613   0.06217105 *
+*    Co      2    -60.70450433   0.01980379  37.76850878 *
+*    Co      3    -60.71869301   0.01822633 -37.73818348 *
+*    Co      4     60.71604930   0.01888346  37.75648971 *
+*    Co      5     60.73044320   0.01776780 -37.72591775 *
+*    Co      6     37.76851862 -60.70458387   0.01987042 *
+*    Co      7    -37.73814488 -60.71856218   0.01837147 *
+*    Co      8     37.75643268  60.71596266   0.01888124 *
+*    Co      9    -37.72582829  60.73036658   0.01776787 *
+*    Co     10      0.01987506  37.76848344 -60.70453898 *
+*    Co     11      0.01823453 -37.73809580 -60.71869102 *
+*    Co     12      0.01885631  37.75641204  60.71598165 *
+*    Co     13      0.01776201 -37.72584314  60.73036849 *
+*    Co     14   -107.04551169  -0.00175106  67.77844535 *
+*    Co     15   -122.76269042  -0.00115310   0.00844153 *
+*    Co     16   -107.06268677  -0.00208182 -67.79145095 *
+*    Co     17    107.01586926  -0.00095527  67.76357302 *
+*    Co     18    122.72333694  -0.00008061   0.00937131 *
+*    Co     19    107.03456475  -0.00147546 -67.77710671 *
+*    Co     20     67.77840349-107.04539106  -0.00180466 *
+*    Co     21      0.00862938-122.76279520  -0.00114302 *
+*    Co     22    -67.79159718-107.06288243  -0.00200587 *
+*    Co     23     67.76372684 107.01604928  -0.00096276 *
+*    Co     24      0.00937648 122.72344292  -0.00009283 *
+*    Co     25    -67.77725055 107.03476367  -0.00147555 *
+*    Co     26     -0.00179845  67.77838850-107.04555440 *
+*    Co     27     -0.00120141   0.00844589-122.76275776 *
+*    Co     28     -0.00214314 -67.79162132-107.06281333 *
+*    Co     29     -0.00083441  67.76372890 107.01605436 *
+*    Co     30     -0.00012164   0.00937183 122.72343597 *
+*    Co     31     -0.00147993 -67.77725528 107.03474776 *
+*    Co     32    -62.89775383  39.09188708-100.57826462 *
+*    Co     33    -62.90845180 -39.09453440-100.58470272 *
+*    Co     34    -62.88178857  39.08913434 100.55367441 *
+*    Co     35    -62.89368251 -39.09054185 100.56038319 *
+*    Co     36     62.89597744  39.08260547-100.56277592 *
+*    Co     37     62.90630277 -39.08493434-100.57061004 *
+*    Co     38     62.88029875  39.07822173 100.53705481 *
+*    Co     39     62.89044338 -39.08012371 100.54405377 *
+*    Co     40   -100.57825132 -62.89769140  39.09191538 *
+*    Co     41   -100.58467449 -62.90838535 -39.09459360 *
+*    Co     42    100.55355221 -62.88177902  39.08911667 *
+*    Co     43    100.56035050 -62.89361989 -39.09058170 *
+*    Co     44   -100.56278700  62.89594368  39.08269006 *
+*    Co     45   -100.57060170  62.90624276 -39.08502102 *
+*    Co     46    100.53709801  62.88015108  39.07835588 *
+*    Co     47    100.54405084  62.89036064 -39.08020118 *
+*    Co     48     39.09194573-100.57830063 -62.89770060 *
+*    Co     49    -39.09447025-100.58473663 -62.90848013 *
+*    Co     50     39.08907593 100.55361388 -62.88186501 *
+*    Co     51    -39.09052359 100.56041971 -62.89370985 *
+*    Co     52     39.08266624-100.56282213  62.89587499 *
+*    Co     53    -39.08502310-100.57058911  62.90625060 *
+*    Co     54     39.07834787 100.53714675  62.88012754 *
+*    Co     55    -39.08017456 100.54407449  62.89046867 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.01029964  -0.01052122  -0.01055948
+ 
+********************* Unconstrained **********************
+************** Compensation density forces ***************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00016004   0.00016572   0.00016699 *
+*    Co      2      0.02239537  -0.00006455  -0.01351062 *
+*    Co      3      0.02201076  -0.00006168   0.01314290 *
+*    Co      4     -0.02315709  -0.00005522  -0.01398207 *
+*    Co      5     -0.02277263  -0.00002421   0.01363754 *
+*    Co      6     -0.01351567   0.02239829  -0.00006249 *
+*    Co      7      0.01313564   0.02201777  -0.00005845 *
+*    Co      8     -0.01398971  -0.02315328  -0.00005406 *
+*    Co      9      0.01363296  -0.02277048  -0.00002302 *
+*    Co     10     -0.00006916  -0.01351092   0.02240073 *
+*    Co     11     -0.00006710   0.01314178   0.02201714 *
+*    Co     12     -0.00006076  -0.01398481  -0.02315309 *
+*    Co     13     -0.00002975   0.01363808  -0.02276884 *
+*    Co     14     -0.00252338  -0.00017183   0.00120598 *
+*    Co     15     -0.00247984  -0.00012743  -0.00012219 *
+*    Co     16     -0.00246910  -0.00017072  -0.00157845 *
+*    Co     17      0.00224167  -0.00017289   0.00129239 *
+*    Co     18      0.00210318  -0.00013167  -0.00012404 *
+*    Co     19      0.00220097  -0.00017192  -0.00167455 *
+*    Co     20      0.00120447  -0.00252719  -0.00017121 *
+*    Co     21     -0.00012586  -0.00248184  -0.00012611 *
+*    Co     22     -0.00158399  -0.00247129  -0.00016962 *
+*    Co     23      0.00128911   0.00224712  -0.00017220 *
+*    Co     24     -0.00012907   0.00210081  -0.00013079 *
+*    Co     25     -0.00167445   0.00219959  -0.00017127 *
+*    Co     26     -0.00017513   0.00120881  -0.00252580 *
+*    Co     27     -0.00013155  -0.00012296  -0.00248188 *
+*    Co     28     -0.00017417  -0.00158325  -0.00247364 *
+*    Co     29     -0.00017760   0.00128981   0.00224390 *
+*    Co     30     -0.00013554  -0.00012499   0.00210047 *
+*    Co     31     -0.00017527  -0.00167252   0.00220202 *
+*    Co     32     -0.00082064   0.00203810  -0.00402594 *
+*    Co     33     -0.00085900  -0.00230339  -0.00405115 *
+*    Co     34     -0.00076879   0.00200524   0.00366102 *
+*    Co     35     -0.00080937  -0.00227422   0.00368402 *
+*    Co     36      0.00052019   0.00200260  -0.00398418 *
+*    Co     37      0.00056224  -0.00228060  -0.00401760 *
+*    Co     38      0.00046237   0.00198200   0.00363182 *
+*    Co     39      0.00050453  -0.00224996   0.00363955 *
+*    Co     40     -0.00402508  -0.00081413   0.00203804 *
+*    Co     41     -0.00405497  -0.00085328  -0.00230195 *
+*    Co     42      0.00366329  -0.00076908   0.00200862 *
+*    Co     43      0.00368732  -0.00080927  -0.00227603 *
+*    Co     44     -0.00398191   0.00051923   0.00200112 *
+*    Co     45     -0.00401610   0.00056141  -0.00227774 *
+*    Co     46      0.00362960   0.00046597   0.00198416 *
+*    Co     47      0.00363791   0.00050910  -0.00225048 *
+*    Co     48      0.00203611  -0.00403036  -0.00081705 *
+*    Co     49     -0.00230761  -0.00405346  -0.00085719 *
+*    Co     50      0.00200293   0.00366502  -0.00076764 *
+*    Co     51     -0.00227881   0.00368571  -0.00080556 *
+*    Co     52      0.00199842  -0.00398324   0.00052282 *
+*    Co     53     -0.00228355  -0.00401313   0.00056311 *
+*    Co     54      0.00197849   0.00363077   0.00046540 *
+*    Co     55     -0.00225262   0.00363546   0.00050678 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00901769  -0.00888139  -0.00885037
+ 
+********************* Unconstrained **********************
+*************** Non-local potential forces ***************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00021944  -0.00022391  -0.00022482 *
+*    Co      2     -0.00087394  -0.00007019  -0.00120936 *
+*    Co      3     -0.00055360  -0.00007209   0.00126608 *
+*    Co      4      0.00126443  -0.00007267  -0.00082103 *
+*    Co      5      0.00093636  -0.00009334   0.00086461 *
+*    Co      6     -0.00120506  -0.00087682  -0.00007144 *
+*    Co      7      0.00127165  -0.00055874  -0.00007412 *
+*    Co      8     -0.00081528   0.00126111  -0.00007352 *
+*    Co      9      0.00086865   0.00093400  -0.00009424 *
+*    Co     10     -0.00006626  -0.00120901  -0.00087841 *
+*    Co     11     -0.00006779   0.00126687  -0.00055864 *
+*    Co     12     -0.00006830  -0.00081932   0.00126079 *
+*    Co     13     -0.00008914   0.00086450   0.00093281 *
+*    Co     14      0.15842414   0.00009548  -0.09889101 *
+*    Co     15      0.08599887   0.00002265  -0.00003193 *
+*    Co     16      0.15843153   0.00009203   0.09916525 *
+*    Co     17     -0.15816625   0.00009913  -0.09888999 *
+*    Co     18     -0.08565388   0.00003234  -0.00002680 *
+*    Co     19     -0.15816696   0.00009945   0.09917301 *
+*    Co     20     -0.09888994   0.15842801   0.00009554 *
+*    Co     21     -0.00002942   0.08600087   0.00002179 *
+*    Co     22      0.09916817   0.15843155   0.00009111 *
+*    Co     23     -0.09888661  -0.15816886   0.00009868 *
+*    Co     24     -0.00002276  -0.08565263   0.00003167 *
+*    Co     25      0.09917210  -0.15816476   0.00009895 *
+*    Co     26      0.00009838  -0.09889291   0.15842604 *
+*    Co     27      0.00002600  -0.00003138   0.08600054 *
+*    Co     28      0.00009488   0.09916829   0.15843334 *
+*    Co     29      0.00010260  -0.09888725  -0.15816663 *
+*    Co     30      0.00003526  -0.00002615  -0.08565244 *
+*    Co     31      0.00010189   0.09917072  -0.15816656 *
+*    Co     32      0.04196431  -0.02851820   0.07122218 *
+*    Co     33      0.04205080   0.02856058   0.07126597 *
+*    Co     34      0.04185920  -0.02847413  -0.07099110 *
+*    Co     35      0.04194275   0.02852684  -0.07102696 *
+*    Co     36     -0.04190413  -0.02843638   0.07113116 *
+*    Co     37     -0.04199479   0.02849053   0.07117170 *
+*    Co     38     -0.04178469  -0.02840467  -0.07090222 *
+*    Co     39     -0.04187292   0.02845783  -0.07092387 *
+*    Co     40      0.07122277   0.04196010  -0.02851881 *
+*    Co     41      0.07126836   0.04204584   0.02855953 *
+*    Co     42     -0.07099199   0.04185889  -0.02847627 *
+*    Co     43     -0.07102907   0.04194210   0.02852813 *
+*    Co     44      0.07112942  -0.04190335  -0.02843526 *
+*    Co     45      0.07117051  -0.04199416   0.02848839 *
+*    Co     46     -0.07090076  -0.04178737  -0.02840646 *
+*    Co     47     -0.07092218  -0.04187623   0.02845806 *
+*    Co     48     -0.02851675   0.07122552   0.04196136 *
+*    Co     49      0.02856317   0.07126636   0.04204872 *
+*    Co     50     -0.02847203  -0.07099351   0.04185812 *
+*    Co     51      0.02853036  -0.07102827   0.04193957 *
+*    Co     52     -0.02843322   0.07113040  -0.04190613 *
+*    Co     53      0.02849303   0.07116834  -0.04199544 *
+*    Co     54     -0.02840208  -0.07090146  -0.04178672 *
+*    Co     55      0.02845983  -0.07092080  -0.04187470 *
+*                                                        *
+**********************************************************
+TOTAL:              0.00365018   0.00354177   0.00351821
+ 
+********************* Unconstrained **********************
+************ NGWF non self-consistent forces *************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00075495   0.00076259   0.00076373 *
+*    Co      2      0.00337026   0.00071014   0.00005114 *
+*    Co      3      0.00312235   0.00070961   0.00120593 *
+*    Co      4     -0.00238528   0.00071084  -0.00020860 *
+*    Co      5     -0.00214586   0.00070988   0.00147336 *
+*    Co      6      0.00004403   0.00337540   0.00071124 *
+*    Co      7      0.00119743   0.00312906   0.00071072 *
+*    Co      8     -0.00021713  -0.00237860   0.00071193 *
+*    Co      9      0.00146627  -0.00214071   0.00071097 *
+*    Co     10      0.00070289   0.00005088   0.00337705 *
+*    Co     11      0.00070236   0.00120413   0.00312928 *
+*    Co     12      0.00070357  -0.00021042  -0.00237836 *
+*    Co     13      0.00070262   0.00147311  -0.00213910 *
+*    Co     14      0.00244355   0.00043611   0.00004828 *
+*    Co     15      0.00202620   0.00053622   0.00053945 *
+*    Co     16      0.00174674   0.00043716   0.00032074 *
+*    Co     17     -0.00278450   0.00043763  -0.00063419 *
+*    Co     18     -0.00233116   0.00053725   0.00054490 *
+*    Co     19     -0.00210317   0.00043677   0.00101437 *
+*    Co     20      0.00005003   0.00243652   0.00043668 *
+*    Co     21      0.00053302   0.00202318   0.00053697 *
+*    Co     22      0.00031506   0.00174863   0.00043774 *
+*    Co     23     -0.00063952  -0.00278254   0.00043820 *
+*    Co     24      0.00053843  -0.00233420   0.00053801 *
+*    Co     25      0.00101651  -0.00210995   0.00043734 *
+*    Co     26      0.00043217   0.00005232   0.00243987 *
+*    Co     27      0.00053108   0.00053859   0.00202266 *
+*    Co     28      0.00043321   0.00031623   0.00174440 *
+*    Co     29      0.00043383  -0.00063868  -0.00278676 *
+*    Co     30      0.00053211   0.00054405  -0.00233472 *
+*    Co     31      0.00043284   0.00101849  -0.00210658 *
+*    Co     32      0.00148157   0.00107459   0.00086654 *
+*    Co     33      0.00128018  -0.00013690   0.00053729 *
+*    Co     34      0.00199931   0.00073764  -0.00070249 *
+*    Co     35      0.00179882   0.00020643  -0.00038501 *
+*    Co     36     -0.00078274   0.00087481   0.00138153 *
+*    Co     37     -0.00058183   0.00006159   0.00105194 *
+*    Co     38     -0.00128624   0.00054104  -0.00120581 *
+*    Co     39     -0.00108871   0.00040349  -0.00088951 *
+*    Co     40      0.00086378   0.00148881   0.00107444 *
+*    Co     41      0.00053405   0.00128695  -0.00013546 *
+*    Co     42     -0.00069921   0.00199919   0.00074182 *
+*    Co     43     -0.00038116   0.00179826   0.00020356 *
+*    Co     44      0.00138537  -0.00078330   0.00087196 *
+*    Co     45      0.00105522  -0.00058192   0.00006578 *
+*    Co     46     -0.00120905  -0.00127944   0.00054249 *
+*    Co     47     -0.00089217  -0.00108145   0.00040336 *
+*    Co     48      0.00107143   0.00086097   0.00148448 *
+*    Co     49     -0.00014262   0.00053547   0.00128590 *
+*    Co     50      0.00073504  -0.00069674   0.00200123 *
+*    Co     51      0.00020009  -0.00038304   0.00180356 *
+*    Co     52      0.00086847   0.00138349  -0.00077802 *
+*    Co     53      0.00005902   0.00105768  -0.00057989 *
+*    Co     54      0.00053526  -0.00120762  -0.00128050 *
+*    Co     55      0.00040033  -0.00089509  -0.00108578 *
+*                                                        *
+**********************************************************
+TOTAL:              0.01882912   0.01900460   0.01903006
+ 
+********************* Unconstrained **********************
+********************** NLCC forces ***********************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00000000   0.00000000   0.00000000 *
+*    Co      2      0.00000000  -0.00000000  -0.00000000 *
+*    Co      3      0.00000000  -0.00000000   0.00000000 *
+*    Co      4     -0.00000000  -0.00000000  -0.00000000 *
+*    Co      5     -0.00000000  -0.00000000   0.00000000 *
+*    Co      6     -0.00000000   0.00000000  -0.00000000 *
+*    Co      7      0.00000000   0.00000000  -0.00000000 *
+*    Co      8     -0.00000000  -0.00000000  -0.00000000 *
+*    Co      9      0.00000000  -0.00000000  -0.00000000 *
+*    Co     10     -0.00000000  -0.00000000   0.00000000 *
+*    Co     11     -0.00000000   0.00000000   0.00000000 *
+*    Co     12     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     13     -0.00000000   0.00000000  -0.00000000 *
+*    Co     14     -0.00000000  -0.00000000   0.00000000 *
+*    Co     15     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     16     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     17      0.00000000  -0.00000000   0.00000000 *
+*    Co     18      0.00000000  -0.00000000  -0.00000000 *
+*    Co     19      0.00000000  -0.00000000  -0.00000000 *
+*    Co     20      0.00000000  -0.00000000  -0.00000000 *
+*    Co     21     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     22     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     23      0.00000000   0.00000000  -0.00000000 *
+*    Co     24     -0.00000000   0.00000000  -0.00000000 *
+*    Co     25     -0.00000000   0.00000000  -0.00000000 *
+*    Co     26     -0.00000000   0.00000000  -0.00000000 *
+*    Co     27     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     28     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     29     -0.00000000   0.00000000   0.00000000 *
+*    Co     30     -0.00000000  -0.00000000   0.00000000 *
+*    Co     31     -0.00000000  -0.00000000   0.00000000 *
+*    Co     32     -0.00000000   0.00000000  -0.00000000 *
+*    Co     33     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     34     -0.00000000   0.00000000   0.00000000 *
+*    Co     35     -0.00000000  -0.00000000   0.00000000 *
+*    Co     36      0.00000000   0.00000000  -0.00000000 *
+*    Co     37      0.00000000  -0.00000000  -0.00000000 *
+*    Co     38      0.00000000   0.00000000   0.00000000 *
+*    Co     39      0.00000000  -0.00000000   0.00000000 *
+*    Co     40     -0.00000000  -0.00000000   0.00000000 *
+*    Co     41     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     42      0.00000000  -0.00000000   0.00000000 *
+*    Co     43      0.00000000  -0.00000000  -0.00000000 *
+*    Co     44     -0.00000000   0.00000000   0.00000000 *
+*    Co     45     -0.00000000   0.00000000  -0.00000000 *
+*    Co     46      0.00000000   0.00000000   0.00000000 *
+*    Co     47      0.00000000   0.00000000  -0.00000000 *
+*    Co     48      0.00000000  -0.00000000  -0.00000000 *
+*    Co     49     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     50      0.00000000   0.00000000  -0.00000000 *
+*    Co     51     -0.00000000   0.00000000  -0.00000000 *
+*    Co     52      0.00000000  -0.00000000   0.00000000 *
+*    Co     53     -0.00000000  -0.00000000   0.00000000 *
+*    Co     54      0.00000000   0.00000000   0.00000000 *
+*    Co     55     -0.00000000   0.00000000   0.00000000 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00000000  -0.00000000  -0.00000000
+ 
+********************* Unconstrained **********************
+****** Correction to ensure the total force is zero ******
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      2     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      3     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      4     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      5     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      6     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      7     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      8     -0.00005749  -0.00005716  -0.00005706 *
+*    Co      9     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     10     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     11     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     12     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     13     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     14     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     15     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     16     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     17     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     18     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     19     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     20     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     21     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     22     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     23     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     24     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     25     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     26     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     27     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     28     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     29     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     30     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     31     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     32     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     33     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     34     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     35     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     36     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     37     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     38     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     39     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     40     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     41     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     42     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     43     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     44     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     45     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     46     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     47     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     48     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     49     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     50     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     51     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     52     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     53     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     54     -0.00005749  -0.00005716  -0.00005706 *
+*    Co     55     -0.00005749  -0.00005716  -0.00005706 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00316197  -0.00314376  -0.00313842
+
+********************* Unconstrained **********************
+************************* Forces *************************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00016075  -0.00016108  -0.00016123 *
+*    Co      2     -0.00064957  -0.00005133   0.00060840 *
+*    Co      3     -0.00044391  -0.00005219  -0.00058503 *
+*    Co      4      0.00087124  -0.00005993   0.00083469 *
+*    Co      5      0.00067119  -0.00007467  -0.00083038 *
+*    Co      6      0.00060877  -0.00064962  -0.00005177 *
+*    Co      7     -0.00058460  -0.00044544  -0.00005338 *
+*    Co      8      0.00083579   0.00087182  -0.00005998 *
+*    Co      9     -0.00083090   0.00067187  -0.00007481 *
+*    Co     10     -0.00005135   0.00060849  -0.00065022 *
+*    Co     11     -0.00005190  -0.00058534  -0.00044499 *
+*    Co     12     -0.00005951   0.00083531   0.00087184 *
+*    Co     13     -0.00007440  -0.00083095   0.00067178 *
+*    Co     14      0.00021340   0.00000507  -0.00016847 *
+*    Co     15      0.00167470  -0.00000932  -0.00002682 *
+*    Co     16      0.00022123   0.00000603   0.00017628 *
+*    Co     17     -0.00020383   0.00000311  -0.00017478 *
+*    Co     18     -0.00163027  -0.00001022  -0.00003104 *
+*    Co     19     -0.00022267   0.00000446   0.00018878 *
+*    Co     20     -0.00016830   0.00021293   0.00000512 *
+*    Co     21     -0.00002730   0.00167486  -0.00000953 *
+*    Co     22      0.00017710   0.00022304   0.00000584 *
+*    Co     23     -0.00017625  -0.00020506   0.00000317 *
+*    Co     24     -0.00003101  -0.00162963  -0.00001021 *
+*    Co     25      0.00018996  -0.00022372   0.00000448 *
+*    Co     26      0.00000506  -0.00016865   0.00021352 *
+*    Co     27     -0.00000915  -0.00002686   0.00167475 *
+*    Co     28      0.00000620   0.00017702   0.00022281 *
+*    Co     29      0.00000366  -0.00017520  -0.00020482 *
+*    Co     30     -0.00001015  -0.00003105  -0.00162953 *
+*    Co     31      0.00000455   0.00018925  -0.00022377 *
+*    Co     32      0.00066472  -0.00066802   0.00151792 *
+*    Co     33      0.00069111   0.00064224   0.00152450 *
+*    Co     34      0.00063283  -0.00067267  -0.00148996 *
+*    Co     35      0.00066624   0.00064365  -0.00149720 *
+*    Co     36     -0.00069223  -0.00065388   0.00149189 *
+*    Co     37     -0.00071813   0.00063239   0.00150353 *
+*    Co     38     -0.00065948  -0.00066224  -0.00146553 *
+*    Co     39     -0.00068815   0.00062972  -0.00146664 *
+*    Co     40      0.00151584   0.00066426  -0.00066790 *
+*    Co     41      0.00152447   0.00069087   0.00064230 *
+*    Co     42     -0.00149006   0.00063323  -0.00067292 *
+*    Co     43     -0.00149754   0.00066640   0.00064383 *
+*    Co     44      0.00149116  -0.00069194  -0.00065381 *
+*    Co     45      0.00150300  -0.00071779   0.00063244 *
+*    Co     46     -0.00146543  -0.00065929  -0.00066266 *
+*    Co     47     -0.00146655  -0.00068816   0.00063002 *
+*    Co     48     -0.00066849   0.00151819   0.00066465 *
+*    Co     49      0.00064239   0.00152497   0.00069257 *
+*    Co     50     -0.00067273  -0.00149024   0.00063327 *
+*    Co     51      0.00064385  -0.00149749   0.00066629 *
+*    Co     52     -0.00065410   0.00149185  -0.00069200 *
+*    Co     53      0.00063278   0.00150305  -0.00071785 *
+*    Co     54     -0.00066248  -0.00146564  -0.00065925 *
+*    Co     55      0.00062995  -0.00146646  -0.00068814 *
+*                                                        *
+**********************************************************
+* TOTAL:           -0.00000000  -0.00000000   0.00000000 *
+**********************************************************
+ 
+ 
+***********************************************************
+********** Summary of Forces (values in Eh/a) *************
+*                                                         *
+* ---------------------- Minimum ------------------------ *
+* Atom:        17, |F|min =    0.00026852                 *
+* Components:     Fx|min       Fy|min       Fz|min        *
+*              -0.00020383   0.00000311  -0.00017478      *
+*                                                         *
+* ---------------------- Maximum ------------------------ *
+* Atom:        49, |F|max =    0.00179384                 *
+* Components:     Fx|max       Fy|max       Fz|max        *
+*               0.00064239   0.00152497   0.00069257      *
+*                                                         *
+* ---------------- Root Mean Square Force --------------- *
+*                  |F|rms =    0.00137531                 *
+* Components:     Fx|rms       Fy|rms       Fz|rms        *
+*               0.00079396   0.00079408   0.00079407      *
+***********************************************************
+ 
+
+------------------------------ TIMING INFORMATION ------------------------------
+AVERAGE TIME:    2126.524s on     55 proc(s)                                    
+TOTAL TIME:      2126.525s on     55 proc(s)                                    
+==================== AVERAGE TIMINGS FROM ALL PROCS (CUMULATIVE) =====================
+|| TAG                                         #calls     cpu time   %total  Gflops ||
+|| hash_table_free                            :    33        0.00s   0.000%  ------ ||
+|| onetep.F90 main loop imbalance             :     1        0.00s   0.000%  ------ ||
+|| sw_bessel_init_cpu                         :     1        0.02s   0.001%  ------ || (1 procs only)
+|| ewald_calculate_forces_realspace           :     1        0.00s   0.000%  ------ ||
+|| onetep.F90 final imbalance                 :     1        0.00s   0.000%  ------ ||
+|| density_fftbox_interp_mult_imbal           : 15756        0.00s   0.000%  ------ ||
+|| sparse_set_to_garbage                      :   390        0.00s   0.000%  ------ ||
+|| ewald_calculate_forces_recipspace          :     1        0.01s   0.000%  ------ ||
+|| ewald_calculate_forces                     :     1        0.01s   0.000%  ------ ||
+|| pseudo_make_structure_factor               :     1        0.01s   0.000%  ------ ||
+|| paw_tcore_density                          :     1        0.01s   0.000%  ------ ||
+|| ewald_calculate_energy                     :     1        0.01s   0.001%  ------ ||
+|| linalg_dgemv                               :    22        0.02s   0.001%  ------ ||
+|| paw_tcore_hartree_calc_forces              :     1        0.04s   0.002%  ------ ||
+|| basis_extract_function_from_box            :   884        0.04s   0.002%  ------ ||
+|| paw_tcore_hartree_on_grid                  :     1        0.05s   0.002%  ------ ||
+|| augmentation_density_forces                :     1        0.12s   0.006%  ------ ||
+|| integrals_grad_spam3                       :     2        0.14s   0.007%  ------ ||
+|| nonsc_forces_ngwfs_calc                    :     1        0.14s   0.007%  ------ ||
+|| paw_nlcc_calculate_forces                  :     1        0.17s   0.008%  ------ ||
+|| paw_sphere_density_on_grid                 :     1        0.20s   0.009%  ------ ||
+|| sparse_blacstospam3_real_fast_imbal        :  2356        0.21s   0.010%  ------ ||
+|| sw_init                                    :  1211        0.22s   0.010%  ------ ||
+|| restart_hamiltonian_write                  :    17        0.23s   0.011%  ------ ||
+|| paw_dij_hartree                            :   813        0.26s   0.012%  ------ ||
+|| restart_kernel_write                       :    18        0.27s   0.012%  ------ ||
+|| ngwfs_initialise_from_radial               :     2        0.35s   0.017%  ------ ||
+|| sparse_init                                :     1        0.35s   0.017%  ------ ||
+|| paw_species_calc_proj_prec_mat             :     1        0.53s   0.025%  ------ ||
+|| sparse_embed_array_hotelling_invert        :    33        0.97s   0.046%  ------ ||
+|| paw_dataset_init                           :     1        1.30s   0.061%  ------ ||
+|| sparse_spam3toblacs_real_fast_B2           : 130.5k       1.38s   0.065%  ------ ||
+|| fourier_apply_box_pair                     :  1360        1.41s   0.066%  1.191k ||
+|| sparse_spam3toblacs_real_fast_imbal        :  2372        2.00s   0.094%  ------ ||
+|| hamiltonian_energy_components              :     1        2.12s   0.100%  ------ ||
+|| eigenstates_calculate                      :     1        3.03s   0.142%  ------ ||
+|| fourier_filter_cell                        :   422        4.07s   0.191% 110.817 ||
+|| projectors_func_grad_ovlp_box_spam3        :     6        4.23s   0.199%  ------ ||
+|| basis_copy_function_to_box                 : 22412        4.28s   0.201%  ------ ||
+|| aug_nl_calculate_forces                    :     1        4.58s   0.215%  ------ ||
+|| ngwf_gradient_coeffs                       :    17        4.92s   0.232%  ------ ||
+|| sparse_trace                               : 15032        5.31s   0.250%  ------ ||
+|| density_init_guess_real                    :     2        5.35s   0.252%  ------ ||
+|| cell_grid_extract_box_real                 :  7115        7.47s   0.351%  ------ ||
+|| energy_and_force_init_cell                 :     1        7.54s   0.354%  ------ ||
+|| hartree_on_grid_single                     :   605        8.25s   0.388%  ------ ||
+|| projectors_init_fftbox_recip               :   141        8.40s   0.395%  ------ ||
+|| forces_calculate                           :     1        8.45s   0.397%  ------ ||
+|| fourier_interpolate_cell                   :  1212       11.32s   0.532% 114.385 ||
+|| sparse_spam3toblacs_real_fast_B1           : 130.5k      18.24s   0.858%  ------ ||
+|| cell_grid_deposit_box_real                 : 17287       19.58s   0.921%  ------ ||
+|| sparse_product                             : 13844       22.17s   1.042%  ------ ||
+|| fourier_filter                             :  3158       22.77s   1.071%  ------ ||
+|| restart_ngwfs_tightbox_output              :    16       22.83s   1.074%  ------ ||
+|| sparse_spam3toblacs_real_fast              :  2372       24.50s   1.152%  ------ ||
+|| integrals_kinetic_spam3                    :    66       25.09s   1.180%  ------ ||
+|| sparse_blacstospam3_real_fast              :  2356       26.68s   1.255%  ------ ||
+|| function_ops_brappd_ketppd_spam3           :   130       27.17s   1.278%  ------ ||
+|| properties_calculate                       :     1       32.42s   1.524%  ------ ||
+|| fourier_apply_cell_backward                :  5446       39.10s   1.839% 134.056 ||
+|| fourier_apply_cell_forward                 :  5446       40.58s   1.908% 129.170 ||
+|| projectors_gradient_batch                  :    34       41.71s   1.961%  ------ ||
+|| fourier_interpolate                        :  3158       44.47s   2.091%  ------ ||
+|| projectors_func_ovlp_box_spam3             :    66       45.55s   2.142%  ------ ||
+|| density_fftbox_deposit_to_cell             : 15756       52.83s   2.484%  ------ ||
+|| projectors_grad_precond_batch              :    34       54.25s   2.551%  ------ ||
+|| augmentation_screen_dij_spam3              :   604       65.20s   3.066%  ------ ||
+|| dense_eigensolve                           :  1136       70.92s   3.335%  ------ ||
+|| edft_diag_ngwf_ham                         :  1134       94.28s   4.434%  ------ ||
+|| xc_energy_potential                        :   605       94.33s   4.436%  ------ ||
+|| basis_dot_function_with_box                : 4.618M     102.23s   4.807%  ------ ||
+|| ngwf_gradient_build_batch                  :    34      115.28s   5.421%  ------ ||
+|| potential_apply_to_ngwf_batch              :   388      126.60s   5.954%  ------ ||
+|| fourier_apply_box                          : 54248      137.31s   6.457%  2.092k ||
+|| edft_apply_smearing_operator               :   567      138.73s   6.524%  ------ ||
+|| integrals_locpot_mat_els_batch             :   388      143.07s   6.728%  ------ ||
+|| aug_density_on_grid_spam3                  :   606      143.09s   6.729%  ------ ||
+|| ngwf_gradient_batch                        :    34      184.41s   8.672%  ------ ||
+|| ngwf_gradient_lnv                          :    17      190.23s   8.946%  ------ ||
+|| fourier_interpolate_product                : 15756      193.38s   9.094%  ------ ||
+|| paw_dij_xc                                 :   813      196.04s   9.219%  ------ ||
+|| aug_nonlocal_mat_spam3_embed_array         :   795      198.51s   9.335%  ------ ||
+|| density_fftbox_interpolate_multiply        : 15756      218.98s  10.297%  ------ ||
+|| basis_add_function_to_box                  : 12.53M     263.10s  12.372%  ------ ||
+|| integrals_locpot_dbl_grid                  :   388      270.34s  12.713%  ------ ||
+|| density_batch_interp_deposit               :  1212      358.10s  16.840%  ------ ||
+|| density_batch_row_sums                     :  1212      417.34s  19.625%  ------ ||
+|| density_on_dbl_grid                        :  1212      780.21s  36.690%  ------ ||
+|| hamiltonian_lhxc_calculate                 :   602     1117.70s  52.560%  ------ ||
+|| edft_calculate                             :    17     1702.26s  80.049%  ------ ||
+|| ngwf_cg_optimise                           :     1     2063.43s  97.033%  ------ ||
+|| energy_and_forces                          :     1     2118.18s  99.608%  ------ ||
+|| total_time                                 :     1     2126.52s 100.000%  ------ ||
+======================================================================================
+Overhead of generating timer report: 
+- 0 ms averaging over threads,
+- 3 ms ensuring consistency across MPI ranks,
+- 1 ms printing in order.
+
+Job completed: 28-03-2025 23:32 (+0000)
+
+onetep_launcher: ONETEP seems to have finished correctly (zero exit code).
+                 Brought to you by PID 92054 on nid006044.

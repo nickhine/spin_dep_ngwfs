@@ -1,0 +1,69 @@
+&CONTROL
+   calculation      = 'relax'
+   restart_mode     = 'from_scratch'
+   tstress          = .true.
+   tprnfor          = .true.
+   outdir           = './ht_afm_qe'
+   prefix           = 'ht_afm_qe'
+   disk_io          = 'low'
+   pseudo_dir       = '..'
+/
+&SYSTEM
+   nbnd             = 100
+   tot_magnetization = 0
+   ecutwfc          = 90.0000000000000
+   ecutrho          = 370.000000000000
+   occupations      = 'fixed'
+   nspin            = 2
+   input_dft        = 'optB86b'
+   assume_isolated  = '2D'
+   starting_magnetization(1) = 3.0
+   starting_magnetization(2) = 0.0
+   starting_magnetization(3) = -3.0
+   ntyp             = 3
+   nat              = 16
+   ibrav            = 0
+/
+&ELECTRONS
+   conv_thr         = 1e-09
+   diago_david_ndim = 8
+   electron_maxstep = 300
+   mixing_beta      = 0.5
+   startingpot      = 'file'
+   startingwfc      = 'atomic'
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+Cr  51.9961 Cr.GGA-PBE-paw.UPF
+I  126.90447 I.GGA-PBE-paw.UPF
+Cr1  51.9961 Cr.GGA-PBE-paw.UPF
+
+K_POINTS automatic
+6 6 1  0 0 0
+
+CELL_PARAMETERS angstrom
+6.87698202200000 -0.00000000000000 0.00000000000000
+-3.43849101100000 5.95564113200000 0.00000000000000
+-0.00000000000000 0.00000000000000 27.50792808800000
+
+ATOMIC_POSITIONS angstrom
+Cr       5.73081835       1.98521371      15.61421389       
+Cr       2.29232734       3.97042742      15.61421435      
+I        6.71493074      -0.00001318      14.06299131       
+I        3.51950524       2.12556082      14.06299131      
+I        0.08103705       3.83009349      14.06299131       
+I        4.74670607      -0.00001140      17.16543544       
+I        4.50361911       3.83009250      17.16543544       
+I        1.06514785       2.12556004      17.16543544      
+Cr1       3.43849101       1.98521371       9.03176873     
+Cr1       0.00000000       3.97042742       9.03176919      
+I        4.42260340      -0.00001318       7.48054615     
+I        1.22717790       2.12556082       7.48054615       
+I       -2.21129029       3.83009349       7.48054615       
+I        2.45437873      -0.00001140      10.58299027       
+I        2.21129177       3.83009250      10.58299027       
+I       -1.22717949       2.12556004      10.58299027    

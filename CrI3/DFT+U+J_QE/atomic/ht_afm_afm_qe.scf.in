@@ -1,0 +1,75 @@
+&CONTROL
+   calculation      = 'scf'
+   restart_mode     = 'from_scratch'
+   tstress          = .true.
+   tprnfor          = .true.
+   outdir           = './ht_afm_qe'
+   prefix           = 'ht_afm_qe'
+   disk_io          = 'low'
+   pseudo_dir       = '../..'
+/
+&SYSTEM
+   nbnd             = 100
+   tot_magnetization = 0
+   ecutwfc          = 90.0000000000000
+   ecutrho          = 370.000000000000
+   occupations      = 'fixed'
+   nspin            = 2
+   input_dft        = 'PBE'
+   assume_isolated  = '2D'
+   starting_magnetization(1) = 3.0
+   starting_magnetization(2) = 0.0
+   starting_magnetization(3) = -3.0
+   ntyp             = 3
+   nat              = 16
+   ibrav            = 0
+/
+&ELECTRONS
+   conv_thr         = 1e-11
+   diago_david_ndim = 8
+   electron_maxstep = 300
+   mixing_beta      = 0.5
+   startingpot      = 'file'
+   startingwfc      = 'atomic'
+/
+&IONS
+/
+&CELL
+/
+
+ATOMIC_SPECIES
+Cr  51.9961 Cr.GGA-PBE-paw.UPF
+I  126.90447 I.GGA-PBE-paw.UPF
+Cr1  51.9961 Cr.GGA-PBE-paw.UPF
+
+K_POINTS automatic
+6 6 1  0 0 0
+
+CELL_PARAMETERS angstrom
+6.87698202200000 -0.00000000000000 0.00000000000000
+-3.43849101100000 5.95564113200000 0.00000000000000
+-0.00000000000000 0.00000000000000 27.50792808800000
+
+ATOMIC_POSITIONS angstrom
+Cr               5.7301230098        1.9861526731       15.6147519499
+Cr               2.2916319998        3.9694884569       15.6147524099
+I                6.7180429520       -0.0000131800       14.0639584676
+I                3.5166150782        2.1233465681       14.0708970668
+I                0.0781468882        3.8323077419       14.0708970668
+I                4.7444550806       -0.0000114000       17.1572378480
+I                4.5048960416        3.8320191812       17.1570743378
+I                1.0664247816        2.1236333588       17.1570743378
+Cr1              3.4391787815        1.9861327725        9.0312332976
+Cr1              0.0006877715        3.9695083575        9.0312337576
+I                4.4248627642       -0.0000131800        7.4887454540
+I                1.2259008776        2.1236324061        7.4889084063
+I               -2.2125673124        3.8320219039        7.4889084063
+I                2.4512670931       -0.0000114000       10.5820250565
+I                2.2141851164        3.8323019942       10.5750789036
+I               -1.2242861436        2.1233505458       10.5750789036
+
+HUBBARD atomic
+U Cr-3d 2.73
+J0 Cr-3d 0.48
+U Cr1-3d 2.73
+J0 Cr1-3d 0.48

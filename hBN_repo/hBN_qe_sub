@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --partition=nanosim
+#SBATCH --nodes=NNNNN
+#SBATCH --ntasks-per-node=PPPPP
+#SBATCH --cpus-per-task=1
+#SBATCH --time=24:00:00
+##SBATCH --account=phspvr
+#SBATCH --job-name=hBNhBN
+
+export OMP_NUM_THREADS=1
+
+#module purge; module load GCC/12.3.0  OpenMPI/4.1.5 QuantumESPRESSO/7.2
+
+mpirun -n PPPPP /storage/nanosim/qe-7.0/bin/pw.x -in hBNhBN.scf.in >> hBNhBN.scf.out

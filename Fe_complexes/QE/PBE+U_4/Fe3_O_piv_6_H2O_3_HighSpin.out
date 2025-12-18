@@ -1,0 +1,1570 @@
+
+     Program PWSCF v.7.3.1 starts on 30Mar2025 at 12:18:38 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on   128 processors
+
+     MPI processes distributed on     2 nodes
+     239944 MiB available memory on the printing compute node when the environment starts
+
+     Reading input from Fe3_O_piv_6_H2O_3_HighSpin.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+     file Fe.GGA-PBE-paw.UPF: wavefunction(s)  4S 3P 4P 3D 4D renormalized
+     file O.GGA-PBE-paw.UPF: wavefunction(s)  3S 2P 3P renormalized
+     file H.GGA-PBE-paw.UPF: wavefunction(s)  2S 2P renormalized
+     file C.GGA-PBE-paw.UPF: wavefunction(s)  3S 3P renormalized
+     Message from routine setup:
+     the system is metallic, specify occupations
+
+     R & G space division:  proc/nbgrp/npool/nimage =     128
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     custom distributed-memory algorithm (size of sub-group:  2*  2 procs)
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         542     542    135               100828   100828   12601
+     Max         543     543    136               100837   100837   12608
+     Sum       69493   69493  17367             12906675 12906675 1613349
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      61.4318  a.u.
+     unit-cell volume          =  211893.4902 (a.u.)^3
+     number of atoms/cell      =          109
+     number of atomic types    =            4
+     number of electrons       =       323.00 (up: 169.00, down: 154.00)
+     number of Kohn-Sham states=          169
+     kinetic-energy cutoff     =      58.8000  Ry
+     charge density cutoff     =     235.2000  Ry
+     scf convergence threshold =      1.0E-06
+     mixing beta               =       0.3000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= SLA PW PBX PBC
+                           (   1   4   3   4   0   0   0)
+     Hubbard projectors: ortho-atomic
+     Hubbard parameters of DFT+U (Dudarev formulation) in eV:
+     U(Fe-3d) =  4.0000
+
+     Internal variables: lda_plus_u =T, lda_plus_u_kind = 0
+
+     celldm(1)=  61.431848  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   0.983954   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.928885 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.016308  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.076559 )  
+
+
+     PseudoPot. # 1 for Fe read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/Fe.GGA-PBE-paw.UPF
+     MD5 check sum: 89f6fde11583ee234fe819c830abe0a6
+     Pseudo is Projector augmented-wave + core cor, Zval = 16.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for O  read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/O.GGA-PBE-paw.UPF
+     MD5 check sum: 75cebe6e27812ecd511c7c5e5b8738d8
+     Pseudo is Projector augmented-wave + core cor, Zval =  6.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for H  read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/H.GGA-PBE-paw.UPF
+     MD5 check sum: b9d592600ff6b56d2e28875790887365
+     Pseudo is Projector augmented-wave + core cor, Zval =  1.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  3 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 4 for C  read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/C.GGA-PBE-paw.UPF
+     MD5 check sum: 6449554384d65163c08b954f27925b11
+     Pseudo is Projector augmented-wave + core cor, Zval =  4.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+     Fe               16.00    55.84500     Fe( 1.00)
+     O                 6.00    16.00000     O ( 1.00)
+     H                 1.00     1.00800     H ( 1.00)
+     C                 4.00    12.01100     C ( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+     Fe              0.312
+     O               0.000
+     H               0.000
+     C               0.000
+
+     No symmetry found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Fe     tau(   1) = (   0.5339877   0.4530735   0.4734192  )
+         2        Fe     tau(   2) = (   0.5059010   0.4973119   0.3865703  )
+         3        Fe     tau(   3) = (   0.4616292   0.5239900   0.4739621  )
+         4        O      tau(   4) = (   0.5002216   0.4912537   0.4445097  )
+         5        O      tau(   5) = (   0.5746154   0.4093125   0.5028391  )
+         6        H      tau(   6) = (   0.5802858   0.3878163   0.4831816  )
+         7        H      tau(   7) = (   0.6005106   0.4221346   0.5094964  )
+         8        O      tau(   8) = (   0.5097534   0.5084191   0.3209634  )
+         9        H      tau(   9) = (   0.5094926   0.5379557   0.3178732  )
+        10        H      tau(  10) = (   0.4853477   0.4981564   0.3076134  )
+        11        O      tau(  11) = (   0.4180849   0.5590590   0.5103948  )
+        12        H      tau(  12) = (   0.4067417   0.5403957   0.5304998  )
+        13        H      tau(  13) = (   0.4323383   0.5802927   0.5253876  )
+        14        O      tau(  14) = (   0.5867006   0.4740920   0.4469997  )
+        15        O      tau(  15) = (   0.5668188   0.5032456   0.3883297  )
+        16        O      tau(  16) = (   0.5313992   0.4076959   0.4311016  )
+        17        O      tau(  17) = (   0.5099391   0.4373170   0.3732665  )
+        18        O      tau(  18) = (   0.5014911   0.5601000   0.3861378  )
+        19        O      tau(  19) = (   0.4743746   0.5773228   0.4465760  )
+        20        O      tau(  20) = (   0.4447183   0.4938718   0.3754437  )
+        21        O      tau(  21) = (   0.4157319   0.5123732   0.4346726  )
+        22        O      tau(  22) = (   0.5018106   0.5403493   0.5192085  )
+        23        O      tau(  23) = (   0.5471536   0.4891179   0.5215587  )
+        24        O      tau(  24) = (   0.4409377   0.4781653   0.5107294  )
+        25        O      tau(  25) = (   0.4868020   0.4277912   0.5038214  )
+        26        C      tau(  26) = (   0.5936324   0.4946784   0.4150054  )
+        27        C      tau(  27) = (   0.6369305   0.5111515   0.4075349  )
+        28        C      tau(  28) = (   0.6512247   0.4971056   0.3649317  )
+        29        H      tau(  29) = (   0.6301521   0.5074851   0.3410016  )
+        30        H      tau(  30) = (   0.6535368   0.4636089   0.3632141  )
+        31        H      tau(  31) = (   0.6816679   0.5098299   0.3586058  )
+        32        C      tau(  32) = (   0.6341491   0.5582294   0.4085348  )
+        33        H      tau(  33) = (   0.6127756   0.5695186   0.3852661  )
+        34        H      tau(  34) = (   0.6644718   0.5713133   0.4023591  )
+        35        H      tau(  35) = (   0.6240819   0.5693010   0.4386547  )
+        36        C      tau(  36) = (   0.6667561   0.4961566   0.4403811  )
+        37        H      tau(  37) = (   0.6692404   0.4626640   0.4403589  )
+        38        H      tau(  38) = (   0.6572799   0.5059517   0.4710604  )
+        39        H      tau(  39) = (   0.6973182   0.5087385   0.4343605  )
+        40        C      tau(  40) = (   0.5209514   0.4064312   0.3937498  )
+        41        C      tau(  41) = (   0.5202540   0.3644788   0.3728082  )
+        42        C      tau(  42) = (   0.4785993   0.3451712   0.3839431  )
+        43        H      tau(  43) = (   0.4531049   0.3637901   0.3724361  )
+        44        H      tau(  44) = (   0.4753050   0.3417383   0.4171947  )
+        45        H      tau(  45) = (   0.4763541   0.3147013   0.3699628  )
+        46        C      tau(  46) = (   0.5550438   0.3375172   0.3891832  )
+        47        H      tau(  47) = (   0.5851264   0.3512286   0.3830730  )
+        48        H      tau(  48) = (   0.5541773   0.3076134   0.3739139  )
+        49        H      tau(  49) = (   0.5520833   0.3323501   0.4221963  )
+        50        C      tau(  50) = (   0.5238422   0.3691034   0.3262789  )
+        51        H      tau(  51) = (   0.5526978   0.3839597   0.3175995  )
+        52        H      tau(  52) = (   0.4986325   0.3873298   0.3137800  )
+        53        H      tau(  53) = (   0.5230527   0.3387533   0.3118998  )
+        54        C      tau(  54) = (   0.4894749   0.5862488   0.4119937  )
+        55        C      tau(  55) = (   0.4927408   0.6318506   0.4014369  )
+        56        C      tau(  56) = (   0.5137947   0.6383208   0.3600997  )
+        57        H      tau(  57) = (   0.5165066   0.6712299   0.3539382  )
+        58        H      tau(  58) = (   0.4961380   0.6246763   0.3349910  )
+        59        H      tau(  59) = (   0.5446493   0.6250939   0.3597462  )
+        60        C      tau(  60) = (   0.4489262   0.6492358   0.4001516  )
+        61        H      tau(  61) = (   0.4501183   0.6820473   0.3930419  )
+        62        H      tau(  62) = (   0.4334026   0.6453226   0.4296305  )
+        63        H      tau(  63) = (   0.4304896   0.6342248   0.3763716  )
+        64        C      tau(  64) = (   0.5173147   0.6531059   0.4355437  )
+        65        H      tau(  65) = (   0.5188822   0.6860799   0.4293166  )
+        66        H      tau(  66) = (   0.5487992   0.6414031   0.4370249  )
+        67        H      tau(  67) = (   0.5029057   0.6485890   0.4654837  )
+        68        C      tau(  68) = (   0.4138339   0.4995644   0.3982442  )
+        69        C      tau(  69) = (   0.3716829   0.4894705   0.3802524  )
+        70        C      tau(  70) = (   0.3700473   0.4426319   0.3747011  )
+        71        H      tau(  71) = (   0.3405670   0.4340235   0.3610761  )
+        72        H      tau(  72) = (   0.3727758   0.4267436   0.4042031  )
+        73        H      tau(  73) = (   0.3946136   0.4319406   0.3544771  )
+        74        C      tau(  74) = (   0.3674130   0.5105349   0.3383993  )
+        75        H      tau(  75) = (   0.3375433   0.5029086   0.3250606  )
+        76        H      tau(  76) = (   0.3912628   0.5003951   0.3171012  )
+        77        H      tau(  77) = (   0.3691391   0.5439859   0.3412715  )
+        78        C      tau(  78) = (   0.3373435   0.5034112   0.4088997  )
+        79        H      tau(  79) = (   0.3076134   0.4957062   0.3952770  )
+        80        H      tau(  80) = (   0.3382527   0.5365805   0.4140055  )
+        81        H      tau(  81) = (   0.3393985   0.4883526   0.4388100  )
+        82        C      tau(  82) = (   0.5326607   0.5226663   0.5344687  )
+        83        C      tau(  83) = (   0.5528189   0.5423577   0.5720001  )
+        84        C      tau(  84) = (   0.5522921   0.5891475   0.5679748  )
+        85        H      tau(  85) = (   0.5698594   0.5993699   0.5412060  )
+        86        H      tau(  86) = (   0.5661434   0.6029265   0.5952996  )
+        87        H      tau(  87) = (   0.5210253   0.6008738   0.5649833  )
+        88        C      tau(  88) = (   0.5267943   0.5292189   0.6091645  )
+        89        H      tau(  89) = (   0.5264197   0.4957914   0.6126142  )
+        90        H      tau(  90) = (   0.4951332   0.5400906   0.6063616  )
+        91        H      tau(  91) = (   0.5398692   0.5423745   0.6371797  )
+        92        C      tau(  92) = (   0.5968075   0.5270300   0.5773847  )
+        93        H      tau(  93) = (   0.6105409   0.5416373   0.6043389  )
+        94        H      tau(  94) = (   0.6157994   0.5345817   0.5507147  )
+        95        H      tau(  95) = (   0.5977730   0.4938102   0.5818793  )
+        96        C      tau(  96) = (   0.4533804   0.4419294   0.5171184  )
+        97        C      tau(  97) = (   0.4252941   0.4131333   0.5412201  )
+        98        C      tau(  98) = (   0.3944838   0.3959014   0.5098108  )
+        99        H      tau(  99) = (   0.3731140   0.3752064   0.5254263  )
+       100        H      tau( 100) = (   0.4101610   0.3784418   0.4857532  )
+       101        H      tau( 101) = (   0.3766945   0.4205254   0.4954693  )
+       102        C      tau( 102) = (   0.4022744   0.4368903   0.5745675  )
+       103        H      tau( 103) = (   0.3825623   0.4157912   0.5917290  )
+       104        H      tau( 104) = (   0.3828207   0.4608487   0.5614262  )
+       105        H      tau( 105) = (   0.4235009   0.4511245   0.5964137  )
+       106        C      tau( 106) = (   0.4498339   0.3780296   0.5602962  )
+       107        H      tau( 107) = (   0.4289534   0.3573707   0.5765989  )
+       108        H      tau( 108) = (   0.4724756   0.3894092   0.5823574  )
+       109        H      tau( 109) = (   0.4661544   0.3603327   0.5369697  )
+
+     number of k points=     1
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+
+     Dense  grid: 12906675 G-vectors     FFT dimensions: ( 300, 300, 288)
+
+     Estimated max dynamical RAM per process >       1.14 GB
+
+     Estimated total dynamical RAM >     145.44 GB
+
+     Check: negative core charge=   -0.000002
+     Generating pointlists ...
+     new r_m :   0.0241 (alat units)  1.4832 (a.u.) for type    1
+     new r_m :   0.0122 (alat units)  0.7512 (a.u.) for type    2
+     new r_m :   0.0122 (alat units)  0.7512 (a.u.) for type    3
+     new r_m :   0.0138 (alat units)  0.8494 (a.u.) for type    4
+
+     Initial potential from superposition of free atoms
+
+     starting charge     323.9959, renormalised to     323.0000
+
+     negative rho (up, down):  5.075E-02 3.490E-02
+
+     STARTING HUBBARD OCCUPATIONS:
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    1 ------------------------
+     Tr[ns(  1)] (up, down, total) =   5.00000  2.00000  7.00000
+     Atomic magnetic moment for atom   1 =   3.00000
+     SPIN  1
+     eigenvalues:
+       1.000  1.000  1.000  1.000  1.000
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     SPIN  2
+     eigenvalues:
+       0.400  0.400  0.400  0.400  0.400
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.400  0.000  0.000  0.000  0.000
+       0.000  0.400  0.000  0.000  0.000
+       0.000  0.000  0.400  0.000  0.000
+       0.000  0.000  0.000  0.400  0.000
+       0.000  0.000  0.000  0.000  0.400
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] (up, down, total) =   5.00000  2.00000  7.00000
+     Atomic magnetic moment for atom   2 =   3.00000
+     SPIN  1
+     eigenvalues:
+       1.000  1.000  1.000  1.000  1.000
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     SPIN  2
+     eigenvalues:
+       0.400  0.400  0.400  0.400  0.400
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.400  0.000  0.000  0.000  0.000
+       0.000  0.400  0.000  0.000  0.000
+       0.000  0.000  0.400  0.000  0.000
+       0.000  0.000  0.000  0.400  0.000
+       0.000  0.000  0.000  0.000  0.400
+     ------------------------ ATOM    3 ------------------------
+     Tr[ns(  3)] (up, down, total) =   5.00000  2.00000  7.00000
+     Atomic magnetic moment for atom   3 =   3.00000
+     SPIN  1
+     eigenvalues:
+       1.000  1.000  1.000  1.000  1.000
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     SPIN  2
+     eigenvalues:
+       0.400  0.400  0.400  0.400  0.400
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.400  0.000  0.000  0.000  0.000
+       0.000  0.400  0.000  0.000  0.000
+       0.000  0.000  0.400  0.000  0.000
+       0.000  0.000  0.000  0.400  0.000
+       0.000  0.000  0.000  0.000  0.400
+
+     Number of occupied Hubbard levels =   21.0000
+
+     Atomic wfc used for Hubbard projectors are orthogonalized
+
+     Starting wfcs are  722 randomized atomic wfcs
+     Checking if some PAW data can be deallocated... 
+
+     total cpu time spent up to now is       82.6 secs
+
+     per-process dynamical memory:   419.3 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.00E-02,  avg # of iterations =  2.0
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    1 ------------------------
+     Tr[ns(  1)] (up, down, total) =   4.87646  0.27604  5.15250
+     Atomic magnetic moment for atom   1 =   4.60042
+     SPIN  1
+     eigenvalues:
+       0.965  0.970  0.976  0.979  0.987
+     eigenvectors (columns):
+       0.222  0.107  0.798  0.532 -0.137
+      -0.447  0.355  0.501 -0.546  0.353
+      -0.718 -0.442 -0.007  0.467  0.267
+      -0.431  0.000  0.071 -0.155 -0.886
+      -0.223  0.817 -0.326  0.420  0.009
+     occupation matrix ns (before diag.):
+       0.976 -0.000  0.002  0.002  0.001
+      -0.000  0.975 -0.002 -0.005 -0.003
+       0.002 -0.002  0.970 -0.006  0.001
+       0.002 -0.005 -0.006  0.982 -0.001
+       0.001 -0.003  0.001 -0.001  0.972
+     SPIN  2
+     eigenvalues:
+       0.026  0.027  0.029  0.097  0.098
+     eigenvectors (columns):
+       0.713  0.616 -0.041 -0.164  0.287
+       0.398 -0.345  0.494  0.662  0.200
+      -0.001  0.468  0.244  0.303 -0.794
+       0.249 -0.146 -0.830  0.445 -0.171
+      -0.520  0.511 -0.077  0.494  0.467
+     occupation matrix ns (before diag.):
+       0.034 -0.004 -0.020 -0.009  0.004
+      -0.004  0.061  0.003  0.017  0.030
+      -0.020  0.003  0.078  0.019 -0.016
+      -0.009  0.017  0.019  0.044  0.010
+       0.004  0.030 -0.016  0.010  0.059
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] (up, down, total) =   4.87700  0.27405  5.15105
+     Atomic magnetic moment for atom   2 =   4.60296
+     SPIN  1
+     eigenvalues:
+       0.964  0.970  0.977  0.979  0.987
+     eigenvectors (columns):
+      -0.266 -0.902  0.196  0.141 -0.242
+      -0.136 -0.029 -0.094  0.763  0.625
+       0.015 -0.285  0.055 -0.607  0.740
+       0.920 -0.296 -0.220  0.132 -0.008
+       0.254  0.131  0.949  0.112  0.067
+     occupation matrix ns (before diag.):
+       0.971 -0.002 -0.004  0.001  0.002
+      -0.002  0.982  0.004  0.002  0.001
+      -0.004  0.004  0.982 -0.001  0.001
+       0.001  0.002 -0.001  0.965 -0.003
+       0.002  0.001  0.001 -0.003  0.976
+     SPIN  2
+     eigenvalues:
+       0.026  0.027  0.028  0.095  0.099
+     eigenvectors (columns):
+      -0.051 -0.125 -0.222 -0.421  0.869
+      -0.033 -0.456  0.871  0.041  0.175
+       0.038  0.867  0.435 -0.192  0.146
+      -0.150 -0.138  0.051 -0.873 -0.439
+       0.986 -0.076  0.009 -0.146 -0.021
+     occupation matrix ns (before diag.):
+       0.093  0.009  0.014 -0.002  0.003
+       0.009  0.030  0.002 -0.008 -0.001
+       0.014  0.002  0.031  0.007  0.002
+      -0.002 -0.008  0.007  0.092  0.010
+       0.003 -0.001  0.002  0.010  0.027
+     ------------------------ ATOM    3 ------------------------
+     Tr[ns(  3)] (up, down, total) =   4.86768  0.26844  5.13611
+     Atomic magnetic moment for atom   3 =   4.59924
+     SPIN  1
+     eigenvalues:
+       0.963  0.969  0.973  0.977  0.986
+     eigenvectors (columns):
+       0.268 -0.104  0.567  0.764 -0.115
+      -0.558 -0.597 -0.346  0.405  0.222
+      -0.606  0.305  0.587 -0.118  0.425
+       0.489 -0.092 -0.074  0.001  0.864
+      -0.104  0.729 -0.457  0.489  0.097
+     occupation matrix ns (before diag.):
+       0.975  0.002  0.001 -0.003  0.002
+       0.002  0.970 -0.002  0.005  0.002
+       0.001 -0.002  0.972  0.008 -0.001
+      -0.003  0.005  0.008  0.980  0.002
+       0.002  0.002 -0.001  0.002  0.972
+     SPIN  2
+     eigenvalues:
+       0.025  0.026  0.028  0.094  0.096
+     eigenvectors (columns):
+       0.523  0.743  0.361  0.193  0.081
+      -0.189  0.456 -0.177 -0.719 -0.457
+       0.495 -0.089 -0.419 -0.463  0.598
+       0.063  0.250 -0.812  0.478 -0.215
+      -0.665  0.412 -0.054  0.057  0.618
+     occupation matrix ns (before diag.):
+       0.029 -0.012 -0.003  0.005  0.004
+      -0.012  0.076  0.004 -0.016 -0.022
+      -0.003  0.004  0.066 -0.023  0.024
+       0.005 -0.016 -0.023  0.046 -0.007
+       0.004 -0.022  0.024 -0.007  0.052
+
+     Number of occupied Hubbard levels =   15.4397
+
+     negative rho (up, down):  5.283E-02 3.727E-02
+
+     total cpu time spent up to now is      115.2 secs
+
+     total energy              =   -2276.32800231 Ry
+     estimated scf accuracy    <      18.75981508 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.47 Bohr mag/cell
+
+     iteration #  2     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  5.81E-03,  avg # of iterations =  3.0
+
+     negative rho (up, down):  5.511E-02 3.847E-02
+
+     total cpu time spent up to now is      144.7 secs
+
+     total energy              =   -2278.00684989 Ry
+     estimated scf accuracy    <       2.40137626 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.41 Bohr mag/cell
+
+     iteration #  3     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  7.43E-04,  avg # of iterations =  3.5
+
+     negative rho (up, down):  5.679E-02 3.917E-02
+
+     total cpu time spent up to now is      175.4 secs
+
+     total energy              =   -2278.15015313 Ry
+     estimated scf accuracy    <       0.71637513 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.21 Bohr mag/cell
+
+     iteration #  4     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  2.22E-04,  avg # of iterations =  3.0
+
+     negative rho (up, down):  5.823E-02 4.009E-02
+
+     total cpu time spent up to now is      203.4 secs
+
+     total energy              =   -2278.27360116 Ry
+     estimated scf accuracy    <       0.33310468 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.15 Bohr mag/cell
+
+     iteration #  5     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.03E-04,  avg # of iterations =  2.0
+
+     negative rho (up, down):  5.904E-02 4.059E-02
+
+     total cpu time spent up to now is      228.0 secs
+
+     total energy              =   -2278.29938699 Ry
+     estimated scf accuracy    <       0.04565187 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.11 Bohr mag/cell
+
+     iteration #  6     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.41E-05,  avg # of iterations =  4.0
+
+     negative rho (up, down):  5.920E-02 4.069E-02
+
+     total cpu time spent up to now is      257.0 secs
+
+     total energy              =   -2278.30962054 Ry
+     estimated scf accuracy    <       0.00327619 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.10 Bohr mag/cell
+
+     iteration #  7     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.01E-06,  avg # of iterations =  3.0
+
+     negative rho (up, down):  5.930E-02 4.073E-02
+
+     total cpu time spent up to now is      289.8 secs
+
+     total energy              =   -2278.31086491 Ry
+     estimated scf accuracy    <       0.00357355 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     iteration #  8     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.01E-06,  avg # of iterations =  2.5
+
+     negative rho (up, down):  5.934E-02 4.073E-02
+
+     total cpu time spent up to now is      316.0 secs
+
+     total energy              =   -2278.31160526 Ry
+     estimated scf accuracy    <       0.00029109 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     iteration #  9     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  9.01E-08,  avg # of iterations =  3.0
+
+     negative rho (up, down):  5.936E-02 4.073E-02
+
+     total cpu time spent up to now is      348.9 secs
+
+     total energy              =   -2278.31171229 Ry
+     estimated scf accuracy    <       0.00019115 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     iteration # 10     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  5.92E-08,  avg # of iterations =  1.5
+
+     negative rho (up, down):  5.937E-02 4.073E-02
+
+     total cpu time spent up to now is      373.2 secs
+
+     total energy              =   -2278.31172371 Ry
+     estimated scf accuracy    <       0.00006018 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     iteration # 11     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.86E-08,  avg # of iterations =  3.0
+
+     negative rho (up, down):  5.936E-02 4.072E-02
+
+     total cpu time spent up to now is      406.1 secs
+
+     total energy              =   -2278.31173799 Ry
+     estimated scf accuracy    <       0.00001725 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     iteration # 12     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  5.34E-09,  avg # of iterations =  2.5
+
+     negative rho (up, down):  5.936E-02 4.072E-02
+
+     total cpu time spent up to now is      438.3 secs
+
+     total energy              =   -2278.31174407 Ry
+     estimated scf accuracy    <       0.00000509 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     iteration # 13     ecut=    58.80 Ry     beta= 0.30
+     Davidson diagonalization with overlap
+     ethr =  1.58E-09,  avg # of iterations =  2.0
+
+     negative rho (up, down):  5.936E-02 4.071E-02
+
+     Magnetic moment per site  (integrated on atomic sphere of radius R)
+     atom   1 (R=0.024)  charge= 12.6731  magn=  3.8425
+     atom   2 (R=0.024)  charge= 12.6714  magn=  3.8419
+     atom   3 (R=0.024)  charge= 12.6715  magn=  3.8425
+     atom   4 (R=0.012)  charge=  1.8969  magn=  0.1958
+     atom   5 (R=0.012)  charge=  1.9185  magn=  0.0186
+     atom   6 (R=0.012)  charge=  0.3938  magn=  0.0003
+     atom   7 (R=0.012)  charge=  0.3943  magn=  0.0004
+     atom   8 (R=0.012)  charge=  1.9109  magn=  0.0188
+     atom   9 (R=0.012)  charge=  0.3919  magn=  0.0003
+     atom  10 (R=0.012)  charge=  0.3965  magn=  0.0004
+     atom  11 (R=0.012)  charge=  1.9244  magn=  0.0185
+     atom  12 (R=0.012)  charge=  0.3928  magn=  0.0003
+     atom  13 (R=0.012)  charge=  0.3951  magn=  0.0004
+     atom  14 (R=0.012)  charge=  1.9202  magn=  0.0406
+     atom  15 (R=0.012)  charge=  1.9206  magn=  0.0433
+     atom  16 (R=0.012)  charge=  1.9250  magn=  0.0398
+     atom  17 (R=0.012)  charge=  1.9151  magn=  0.0420
+     atom  18 (R=0.012)  charge=  1.9217  magn=  0.0381
+     atom  19 (R=0.012)  charge=  1.9170  magn=  0.0416
+     atom  20 (R=0.012)  charge=  1.9246  magn=  0.0407
+     atom  21 (R=0.012)  charge=  1.9177  magn=  0.0431
+     atom  22 (R=0.012)  charge=  1.9218  magn=  0.0391
+     atom  23 (R=0.012)  charge=  1.9124  magn=  0.0414
+     atom  24 (R=0.012)  charge=  1.9178  magn=  0.0396
+     atom  25 (R=0.012)  charge=  1.9162  magn=  0.0425
+     atom  26 (R=0.014)  charge=  0.8366  magn=  0.0029
+     atom  27 (R=0.014)  charge=  0.8339  magn=  0.0048
+     atom  28 (R=0.014)  charge=  0.8524  magn=  0.0002
+     atom  29 (R=0.012)  charge=  0.3862  magn=  0.0000
+     atom  30 (R=0.012)  charge=  0.3879  magn=  0.0000
+     atom  31 (R=0.012)  charge=  0.3876  magn=  0.0003
+     atom  32 (R=0.014)  charge=  0.8533  magn=  0.0002
+     atom  33 (R=0.012)  charge=  0.3878  magn=  0.0000
+     atom  34 (R=0.012)  charge=  0.3856  magn=  0.0004
+     atom  35 (R=0.012)  charge=  0.3876  magn=  0.0000
+     atom  36 (R=0.014)  charge=  0.8565  magn=  0.0004
+     atom  37 (R=0.012)  charge=  0.3876  magn=  0.0000
+     atom  38 (R=0.012)  charge=  0.3866  magn=  0.0000
+     atom  39 (R=0.012)  charge=  0.3855  magn=  0.0003
+     atom  40 (R=0.014)  charge=  0.8350  magn=  0.0032
+     atom  41 (R=0.014)  charge=  0.8332  magn=  0.0047
+     atom  42 (R=0.014)  charge=  0.8524  magn=  0.0002
+     atom  43 (R=0.012)  charge=  0.3855  magn=  0.0000
+     atom  44 (R=0.012)  charge=  0.3871  magn=  0.0000
+     atom  45 (R=0.012)  charge=  0.3839  magn=  0.0003
+     atom  46 (R=0.014)  charge=  0.8553  magn=  0.0004
+     atom  47 (R=0.012)  charge=  0.3880  magn=  0.0000
+     atom  48 (R=0.012)  charge=  0.3852  magn=  0.0003
+     atom  49 (R=0.012)  charge=  0.3892  magn=  0.0000
+     atom  50 (R=0.014)  charge=  0.8548  magn=  0.0004
+     atom  51 (R=0.012)  charge=  0.3864  magn=  0.0000
+     atom  52 (R=0.012)  charge=  0.3885  magn=  0.0000
+     atom  53 (R=0.012)  charge=  0.3869  magn=  0.0003
+     atom  54 (R=0.014)  charge=  0.8352  magn=  0.0030
+     atom  55 (R=0.014)  charge=  0.8326  magn=  0.0046
+     atom  56 (R=0.014)  charge=  0.8559  magn=  0.0004
+     atom  57 (R=0.012)  charge=  0.3874  magn=  0.0003
+     atom  58 (R=0.012)  charge=  0.3877  magn=  0.0000
+     atom  59 (R=0.012)  charge=  0.3889  magn=  0.0000
+     atom  60 (R=0.014)  charge=  0.8534  magn=  0.0002
+     atom  61 (R=0.012)  charge=  0.3853  magn=  0.0003
+     atom  62 (R=0.012)  charge=  0.3861  magn=  0.0000
+     atom  63 (R=0.012)  charge=  0.3873  magn=  0.0000
+     atom  64 (R=0.014)  charge=  0.8528  magn=  0.0003
+     atom  65 (R=0.012)  charge=  0.3853  magn=  0.0003
+     atom  66 (R=0.012)  charge=  0.3884  magn=  0.0000
+     atom  67 (R=0.012)  charge=  0.3866  magn=  0.0000
+     atom  68 (R=0.014)  charge=  0.8364  magn=  0.0029
+     atom  69 (R=0.014)  charge=  0.8326  magn=  0.0047
+     atom  70 (R=0.014)  charge=  0.8548  magn=  0.0002
+     atom  71 (R=0.012)  charge=  0.3851  magn=  0.0003
+     atom  72 (R=0.012)  charge=  0.3859  magn=  0.0000
+     atom  73 (R=0.012)  charge=  0.3875  magn=  0.0000
+     atom  74 (R=0.014)  charge=  0.8536  magn=  0.0003
+     atom  75 (R=0.012)  charge=  0.3865  magn=  0.0003
+     atom  76 (R=0.012)  charge=  0.3897  magn=  0.0000
+     atom  77 (R=0.012)  charge=  0.3867  magn=  0.0000
+     atom  78 (R=0.014)  charge=  0.8555  magn=  0.0004
+     atom  79 (R=0.012)  charge=  0.3872  magn=  0.0003
+     atom  80 (R=0.012)  charge=  0.3885  magn=  0.0000
+     atom  81 (R=0.012)  charge=  0.3866  magn=  0.0000
+     atom  82 (R=0.014)  charge=  0.8360  magn=  0.0029
+     atom  83 (R=0.014)  charge=  0.8333  magn=  0.0047
+     atom  84 (R=0.014)  charge=  0.8535  magn=  0.0004
+     atom  85 (R=0.012)  charge=  0.3862  magn=  0.0000
+     atom  86 (R=0.012)  charge=  0.3868  magn=  0.0003
+     atom  87 (R=0.012)  charge=  0.3886  magn=  0.0000
+     atom  88 (R=0.014)  charge=  0.8535  magn=  0.0001
+     atom  89 (R=0.012)  charge=  0.3861  magn=  0.0000
+     atom  90 (R=0.012)  charge=  0.3890  magn=  0.0000
+     atom  91 (R=0.012)  charge=  0.3858  magn=  0.0003
+     atom  92 (R=0.014)  charge=  0.8549  magn=  0.0004
+     atom  93 (R=0.012)  charge=  0.3854  magn=  0.0003
+     atom  94 (R=0.012)  charge=  0.3866  magn=  0.0000
+     atom  95 (R=0.012)  charge=  0.3891  magn=  0.0000
+     atom  96 (R=0.014)  charge=  0.8369  magn=  0.0030
+     atom  97 (R=0.014)  charge=  0.8325  magn=  0.0046
+     atom  98 (R=0.014)  charge=  0.8524  magn=  0.0002
+     atom  99 (R=0.012)  charge=  0.3849  magn=  0.0003
+     atom 100 (R=0.012)  charge=  0.3871  magn=  0.0000
+     atom 101 (R=0.012)  charge=  0.3856  magn=  0.0000
+     atom 102 (R=0.014)  charge=  0.8539  magn=  0.0004
+     atom 103 (R=0.012)  charge=  0.3862  magn=  0.0003
+     atom 104 (R=0.012)  charge=  0.3884  magn=  0.0000
+     atom 105 (R=0.012)  charge=  0.3864  magn=  0.0000
+     atom 106 (R=0.014)  charge=  0.8566  magn=  0.0004
+     atom 107 (R=0.012)  charge=  0.3866  magn=  0.0003
+     atom 108 (R=0.012)  charge=  0.3877  magn=  0.0000
+     atom 109 (R=0.012)  charge=  0.3868  magn=  0.0000
+
+     total cpu time spent up to now is      465.8 secs
+
+     End of self-consistent calculation
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    1 ------------------------
+     Tr[ns(  1)] (up, down, total) =   4.88664  0.84314  5.72977
+     Atomic magnetic moment for atom   1 =   4.04350
+     SPIN  1
+     eigenvalues:
+       0.968  0.973  0.979  0.983  0.983
+     eigenvectors (columns):
+       0.285  0.164 -0.727  0.494 -0.345
+      -0.414  0.519  0.320  0.655  0.168
+      -0.727 -0.420 -0.476  0.039  0.258
+      -0.444  0.074  0.130 -0.181 -0.865
+      -0.145  0.722 -0.355 -0.542  0.196
+     occupation matrix ns (before diag.):
+       0.980  0.002  0.002  0.002 -0.001
+       0.002  0.977 -0.002 -0.003 -0.004
+       0.002 -0.002  0.973 -0.004  0.001
+       0.002 -0.003 -0.004  0.980 -0.001
+      -0.001 -0.004  0.001 -0.001  0.977
+     SPIN  2
+     eigenvalues:
+       0.069  0.077  0.118  0.282  0.297
+     eigenvectors (columns):
+      -0.706 -0.614 -0.078 -0.212  0.271
+       0.328 -0.465  0.405 -0.522 -0.490
+      -0.434 -0.014  0.290  0.565 -0.639
+       0.042 -0.126 -0.862 -0.075 -0.483
+      -0.451  0.625  0.056 -0.599 -0.211
+     occupation matrix ns (before diag.):
+       0.099 -0.006 -0.066 -0.022  0.011
+      -0.006  0.192  0.014  0.046  0.089
+      -0.066  0.014  0.234  0.049 -0.041
+      -0.022  0.046  0.049  0.160  0.030
+       0.011  0.089 -0.041  0.030  0.159
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] (up, down, total) =   4.88472  0.84191  5.72664
+     Atomic magnetic moment for atom   2 =   4.04281
+     SPIN  1
+     eigenvalues:
+       0.968  0.973  0.979  0.982  0.983
+     eigenvectors (columns):
+       0.188 -0.949  0.052 -0.012 -0.249
+       0.132 -0.080  0.802 -0.036  0.575
+      -0.070 -0.249 -0.572 -0.019  0.778
+      -0.960 -0.178  0.162  0.142 -0.021
+      -0.144 -0.006  0.004 -0.989 -0.036
+     occupation matrix ns (before diag.):
+       0.973 -0.001 -0.002  0.001  0.000
+      -0.001  0.980  0.002  0.001  0.000
+      -0.002  0.002  0.981 -0.001 -0.000
+       0.001  0.001 -0.001  0.968 -0.002
+       0.000  0.000 -0.000 -0.002  0.982
+     SPIN  2
+     eigenvalues:
+       0.069  0.079  0.118  0.281  0.295
+     eigenvectors (columns):
+      -0.032 -0.065 -0.240  0.958 -0.141
+      -0.676 -0.174  0.693  0.119 -0.137
+       0.719 -0.080  0.660  0.193  0.061
+      -0.136 -0.129  0.004  0.131  0.973
+      -0.082  0.971  0.163  0.119  0.101
+     occupation matrix ns (before diag.):
+       0.271  0.021  0.030 -0.004  0.018
+       0.021  0.100  0.026 -0.026  0.004
+       0.030  0.026  0.099  0.019  0.011
+      -0.004 -0.026  0.019  0.287  0.024
+       0.018  0.004  0.011  0.024  0.085
+     ------------------------ ATOM    3 ------------------------
+     Tr[ns(  3)] (up, down, total) =   4.88314  0.84175  5.72489
+     Atomic magnetic moment for atom   3 =   4.04139
+     SPIN  1
+     eigenvalues:
+       0.967  0.973  0.979  0.981  0.983
+     eigenvectors (columns):
+       0.197 -0.081  0.739  0.613 -0.178
+      -0.550  0.664  0.417 -0.170  0.233
+      -0.617 -0.386 -0.211  0.517  0.397
+       0.509  0.118  0.033  0.058  0.850
+      -0.132 -0.624  0.484 -0.569  0.186
+     occupation matrix ns (before diag.):
+       0.979  0.001  0.002 -0.002 -0.001
+       0.001  0.973 -0.002  0.004  0.002
+       0.002 -0.002  0.975  0.005 -0.003
+      -0.002  0.004  0.005  0.979  0.002
+      -0.001  0.002 -0.003  0.002  0.977
+     SPIN  2
+     eigenvalues:
+       0.069  0.079  0.118  0.281  0.295
+     eigenvectors (columns):
+      -0.771 -0.567 -0.146 -0.169  0.183
+      -0.426  0.140  0.244  0.608 -0.608
+       0.202 -0.418  0.419 -0.515 -0.585
+      -0.072  0.007  0.859  0.100  0.497
+      -0.421  0.695  0.075 -0.571 -0.085
+     occupation matrix ns (before diag.):
+       0.087 -0.049 -0.007  0.011  0.013
+      -0.049  0.234  0.019 -0.045 -0.060
+      -0.007  0.019  0.213 -0.059  0.072
+       0.011 -0.045 -0.059  0.163 -0.019
+       0.013 -0.060  0.072 -0.019  0.145
+
+     Number of occupied Hubbard levels =   17.1813
+
+ ------ SPIN UP ------------
+
+
+          k = 0.0000 0.0000 0.0000 (****** PWs)   bands (ev):
+
+   -98.2066 -98.2028 -98.2015 -64.1828 -64.1768 -64.1736 -64.1668 -64.1652
+   -64.1547 -64.1439 -64.1439 -64.1337 -28.6298 -28.5417 -28.5342 -28.4614
+   -28.4544 -28.4441 -27.8858 -27.8803 -27.8603 -26.2502 -26.2474 -26.1486
+   -26.1262 -26.1163 -26.0953 -24.6577 -21.3587 -21.3400 -21.3334 -21.3132
+   -21.2930 -21.2860 -17.8963 -17.8677 -17.8570 -17.8358 -17.8314 -17.8018
+   -17.7839 -17.7653 -17.7363 -17.7185 -17.7003 -17.6838 -16.8869 -16.6883
+   -16.6778 -16.5796 -16.5672 -16.4863 -15.7568 -15.7416 -15.7100 -15.0342
+   -14.9043 -14.8989 -14.6930 -14.6745 -14.6250 -14.4550 -14.4354 -14.3345
+   -14.0991 -14.0936 -14.0163 -13.9964 -13.9785 -13.8591 -13.6088 -13.5993
+   -13.5240 -13.3547 -13.1873 -13.1753 -12.9846 -12.9757 -12.7996 -12.7525
+   -12.7132 -12.6993 -12.6249 -12.5937 -12.5839 -12.3287 -12.3164 -12.2463
+   -12.2342 -12.2209 -12.1529 -11.7122 -11.6842 -11.6432 -11.6056 -11.5686
+   -11.4904 -11.4475 -11.4366 -11.4099 -11.3930 -11.3321 -11.2345 -11.2221
+   -11.1865 -11.1427 -11.0891 -11.0441 -10.6682 -10.6468 -10.4193 -10.3408
+   -10.3223 -10.2133 -10.2103 -10.1881 -10.1558 -10.1449 -10.1075 -10.0770
+   -10.0583 -10.0539 -10.0304 -10.0121 -10.0026  -9.9479  -9.9363  -9.8772
+    -9.8600  -9.6668  -9.6549  -9.6227  -9.6215  -9.5962  -9.5676  -9.5624
+    -9.2103  -9.1937  -8.9933  -8.9528  -8.9454  -8.9280  -8.9104  -8.8988
+    -8.8966  -8.8823  -8.8648  -8.8550  -8.8284  -8.8071  -8.6833  -8.6652
+    -8.6182  -8.5732  -8.5593  -8.5352  -8.2261  -8.1865  -8.1565  -8.1330
+    -8.0304  -7.9450  -7.9323  -7.5553  -7.3993  -7.0381  -7.0322  -6.9764
+    -6.9649
+
+ ------ SPIN DOWN ----------
+
+
+          k = 0.0000 0.0000 0.0000 (****** PWs)   bands (ev):
+
+   -93.1792 -93.1744 -93.1739 -59.2704 -59.2621 -59.2605 -59.2588 -59.2571
+   -59.2510 -59.2397 -59.2358 -59.2304 -28.4900 -28.4112 -28.4065 -28.3227
+   -28.2882 -28.2841 -27.8075 -27.7999 -27.7783 -26.0736 -26.0723 -25.9872
+   -25.9554 -25.9315 -25.9024 -23.6207 -21.3322 -21.3128 -21.3101 -21.2872
+   -21.2645 -21.2615 -17.8932 -17.8640 -17.8534 -17.8323 -17.8283 -17.7980
+   -17.7751 -17.7564 -17.7279 -17.7093 -17.6918 -17.6750 -16.6438 -16.4523
+   -16.4397 -16.3817 -16.3230 -16.3105 -15.6322 -15.6208 -15.5911 -14.3827
+   -14.3253 -14.3095 -13.9806 -13.8784 -13.8773 -13.7124 -13.7053 -13.3399
+   -13.3314 -13.3033 -13.2650 -12.8950 -12.8609 -12.8491 -12.8172 -12.7653
+   -12.7518 -12.6386 -12.4576 -12.4471 -12.3560 -12.2036 -12.1928 -12.1745
+   -12.1501 -12.0989 -11.5341 -11.5050 -11.4928 -11.4848 -11.4629 -11.4530
+   -11.3163 -11.2687 -11.2657 -11.2340 -11.1637 -11.1461 -10.9200 -10.9048
+   -10.6118 -10.3869 -10.3657 -10.3174 -10.2670 -10.2305 -10.2111 -10.1845
+   -10.1755 -10.1473 -10.1122 -10.1025 -10.0847 -10.0694 -10.0505 -10.0397
+   -10.0015  -9.9891  -9.9240  -9.7395  -9.7298  -9.6551  -9.6228  -9.6209
+    -9.5975  -9.5672  -9.5614  -9.1620  -9.1425  -9.0070  -8.9836  -8.9499
+    -8.9363  -8.9241  -8.9058  -8.9013  -8.8838  -8.8568  -8.8464  -8.8378
+    -8.8254  -8.7454  -8.6346  -8.5494  -8.5174  -8.5055  -8.4100  -8.3970
+    -8.3463  -8.3091  -8.2379  -8.0393  -8.0205  -7.9607  -7.9167  -7.8430
+    -7.8343  -7.5141  -5.1677  -5.0795  -5.0774  -5.0363  -5.0262  -4.7069
+    -4.6978  -4.6462  -4.4789  -4.3890  -4.2796  -4.0138  -4.0050  -3.4888
+    -3.4824
+
+     highest occupied, lowest unoccupied level (ev):    -6.9649   -5.1677
+
+!    total energy              =   -2278.31174516 Ry
+     total all-electron energy =     -2278.311745 Ry
+     estimated scf accuracy    <       0.00000040 Ry
+
+     The total energy is the sum of the following terms:
+     one-electron contribution =  -16395.63934953 Ry
+     hartree contribution      =    8154.66082456 Ry
+     xc contribution           =    -361.19985921 Ry
+     ewald contribution        =    6872.56450228 Ry
+     Hubbard energy            =       0.33656761 Ry
+     one-center paw contrib.   =    -549.03443087 Ry
+
+     total magnetization       =    15.00 Bohr mag/cell
+     absolute magnetization    =    15.08 Bohr mag/cell
+
+     convergence has been achieved in  13 iterations
+
+     negative rho (up, down):  5.936E-02 4.071E-02
+
+     Forces acting on atoms (cartesian axes, Ry/au):
+
+     atom    1 type  1   force =     0.00335258   -0.00416611    0.00088348
+     atom    2 type  1   force =    -0.00084930    0.00366971   -0.00632049
+     atom    3 type  1   force =    -0.00321589    0.00323963    0.00450830
+     atom    4 type  2   force =     0.00059630    0.00013351    0.00106742
+     atom    5 type  2   force =    -0.01431010   -0.00043573    0.01338341
+     atom    6 type  3   force =     0.00338681   -0.01386297   -0.01276954
+     atom    7 type  3   force =     0.01672491    0.00773882    0.00419037
+     atom    8 type  2   force =     0.01721577   -0.01155146    0.00100400
+     atom    9 type  3   force =    -0.00060434    0.01917063   -0.00181435
+     atom   10 type  3   force =    -0.01591132   -0.00623298   -0.00890024
+     atom   11 type  2   force =    -0.00867280    0.00335412   -0.01800502
+     atom   12 type  3   force =    -0.00713084   -0.01221030    0.01295618
+     atom   13 type  3   force =     0.00890218    0.01368172    0.01014338
+     atom   14 type  2   force =     0.00926179   -0.01303317    0.02419779
+     atom   15 type  2   force =    -0.00527708    0.01114746   -0.02447113
+     atom   16 type  2   force =     0.00897636   -0.01281445    0.02352070
+     atom   17 type  2   force =    -0.00958720    0.01152290   -0.02444111
+     atom   18 type  2   force =     0.01097659   -0.00844426   -0.02532951
+     atom   19 type  2   force =    -0.01027580    0.00934963    0.02301155
+     atom   20 type  2   force =     0.01110114   -0.00728002   -0.02451125
+     atom   21 type  2   force =    -0.01361465    0.00804559    0.02344579
+     atom   22 type  2   force =    -0.01949241    0.02184118   -0.00186911
+     atom   23 type  2   force =     0.01793140   -0.01980705    0.00291989
+     atom   24 type  2   force =    -0.01818368    0.01944212    0.00398625
+     atom   25 type  2   force =     0.01818996   -0.02186869   -0.00304852
+     atom   26 type  4   force =     0.01526168    0.00528997   -0.00394900
+     atom   27 type  4   force =     0.00341428   -0.00064356    0.00002661
+     atom   28 type  4   force =     0.00115376   -0.00154234   -0.00077933
+     atom   29 type  3   force =    -0.00460282    0.00237706   -0.00615028
+     atom   30 type  3   force =     0.00063011   -0.00788834   -0.00061118
+     atom   31 type  3   force =     0.00725241    0.00278618   -0.00192635
+     atom   32 type  4   force =     0.00117890    0.00272097   -0.00031890
+     atom   33 type  3   force =    -0.00487018    0.00321651   -0.00534601
+     atom   34 type  3   force =     0.00712013    0.00364255   -0.00125381
+     atom   35 type  3   force =    -0.00247041    0.00267755    0.00677561
+     atom   36 type  4   force =     0.00106843    0.00066307    0.00089495
+     atom   37 type  3   force =     0.00081483   -0.00799511    0.00037263
+     atom   38 type  3   force =    -0.00162636    0.00205999    0.00750541
+     atom   39 type  3   force =     0.00739168    0.00288361   -0.00104558
+     atom   40 type  4   force =     0.00143443   -0.01585397   -0.00641048
+     atom   41 type  4   force =     0.00097759   -0.00159324   -0.00216684
+     atom   42 type  4   force =    -0.00224339   -0.00018333    0.00043965
+     atom   43 type  3   force =    -0.00656991    0.00397429   -0.00262460
+     atom   44 type  3   force =    -0.00129782   -0.00103559    0.00778704
+     atom   45 type  3   force =    -0.00085698   -0.00738622   -0.00328220
+     atom   46 type  4   force =     0.00152698   -0.00133628   -0.00017860
+     atom   47 type  3   force =     0.00700837    0.00315696   -0.00105636
+     atom   48 type  3   force =    -0.00007609   -0.00732827   -0.00346060
+     atom   49 type  3   force =    -0.00030044   -0.00166624    0.00782257
+     atom   50 type  4   force =     0.00103669   -0.00061407   -0.00118592
+     atom   51 type  3   force =     0.00669973    0.00338484   -0.00251885
+     atom   52 type  3   force =    -0.00597708    0.00409918   -0.00362938
+     atom   53 type  3   force =    -0.00032124   -0.00700377   -0.00373871
+     atom   54 type  4   force =     0.00025668    0.01610064   -0.00351164
+     atom   55 type  4   force =    -0.00055625    0.00150941   -0.00098927
+     atom   56 type  4   force =     0.00102188    0.00016795   -0.00161927
+     atom   57 type  3   force =     0.00073072    0.00779754   -0.00188548
+     atom   58 type  3   force =    -0.00378868   -0.00318003   -0.00628942
+     atom   59 type  3   force =     0.00749368   -0.00286662   -0.00072843
+     atom   60 type  4   force =    -0.00201533   -0.00043208    0.00016646
+     atom   61 type  3   force =    -0.00007346    0.00795101   -0.00169330
+     atom   62 type  3   force =    -0.00408383   -0.00055709    0.00687156
+     atom   63 type  3   force =    -0.00477436   -0.00290478   -0.00543901
+     atom   64 type  4   force =     0.00161720    0.00070458    0.00091165
+     atom   65 type  3   force =     0.00053505    0.00798826   -0.00113455
+     atom   66 type  3   force =     0.00751557   -0.00241770    0.00078027
+     atom   67 type  3   force =    -0.00308781   -0.00037386    0.00746391
+     atom   68 type  4   force =    -0.01305060   -0.00284343   -0.00677241
+     atom   69 type  4   force =    -0.00241187    0.00062548   -0.00103500
+     atom   70 type  4   force =     0.00029086   -0.00188522   -0.00013513
+     atom   71 type  3   force =    -0.00702303   -0.00234736   -0.00326438
+     atom   72 type  3   force =     0.00086819   -0.00396465    0.00684105
+     atom   73 type  3   force =     0.00547281   -0.00292051   -0.00478329
+     atom   74 type  4   force =     0.00067171    0.00051080   -0.00134561
+     atom   75 type  3   force =    -0.00716057   -0.00142748   -0.00362489
+     atom   76 type  3   force =     0.00547147   -0.00225020   -0.00552439
+     atom   77 type  3   force =     0.00040411    0.00783376    0.00039889
+     atom   78 type  4   force =    -0.00058918    0.00076475   -0.00002395
+     atom   79 type  3   force =    -0.00736404   -0.00154516   -0.00278249
+     atom   80 type  3   force =    -0.00036973    0.00788814    0.00137536
+     atom   81 type  3   force =    -0.00021100   -0.00343499    0.00720574
+     atom   82 type  4   force =     0.00780219    0.00748202    0.01250227
+     atom   83 type  4   force =     0.00077181    0.00235471    0.00231668
+     atom   84 type  4   force =    -0.00109009    0.00068995   -0.00003063
+     atom   85 type  3   force =     0.00396069    0.00248283   -0.00625084
+     atom   86 type  3   force =     0.00323259    0.00359686    0.00637294
+     atom   87 type  3   force =    -0.00733347    0.00359237   -0.00067753
+     atom   88 type  4   force =    -0.00083172   -0.00029588    0.00159607
+     atom   89 type  3   force =    -0.00020129   -0.00778490    0.00134046
+     atom   90 type  3   force =    -0.00754750    0.00233233   -0.00043432
+     atom   91 type  3   force =     0.00299693    0.00310665    0.00693538
+     atom   92 type  4   force =     0.00205423   -0.00095875    0.00038217
+     atom   93 type  3   force =     0.00360895    0.00329996    0.00637530
+     atom   94 type  3   force =     0.00489747    0.00170894   -0.00605627
+     atom   95 type  3   force =     0.00086014   -0.00792462    0.00119232
+     atom   96 type  4   force =    -0.01030872   -0.01014918    0.00961801
+     atom   97 type  4   force =    -0.00206890   -0.00165946    0.00172059
+     atom   98 type  4   force =    -0.00073188   -0.00132050   -0.00092065
+     atom   99 type  3   force =    -0.00551505   -0.00509988    0.00333495
+     atom  100 type  3   force =     0.00315376   -0.00430108   -0.00585314
+     atom  101 type  3   force =    -0.00456171    0.00539370   -0.00361426
+     atom  102 type  4   force =    -0.00107146    0.00126456    0.00150940
+     atom  103 type  3   force =    -0.00501197   -0.00470311    0.00424826
+     atom  104 type  3   force =    -0.00499336    0.00594644   -0.00269444
+     atom  105 type  3   force =     0.00474953    0.00339407    0.00484931
+     atom  106 type  4   force =     0.00053642   -0.00092518    0.00090367
+     atom  107 type  3   force =    -0.00466073   -0.00519259    0.00405842
+     atom  108 type  3   force =     0.00538250    0.00240138    0.00525674
+     atom  109 type  3   force =     0.00388280   -0.00471502   -0.00514359
+
+     Total force =     0.135064     Total SCF correction =     0.000685
+
+
+     Computing stress (Cartesian axis) and pressure
+
+
+     negative rho (up, down):  5.936E-02 4.071E-02
+          total   stress  (Ry/bohr**3)                   (kbar)     P=        0.90
+   0.00000583  -0.00000037   0.00000002            0.86       -0.05        0.00
+  -0.00000037   0.00000612  -0.00000001           -0.05        0.90       -0.00
+   0.00000002  -0.00000001   0.00000643            0.00       -0.00        0.95
+
+
+     Writing all to output data dir ./out/Fe3_O_piv_6_H2O_3_HighSpin.save/ :
+     XML data file, charge density, pseudopotentials, collected wavefunctions
+
+     init_run     :     79.09s CPU     81.24s WALL (       1 calls)
+     electrons    :    377.83s CPU    385.01s WALL (       1 calls)
+     forces       :   1014.67s CPU   1015.46s WALL (       1 calls)
+     stress       :   2176.44s CPU   2178.00s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :     61.15s CPU     61.65s WALL (       1 calls)
+     potinit      :      0.94s CPU      1.02s WALL (       1 calls)
+     hinit0       :      9.57s CPU     11.02s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :    288.51s CPU    290.87s WALL (      13 calls)
+     sum_band     :     62.85s CPU     65.48s WALL (      13 calls)
+     v_of_rho     :      6.54s CPU      6.74s WALL (      14 calls)
+     newd         :     13.21s CPU     14.29s WALL (      14 calls)
+     PAW_pot      :      5.56s CPU      5.57s WALL (      14 calls)
+     mix_rho      :      1.94s CPU      1.96s WALL (      13 calls)
+
+     Called by c_bands:
+     init_us_2    :      8.03s CPU      8.09s WALL (      64 calls)
+     cegterg      :    280.81s CPU    283.13s WALL (      26 calls)
+
+     Called by *egterg:
+     cdiaghg      :     13.31s CPU     13.40s WALL (      96 calls)
+     h_psi        :    211.44s CPU    212.27s WALL (      98 calls)
+     s_psi        :     47.80s CPU     47.82s WALL (     108 calls)
+     g_psi        :      0.52s CPU      0.52s WALL (      70 calls)
+
+     Called by h_psi:
+     h_psi:calbec :     36.95s CPU     36.95s WALL (      98 calls)
+     vloc_psi     :    133.72s CPU    133.87s WALL (      98 calls)
+     add_vuspsi   :     34.39s CPU     34.39s WALL (      98 calls)
+     vhpsi        :      5.53s CPU      5.53s WALL (      98 calls)
+
+     General routines
+     calbec       :    659.83s CPU    660.10s WALL (   21218 calls)
+     fft          :      6.99s CPU      8.66s WALL (     336 calls)
+     ffts         :      0.31s CPU      0.32s WALL (      26 calls)
+     fftw         :    143.60s CPU    143.78s WALL (   29208 calls)
+
+     Parallel routines
+
+     Hubbard U routines
+     new_ns       :      1.09s CPU      1.09s WALL (      13 calls)
+     vhpsi        :      5.53s CPU      5.53s WALL (      98 calls)
+     force_hub    :   1004.76s CPU   1005.20s WALL (       1 calls)
+                                        0.00s GPU  (       1 calls)
+     stres_hub    :   2055.01s CPU   2055.85s WALL (       1 calls)
+                                        0.00s GPU  (       1 calls)
+
+     PWSCF        :      1h 0m CPU      1h 1m WALL
+
+
+   This run was terminated on:  13:20:16  30Mar2025            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
+
+     Program PWSCF v.7.3.1 starts on 14Oct2025 at 16:27:59 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on   128 processors
+
+     MPI processes distributed on     2 nodes
+     238230 MiB available memory on the printing compute node when the environment starts
+
+     Reading input from Fe3_O_piv_6_H2O_3_HighSpin.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+read_pp_mesh; mismatch in mesh size, discarding the one in header
+     file Fe.GGA-PBE-paw.UPF: wavefunction(s)  4S 3P 4P 3D 4D renormalized
+     file O.GGA-PBE-paw.UPF: wavefunction(s)  3S 2P 3P renormalized
+     file H.GGA-PBE-paw.UPF: wavefunction(s)  2S 2P renormalized
+     file C.GGA-PBE-paw.UPF: wavefunction(s)  3S 3P renormalized
+     Message from routine setup:
+     the system is metallic, specify occupations
+
+     R & G space division:  proc/nbgrp/npool/nimage =     128
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     custom distributed-memory algorithm (size of sub-group:  2*  2 procs)
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         542     542    135               100828   100828   12601
+     Max         543     543    136               100837   100837   12608
+     Sum       69493   69493  17367             12906675 12906675 1613349
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      61.4318  a.u.
+     unit-cell volume          =  211893.4902 (a.u.)^3
+     number of atoms/cell      =          109
+     number of atomic types    =            4
+     number of electrons       =       323.00 (up: 169.00, down: 154.00)
+     number of Kohn-Sham states=          169
+     kinetic-energy cutoff     =      58.8000  Ry
+     charge density cutoff     =     235.2000  Ry
+     scf convergence threshold =      1.0E-06
+     mixing beta               =       0.3000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= SLA PW PBX PBC
+                           (   1   4   3   4   0   0   0)
+     Hubbard projectors: ortho-atomic
+     Hubbard parameters of DFT+U (Dudarev formulation) in eV:
+     U(Fe-3d) =  4.0000
+
+     Internal variables: lda_plus_u =T, lda_plus_u_kind = 0
+
+     celldm(1)=  61.431848  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   0.983954   0.000000 )  
+               a(3) = (   0.000000   0.000000   0.928885 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.016308  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.076559 )  
+
+
+     PseudoPot. # 1 for Fe read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/Fe.GGA-PBE-paw.UPF
+     MD5 check sum: 2d46233e65fd0c9f60bb7b941dda812a
+     Pseudo is Projector augmented-wave + core cor, Zval = 16.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for O  read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/O.GGA-PBE-paw.UPF
+     MD5 check sum: 75cebe6e27812ecd511c7c5e5b8738d8
+     Pseudo is Projector augmented-wave + core cor, Zval =  6.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for H  read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/H.GGA-PBE-paw.UPF
+     MD5 check sum: b9d592600ff6b56d2e28875790887365
+     Pseudo is Projector augmented-wave + core cor, Zval =  1.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  3 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 4 for C  read from file:
+     /work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER/C.GGA-PBE-paw.UPF
+     MD5 check sum: 4aa9e32dab6042a76c944283fa01cc46
+     Pseudo is Projector augmented-wave + core cor, Zval =  4.0
+     Generated using ATOMPAW code
+     Shape of augmentation charge: SINC**2
+     Using radial grid of 2342 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+     Fe               16.00    55.84500     Fe( 1.00)
+     O                 6.00    16.00000     O ( 1.00)
+     H                 1.00     1.00800     H ( 1.00)
+     C                 4.00    12.01100     C ( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+     Fe              0.312
+     O               0.000
+     H               0.000
+     C               0.000
+
+     No symmetry found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Fe     tau(   1) = (   0.5339877   0.4530735   0.4734192  )
+         2        Fe     tau(   2) = (   0.5059010   0.4973119   0.3865703  )
+         3        Fe     tau(   3) = (   0.4616292   0.5239900   0.4739621  )
+         4        O      tau(   4) = (   0.5002216   0.4912537   0.4445097  )
+         5        O      tau(   5) = (   0.5746154   0.4093125   0.5028391  )
+         6        H      tau(   6) = (   0.5802858   0.3878163   0.4831816  )
+         7        H      tau(   7) = (   0.6005106   0.4221346   0.5094964  )
+         8        O      tau(   8) = (   0.5097534   0.5084191   0.3209634  )
+         9        H      tau(   9) = (   0.5094926   0.5379557   0.3178732  )
+        10        H      tau(  10) = (   0.4853477   0.4981564   0.3076134  )
+        11        O      tau(  11) = (   0.4180849   0.5590590   0.5103948  )
+        12        H      tau(  12) = (   0.4067417   0.5403957   0.5304998  )
+        13        H      tau(  13) = (   0.4323383   0.5802927   0.5253876  )
+        14        O      tau(  14) = (   0.5867006   0.4740920   0.4469997  )
+        15        O      tau(  15) = (   0.5668188   0.5032456   0.3883297  )
+        16        O      tau(  16) = (   0.5313992   0.4076959   0.4311016  )
+        17        O      tau(  17) = (   0.5099391   0.4373170   0.3732665  )
+        18        O      tau(  18) = (   0.5014911   0.5601000   0.3861378  )
+        19        O      tau(  19) = (   0.4743746   0.5773228   0.4465760  )
+        20        O      tau(  20) = (   0.4447183   0.4938718   0.3754437  )
+        21        O      tau(  21) = (   0.4157319   0.5123732   0.4346726  )
+        22        O      tau(  22) = (   0.5018106   0.5403493   0.5192085  )
+        23        O      tau(  23) = (   0.5471536   0.4891179   0.5215587  )
+        24        O      tau(  24) = (   0.4409377   0.4781653   0.5107294  )
+        25        O      tau(  25) = (   0.4868020   0.4277912   0.5038214  )
+        26        C      tau(  26) = (   0.5936324   0.4946784   0.4150054  )
+        27        C      tau(  27) = (   0.6369305   0.5111515   0.4075349  )
+        28        C      tau(  28) = (   0.6512247   0.4971056   0.3649317  )
+        29        H      tau(  29) = (   0.6301521   0.5074851   0.3410016  )
+        30        H      tau(  30) = (   0.6535368   0.4636089   0.3632141  )
+        31        H      tau(  31) = (   0.6816679   0.5098299   0.3586058  )
+        32        C      tau(  32) = (   0.6341491   0.5582294   0.4085348  )
+        33        H      tau(  33) = (   0.6127756   0.5695186   0.3852661  )
+        34        H      tau(  34) = (   0.6644718   0.5713133   0.4023591  )
+        35        H      tau(  35) = (   0.6240819   0.5693010   0.4386547  )
+        36        C      tau(  36) = (   0.6667561   0.4961566   0.4403811  )
+        37        H      tau(  37) = (   0.6692404   0.4626640   0.4403589  )
+        38        H      tau(  38) = (   0.6572799   0.5059517   0.4710604  )
+        39        H      tau(  39) = (   0.6973182   0.5087385   0.4343605  )
+        40        C      tau(  40) = (   0.5209514   0.4064312   0.3937498  )
+        41        C      tau(  41) = (   0.5202540   0.3644788   0.3728082  )
+        42        C      tau(  42) = (   0.4785993   0.3451712   0.3839431  )
+        43        H      tau(  43) = (   0.4531049   0.3637901   0.3724361  )
+        44        H      tau(  44) = (   0.4753050   0.3417383   0.4171947  )
+        45        H      tau(  45) = (   0.4763541   0.3147013   0.3699628  )
+        46        C      tau(  46) = (   0.5550438   0.3375172   0.3891832  )
+        47        H      tau(  47) = (   0.5851264   0.3512286   0.3830730  )
+        48        H      tau(  48) = (   0.5541773   0.3076134   0.3739139  )
+        49        H      tau(  49) = (   0.5520833   0.3323501   0.4221963  )
+        50        C      tau(  50) = (   0.5238422   0.3691034   0.3262789  )
+        51        H      tau(  51) = (   0.5526978   0.3839597   0.3175995  )
+        52        H      tau(  52) = (   0.4986325   0.3873298   0.3137800  )
+        53        H      tau(  53) = (   0.5230527   0.3387533   0.3118998  )
+        54        C      tau(  54) = (   0.4894749   0.5862488   0.4119937  )
+        55        C      tau(  55) = (   0.4927408   0.6318506   0.4014369  )
+        56        C      tau(  56) = (   0.5137947   0.6383208   0.3600997  )
+        57        H      tau(  57) = (   0.5165066   0.6712299   0.3539382  )
+        58        H      tau(  58) = (   0.4961380   0.6246763   0.3349910  )
+        59        H      tau(  59) = (   0.5446493   0.6250939   0.3597462  )
+        60        C      tau(  60) = (   0.4489262   0.6492358   0.4001516  )
+        61        H      tau(  61) = (   0.4501183   0.6820473   0.3930419  )
+        62        H      tau(  62) = (   0.4334026   0.6453226   0.4296305  )
+        63        H      tau(  63) = (   0.4304896   0.6342248   0.3763716  )
+        64        C      tau(  64) = (   0.5173147   0.6531059   0.4355437  )
+        65        H      tau(  65) = (   0.5188822   0.6860799   0.4293166  )
+        66        H      tau(  66) = (   0.5487992   0.6414031   0.4370249  )
+        67        H      tau(  67) = (   0.5029057   0.6485890   0.4654837  )
+        68        C      tau(  68) = (   0.4138339   0.4995644   0.3982442  )
+        69        C      tau(  69) = (   0.3716829   0.4894705   0.3802524  )
+        70        C      tau(  70) = (   0.3700473   0.4426319   0.3747011  )
+        71        H      tau(  71) = (   0.3405670   0.4340235   0.3610761  )
+        72        H      tau(  72) = (   0.3727758   0.4267436   0.4042031  )
+        73        H      tau(  73) = (   0.3946136   0.4319406   0.3544771  )
+        74        C      tau(  74) = (   0.3674130   0.5105349   0.3383993  )
+        75        H      tau(  75) = (   0.3375433   0.5029086   0.3250606  )
+        76        H      tau(  76) = (   0.3912628   0.5003951   0.3171012  )
+        77        H      tau(  77) = (   0.3691391   0.5439859   0.3412715  )
+        78        C      tau(  78) = (   0.3373435   0.5034112   0.4088997  )
+        79        H      tau(  79) = (   0.3076134   0.4957062   0.3952770  )
+        80        H      tau(  80) = (   0.3382527   0.5365805   0.4140055  )
+        81        H      tau(  81) = (   0.3393985   0.4883526   0.4388100  )
+        82        C      tau(  82) = (   0.5326607   0.5226663   0.5344687  )
+        83        C      tau(  83) = (   0.5528189   0.5423577   0.5720001  )
+        84        C      tau(  84) = (   0.5522921   0.5891475   0.5679748  )
+        85        H      tau(  85) = (   0.5698594   0.5993699   0.5412060  )
+        86        H      tau(  86) = (   0.5661434   0.6029265   0.5952996  )
+        87        H      tau(  87) = (   0.5210253   0.6008738   0.5649833  )
+        88        C      tau(  88) = (   0.5267943   0.5292189   0.6091645  )
+        89        H      tau(  89) = (   0.5264197   0.4957914   0.6126142  )
+        90        H      tau(  90) = (   0.4951332   0.5400906   0.6063616  )
+        91        H      tau(  91) = (   0.5398692   0.5423745   0.6371797  )
+        92        C      tau(  92) = (   0.5968075   0.5270300   0.5773847  )
+        93        H      tau(  93) = (   0.6105409   0.5416373   0.6043389  )
+        94        H      tau(  94) = (   0.6157994   0.5345817   0.5507147  )
+        95        H      tau(  95) = (   0.5977730   0.4938102   0.5818793  )
+        96        C      tau(  96) = (   0.4533804   0.4419294   0.5171184  )
+        97        C      tau(  97) = (   0.4252941   0.4131333   0.5412201  )
+        98        C      tau(  98) = (   0.3944838   0.3959014   0.5098108  )
+        99        H      tau(  99) = (   0.3731140   0.3752064   0.5254263  )
+       100        H      tau( 100) = (   0.4101610   0.3784418   0.4857532  )
+       101        H      tau( 101) = (   0.3766945   0.4205254   0.4954693  )
+       102        C      tau( 102) = (   0.4022744   0.4368903   0.5745675  )
+       103        H      tau( 103) = (   0.3825623   0.4157912   0.5917290  )
+       104        H      tau( 104) = (   0.3828207   0.4608487   0.5614262  )
+       105        H      tau( 105) = (   0.4235009   0.4511245   0.5964137  )
+       106        C      tau( 106) = (   0.4498339   0.3780296   0.5602962  )
+       107        H      tau( 107) = (   0.4289534   0.3573707   0.5765989  )
+       108        H      tau( 108) = (   0.4724756   0.3894092   0.5823574  )
+       109        H      tau( 109) = (   0.4661544   0.3603327   0.5369697  )
+
+     number of k points=     1
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   1.0000000
+
+     Dense  grid: 12906675 G-vectors     FFT dimensions: ( 300, 300, 288)
+
+     Estimated max dynamical RAM per process >       1.14 GB
+
+     Estimated total dynamical RAM >     145.44 GB
+
+     Check: negative core charge=   -0.000002
+     Generating pointlists ...
+     new r_m :   0.0241 (alat units)  1.4832 (a.u.) for type    1
+     new r_m :   0.0122 (alat units)  0.7512 (a.u.) for type    2
+     new r_m :   0.0122 (alat units)  0.7512 (a.u.) for type    3
+     new r_m :   0.0138 (alat units)  0.8494 (a.u.) for type    4
+
+     Initial potential from superposition of free atoms
+
+     starting charge     323.9959, renormalised to     323.0000
+
+     negative rho (up, down):  5.075E-02 3.490E-02
+
+     STARTING HUBBARD OCCUPATIONS:
+
+     =================== HUBBARD OCCUPATIONS ===================
+     ------------------------ ATOM    1 ------------------------
+     Tr[ns(  1)] (up, down, total) =   5.00000  2.00000  7.00000
+     Atomic magnetic moment for atom   1 =   3.00000
+     SPIN  1
+     eigenvalues:
+       1.000  1.000  1.000  1.000  1.000
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     SPIN  2
+     eigenvalues:
+       0.400  0.400  0.400  0.400  0.400
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.400  0.000  0.000  0.000  0.000
+       0.000  0.400  0.000  0.000  0.000
+       0.000  0.000  0.400  0.000  0.000
+       0.000  0.000  0.000  0.400  0.000
+       0.000  0.000  0.000  0.000  0.400
+     ------------------------ ATOM    2 ------------------------
+     Tr[ns(  2)] (up, down, total) =   5.00000  2.00000  7.00000
+     Atomic magnetic moment for atom   2 =   3.00000
+     SPIN  1
+     eigenvalues:
+       1.000  1.000  1.000  1.000  1.000
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     SPIN  2
+     eigenvalues:
+       0.400  0.400  0.400  0.400  0.400
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.400  0.000  0.000  0.000  0.000
+       0.000  0.400  0.000  0.000  0.000
+       0.000  0.000  0.400  0.000  0.000
+       0.000  0.000  0.000  0.400  0.000
+       0.000  0.000  0.000  0.000  0.400
+     ------------------------ ATOM    3 ------------------------
+     Tr[ns(  3)] (up, down, total) =   5.00000  2.00000  7.00000
+     Atomic magnetic moment for atom   3 =   3.00000
+     SPIN  1
+     eigenvalues:
+       1.000  1.000  1.000  1.000  1.000
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     SPIN  2
+     eigenvalues:
+       0.400  0.400  0.400  0.400  0.400
+     eigenvectors (columns):
+       1.000  0.000  0.000  0.000  0.000
+       0.000  1.000  0.000  0.000  0.000
+       0.000  0.000  1.000  0.000  0.000
+       0.000  0.000  0.000  1.000  0.000
+       0.000  0.000  0.000  0.000  1.000
+     occupation matrix ns (before diag.):
+       0.400  0.000  0.000  0.000  0.000
+       0.000  0.400  0.000  0.000  0.000
+       0.000  0.000  0.400  0.000  0.000
+       0.000  0.000  0.000  0.400  0.000
+       0.000  0.000  0.000  0.000  0.400
+
+     Number of occupied Hubbard levels =   21.0000
+
+     Atomic wfc used for Hubbard projectors are orthogonalized
+

@@ -1,0 +1,65 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'FeH2O6'
+  restart_mode     = 'from_scratch'
+  tstress          = .true.
+  tprnfor          = .true.
+  outdir = './out'
+  pseudo_dir = '../..'
+/
+
+&SYSTEM
+ ibrav = 0
+ nat = 19
+ nspin = 2
+ ntyp = 3
+ ecutwfc = 58.80
+ starting_magnetization(1) = 5.0  ! Spin polarization
+ tot_magnetization = 5.0
+ tot_charge = 3
+/
+
+&ELECTRONS
+diago_david_ndim = 8
+electron_maxstep = 1000
+conv_thr = 1.0d-6
+mixing_beta = 0.3
+/
+
+CELL_PARAMETERS angstrom
+24.26273295  0.00000000  0.00000000
+ 0.00000000 24.37834389  0.00000000
+ 0.00000000  0.00000000 24.49207180
+
+ATOMIC_SPECIES
+Fe 55.845  Fe.GGA-PBE-paw.UPF
+O  16.00   O.GGA-PBE-paw.UPF
+H  1.008   H.GGA-PBE-paw.UPF
+
+ATOMIC_POSITIONS angstrom
+Fe    12.250834    12.347183    12.383732
+O     10.917918    12.146968    10.856178
+O     13.583304    12.546579    13.912161
+O     12.887136    14.120729    11.605769
+O     11.615952    10.572827    13.160958
+O     10.850840    13.339989    13.478875
+O     13.651816    11.355466    11.289061
+H     10.696459    14.301039    13.481892
+H     12.560868    14.548886    10.794767
+H     10.000000    12.470494    10.843615
+H     10.918955    10.000000    12.795645
+H     13.422087    12.984112    14.766573
+H     14.297832    11.752416    10.678656
+H     11.941917    10.145878    13.972648
+H     10.207412    12.944405    14.092914
+H     11.081036    11.713610    10.000000
+H     13.803190    10.393971    11.281531
+H     13.581663    14.695076    11.973417
+H     14.500246    12.220359    13.925451
+
+K_POINTS automatic
+1 1 1 0 0 0  ! Gamma point only
+
+HUBBARD ortho-atomic
+U Fe-3d 4.0
+

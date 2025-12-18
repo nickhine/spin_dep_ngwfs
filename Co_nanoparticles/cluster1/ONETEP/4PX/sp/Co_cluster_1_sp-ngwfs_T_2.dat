@@ -1,0 +1,78 @@
+!------------------------------------------------------------------------------!
+!--------------------------------- INPUT FILE ---------------------------------!
+!------------------------------------------------------------------------------!
+
+charge : 0 e
+cutoff_energy : 600 eV
+delta_e_conv : F
+do_properties : T
+edft : T
+edft_maxit : 15
+edft_spin_fix : 0
+fine_grid_scale : 4
+forces_output_detail : VERBOSE
+maxit_ngwf_cg : 50
+ngwf_threshold_orig : 1e-06
+ngwfs_spin_polarized : T
+output_detail : BRIEF
+paw : T
+pseudo_path : ..
+read_denskern : T
+read_hamiltonian : T
+read_tightbox_ngwfs : T
+spin : 39
+spin_polarized : T
+task : SinglePoint
+write_denskern : T
+write_forces : T
+write_hamiltonian : T
+write_tightbox_ngwfs : T
+xc_functional : PBE
+
+%BLOCK LATTICE_CART
+ang
+     14.23456672       0.00000000       0.00000000
+      0.00000000      14.23456672       0.00000000
+      0.00000000       0.00000000      14.23456672
+%ENDBLOCK LATTICE_CART
+
+%BLOCK POSITIONS_ABS
+ang
+ Co1 7.11725437806771 7.11725173218167 7.11725570101073
+ Co2 9.09289631526896 7.11733809390206 5.89725537471156
+ Co2 9.09280672556759 7.11734518487666 8.33735122628968
+ Co2 5.14153471531811 7.11732671659209 5.8971289542765
+ Co2 5.14166633227336 7.11733380756668 8.33744076307332
+ Co2 5.89725442219259 9.09289959616765 7.11733904642104
+ Co2 8.33735207297321 9.09281122357386 7.11734597864247
+ Co2 5.89713043597268 5.14153364108838 7.11732756327562
+ Co2 8.33743949304802 5.14166441665187 7.11733460133249
+ Co2 7.11733846432611 5.89725611555965 9.09289679152844
+ Co2 7.11734550238298 8.33735096170107 9.09281048272577
+ Co2 7.1173275103579 5.89712837218157 5.14153306957699
+ Co2 7.11733460133249 8.33744118641509 5.1416614532595
+%ENDBLOCK POSITIONS_ABS
+
+%BLOCK SPECIES
+Co1 Co 27 10 10.0
+Co2 Co 27 10 10.0
+%ENDBLOCK SPECIES
+
+%BLOCK SPECIES_ATOMIC_SET
+Co1 "SOLVE conf=4pX INIT SPIN=3"
+Co2 "SOLVE conf=4pX INIT SPIN=3"
+%ENDBLOCK SPECIES_ATOMIC_SET
+
+%BLOCK SPECIES_LDOS_GROUPS
+Co1
+Co2
+%ENDBLOCK SPECIES_LDOS_GROUPS
+
+%BLOCK SPECIES_POT
+Co1 Co.PBE-paw.abinit
+Co2 Co.PBE-paw.abinit
+%ENDBLOCK SPECIES_POT
+
+!------------------------------------------------------------------------------!
+!-------------------------------- END OF INPUT --------------------------------!
+!------------------------------------------------------------------------------!

@@ -1,0 +1,79 @@
+!------------------------------------------------------------------------------!
+!--------------------------------- INPUT FILE ---------------------------------!
+!------------------------------------------------------------------------------!
+
+charge : 0
+comms_group_size : 8
+cutoff_energy : 600 eV
+do_properties : T
+edft : T
+edft_maxit : 15
+edft_spin_fix : 0
+fine_grid_scale : 4
+forces_output_detail : VERBOSE
+geom_continuation : T
+maxit_ngwf_cg : 30
+ngwf_threshold_orig : 1e-06
+ngwfs_spin_polarized : F
+output_detail : BRIEF
+paw : T
+pseudo_path : .
+read_denskern : F
+read_hamiltonian : F
+read_tightbox_ngwfs : F
+run_time : 86000
+spin : 39
+task : GEOMETRYOPTIMIZATION
+write_denskern : T
+write_forces : T
+write_hamiltonian : T
+write_tightbox_ngwfs : T
+xc_functional : PBE
+
+%BLOCK LATTICE_CART
+ang
+     14.23456672       0.00000000       0.00000000
+      0.00000000      14.23456672       0.00000000
+      0.00000000       0.00000000      14.23456672
+%ENDBLOCK LATTICE_CART
+
+%BLOCK POSITIONS_ABS
+ang
+  Co1     7.117283     7.117283     7.117283
+  Co2     9.234567     7.117283     5.808730
+  Co2     9.234567     7.117283     8.425836
+  Co2     5.000000     7.117283     5.808730
+  Co2     5.000000     7.117283     8.425836
+  Co2     5.808730     9.234567     7.117283
+  Co2     8.425836     9.234567     7.117283
+  Co2     5.808730     5.000000     7.117283
+  Co2     8.425836     5.000000     7.117283
+  Co2     7.117283     5.808730     9.234567
+  Co2     7.117283     8.425836     9.234567
+  Co2     7.117283     5.808730     5.000000
+  Co2     7.117283     8.425836     5.000000
+%ENDBLOCK POSITIONS_ABS
+
+%BLOCK SPECIES
+Co1 Co 27 -1 10.0
+Co2 Co 27 -1 10.0
+%ENDBLOCK SPECIES
+
+%BLOCK SPECIES_ATOMIC_SET
+Co1 "SOLVE INIT SPIN=3"
+Co2 "SOLVE INIT SPIN=3"
+%ENDBLOCK SPECIES_ATOMIC_SET
+
+%BLOCK SPECIES_LDOS_GROUPS
+Co1
+Co2
+%ENDBLOCK SPECIES_LDOS_GROUPS
+
+%BLOCK SPECIES_POT
+Co1 Co.PBE-paw.abinit
+Co2 Co.PBE-paw.abinit
+%ENDBLOCK SPECIES_POT
+
+!------------------------------------------------------------------------------!
+!-------------------------------- END OF INPUT --------------------------------!
+!------------------------------------------------------------------------------!

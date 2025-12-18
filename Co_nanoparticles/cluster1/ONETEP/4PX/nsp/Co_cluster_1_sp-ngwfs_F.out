@@ -1,0 +1,846 @@
+ +---------------------------------------------------------------+
+ |                                                               |
+ |        ####### #     # ####### ####### ####### ######         |
+ |        #     # ##    # #          #    #       #     #        |
+ |        #     # # #   # #          #    #       #     #        |
+ |        #     # #  #  # #####      #    #####   ######         |
+ |        #     # #   # # #          #    #       #              |
+ |        #     # #    ## #          #    #       #              |
+ |        ####### #     # #######    #    ####### #              |
+ |                                                               |
+ |        Linear-Scaling Ab Initio Total Energy Program          |
+ |                                                               |
+ |          Release for academic collaborators of ODG            |
+ |                                             Version 7.3.26    |
+ | Remote: git@github.com:Miesaz/onetep_mea.git                  |
+ | Local branch: master                                          |
+ | Commit ID: 474b165149cd54f07116211190b13a046ee328b9           |
+ | Date: Mon Dec 16 13:35:19 2024 +0000                          |
+ |                                                               |
+ +---------------------------------------------------------------+
+ |                                                               |
+ |  Authors:                                                     |
+ |  Jacek Dziedzic, Peter D. Haynes, Nicholas D. M. Hine,        |
+ |  Arash A. Mostofi, Mike C. Payne and Chris-Kriton Skylaris    |
+ |                                                               |
+ |  Contributors:                                                |
+ |  J. Aarons, L. Andrinopoulos, P. W. Avraam, R. A. Bell,       |
+ |  A. Bhandari, G. A. Bramley, R. J. Charlton, S. J. Clark,     |
+ |  R. J. Clements, G. C. Constantinescu, F. Corsetti,           |
+ |  N. Corsini, O. Dieguez, S. M. M. Dubois, K. K. B. Duff,      |
+ |  J. M. Escartin, M. Escobar Azor, A. Greco,                   |
+ |  H. Helal, Q. O. Hill, L. P. Lee, J.-H. Li,                   |
+ |  T. Li, E. B. Linscott, G. Moynihan, D. D. O`Regan,           |
+ |  O. K. Okan, E. Parkinson, M. J. S. Phipps,                   |
+ |  C. J. Pickard, J. C. A. Prentice, M. I. J. Probert,          |
+ |  L. E. Ratcliff, M. Robinson, A. Ruiz Serrano,                |
+ |  M. dos Santos Dias, J. S. Spencer, E. W. Tait,               |
+ |  G. Teobaldi, D. Turban, V. Vitale, K. A. Wilkinson,          |
+ |  C. Weber, J. C. Womack, Chengcheng Xiao, N. Yeung,           |
+ |  and T. J. Zuehlsdorff.                                       |
+ |                                                               |
+ |                                   Copyright (c) 2004-2024     |
+ |                                                               |
+ |  Please cite:                                                 |
+ |  "The ONETEP linear-scaling density functional theory program"|
+ |   J. Chem. Phys. 152(17) 174111 (2020)                        |
+ |                                                               |
+ |          in all publications arising from your use of ONETEP. |
+ |                                                               |
+ +---------------------------------------------------------------+
+ |                                                               |
+ |   ONETEP is based on developments described in the following  |
+ |   publications:                                               |
+ |                                                               |
+ |  "Nonorthogonal generalized Wannier function pseudopotential  |
+ |   plane-wave method".                                         |
+ |   C.-K. Skylaris, A. A. Mostofi, P. D. Haynes, O. Dieguez,    |
+ |   M. C. Payne.                                                |
+ |   Phys. Rev. B 66 035119 (2002).                              |
+ |                                                               |
+ |  "Preconditioned iterative minimization for linear-scaling    |
+ |   electronic structure calculations".                         |
+ |   A. A. Mostofi, P. D. Haynes, C.-K. Skylaris, M. C. Payne.   |
+ |   J. Chem. Phys. 119(17), pp.8842-8848 (2003).                |
+ |                                                               |
+ |  "Total-energy calculations on a real space grid with         |
+ |   localized functions and a plane-wave basis".                |
+ |   A. A. Mostofi, C.-K. Skylaris, P. D. Haynes, M. C. Payne.   |
+ |   Comput. Phys. Commun. 147, pp.788-802 (2002).               |
+ |                                                               |
+ |  "Accurate kinetic energy evaluation in electronic structure  |
+ |   calculations with localized functions on real space grids"  |
+ |   C.-K. Skylaris, A. A. Mostofi, P. D. Haynes, C. J. Pickard, |
+ |   M. C. Payne.                                                |
+ |   Comput. Phys. Commun. 140, pp.315-322 (2001).               |
+ |                                                               |
+ |  "Accurate ionic forces and geometry optimization in linear-  |
+ |   scaling density-functional theory with local orbitals"      |
+ |   N. D. M. Hine, M. Robinson, P. D. Haynes, C.-K. Skylaris,   |
+ |   M. C. Payne, and A. A. Mostofi.                             |
+ |   Phys. Rev. B 83 195102 (2011).                              |
+ |                                                               |
+ +---------------------------------------------------------------+
+
+Job started: 26-03-2025 17:49 (+0000)
+
+Reading parameters from file "Co_cluster_1_sp-ngwfs_F.dat" ...... done
+
+If your calculation crashes here, before "Checking processes and threads..."
+is displayed, then your stack size is insufficient.
+If so, use "ulimit -s unlimited" at runtime.
+You can disable this check with "check_stack_size F".
+
+Checking processes and threads...
+   Running with 7 MPI processes.
+   There are 7 MPI processes running on the same node as the root process.
+   Each MPI process is using: 
+               1 threads for simulation cell FFTs.
+               1 threads for threaded FFT box operations.
+               3 threads for loops over batched FFT box operations.
+               3 threads in other parallel regions.
+   MPI Interface: S2 (use mpi) (-DMPI, no -DUSE_MPI_F08, no -DUSE_INCLUDE_MPIF).
+   MPI_ASYNC_PROTECTS_NONBLOCKING:  No. MPI_SUBARRAYS_SUPPORTED:  No.
+   FFTW Interface:  OMP-capable and DEPRECATED. (Use -DUSE_MODERN_FFTW to switch to modern).
+   GPU Interface:   None.
+   GPU FFT Backend: None.
+   GPU DGEMM:       No (dense_threshold:   0.10).
+   Number of GPU devices per node (OpenACC/CUDA/total): 0/0/0.
+ WARNING in get_rundat: Comms group size is incompatible with number of procs
+ WARNING in get_rundat: Overriding to comms_group_size : -1
+   Number of comms groups: 1. Comms group size: 7.
+... done
+
+Basic input checks...
+Resetting ngwf_cg_rotate to TRUE for EDFT calculations
+
+WARNING: The number of FFT boxes in a batch is not a multiple of the number of
+OpenMP threads. Consider changing fftbox_batch_size.
+... done
+
+Reading geometry and species blocks from file "Co_cluster_1_sp-ngwfs_F.dat" ...... done
+
+
+--------------------------------------------------------------------------------
+---------------------------------- INPUT FILE ----------------------------------
+--------------------------------------------------------------------------------
+
+charge : 0 e                                                                    
+comms_group_size : 8                                                            
+cutoff_energy : 600 eV                                                          
+delta_e_conv : F                                                                
+do_properties : T                                                               
+edft : T                                                                        
+edft_maxit : 15                                                                 
+edft_spin_fix : 0                                                               
+fine_grid_scale : 4                                                             
+forces_output_detail : VERBOSE                                                  
+maxit_ngwf_cg : 30                                                              
+ngwf_threshold_orig : 1e-06                                                     
+ngwfs_spin_polarized : F                                                        
+output_detail : BRIEF                                                           
+paw : T                                                                         
+pseudo_path : ..                                                                
+read_denskern : F                                                               
+read_hamiltonian : F                                                            
+read_tightbox_ngwfs : F                                                         
+spin : 39                                                                       
+spin_polarized : T                                                              
+task : SinglePoint                                                              
+write_denskern : T                                                              
+write_forces : T                                                                
+write_hamiltonian : T                                                           
+write_tightbox_ngwfs : T                                                        
+xc_functional : PBE                                                             
+%BLOCK LATTICE_CART                                                             
+ang                                                                             
+14.23456672       0.00000000       0.00000000                                   
+0.00000000      14.23456672       0.00000000                                    
+0.00000000       0.00000000      14.23456672                                    
+%ENDBLOCK LATTICE_CART                                                          
+%BLOCK POSITIONS_ABS                                                            
+ang                                                                             
+Co1 7.11725437806771 7.11725173218167 7.11725570101073                          
+Co2 9.09289631526896 7.11733809390206 5.89725537471156                          
+Co2 9.09280672556759 7.11734518487666 8.33735122628968                          
+Co2 5.14153471531811 7.11732671659209 5.8971289542765                           
+Co2 5.14166633227336 7.11733380756668 8.33744076307332                          
+Co2 5.89725442219259 9.09289959616765 7.11733904642104                          
+Co2 8.33735207297321 9.09281122357386 7.11734597864247                          
+Co2 5.89713043597268 5.14153364108838 7.11732756327562                          
+Co2 8.33743949304802 5.14166441665187 7.11733460133249                          
+Co2 7.11733846432611 5.89725611555965 9.09289679152844                          
+Co2 7.11734550238298 8.33735096170107 9.09281048272577                          
+Co2 7.1173275103579 5.89712837218157 5.14153306957699                           
+Co2 7.11733460133249 8.33744118641509 5.1416614532595                           
+%ENDBLOCK POSITIONS_ABS                                                         
+%BLOCK SPECIES                                                                  
+Co1 Co 27 10 10.0                                                               
+Co2 Co 27 10 10.0                                                               
+%ENDBLOCK SPECIES                                                               
+%BLOCK SPECIES_ATOMIC_SET                                                       
+Co1 "SOLVE conf=4pX INIT SPIN=3"                                                
+Co2 "SOLVE conf=4pX INIT SPIN=3"                                                
+%ENDBLOCK SPECIES_ATOMIC_SET                                                    
+%BLOCK SPECIES_LDOS_GROUPS                                                      
+Co1                                                                             
+Co2                                                                             
+%ENDBLOCK SPECIES_LDOS_GROUPS                                                   
+%BLOCK SPECIES_POT                                                              
+Co1 Co.PBE-paw.abinit                                                           
+Co2 Co.PBE-paw.abinit                                                           
+%ENDBLOCK SPECIES_POT                                                           
+
+--------------------------------------------------------------------------------
+-------------------------------- END INPUT FILE --------------------------------
+--------------------------------------------------------------------------------
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Full system >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+<<<<<<<<<<<<<<<<<<<<<<<<<<< PAW Dataset information >>>>>>>>>>>>>>>>>>>>>>>>>>>
+File: Co.PBE-paw.abinit; rc = 2.11 bohr; shape type =  2; rshape = 1.60 bohr;
+  Atomic number: 27;  ionic charge: 17.000000
+    Partial Wave 1: l = 0
+    Partial Wave 2: l = 0
+    Partial Wave 3: l = 1
+    Partial Wave 4: l = 1
+    Partial Wave 5: l = 2
+    Partial Wave 6: l = 2
+  Core charge supplied for Nonlinear Core Corrections
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+-------------------------- Atom counting information ---------------------------
+Symbol    Natoms    Nngwfs    Nprojs
+  Co        13       130       234
+.......   ......    ......    ......
+Totals:     13       130       234
+--------------------------------------------------------------------------------
+
+=============================== PSINC grid sizes ===============================
+                      Simulation cell:   49 x  49 x  49
+                              FFT-box:   49 x  49 x  49
+                                  PPD:    7 x   7 x   1
+================================================================================
+
+Atom SCF Calculation for Co : Z (AE atom) =  27 : Z (PS atom) =  17
+Config String: 4pX INIT SPIN=3
+Orbitals (num,occ):  4     2.00 6.00 7.00 2.00
+Orbitals   (num,l):  4        0    1    2    0
+Atom SCF converged after  37 iterations to a total energy of   -146.10251041
+Adjusting orbital occupancies:
+Orbitals (num,spin,occ):  4  1     1.00 3.00 5.00 1.00
+Orbitals   (num,spin,l):  4  1        0    1    2    0
+Orbitals (num,spin,occ):  4  2     1.00 3.00 3.00 0.00
+Orbitals   (num,spin,l):  4  2        0    1    2    0
+
+Atom SCF Calculation for Co : Z (AE atom) =  27 : Z (PS atom) =  17
+Config String: 4pX INIT SPIN=3
+Orbitals (num,occ):  4     2.00 6.00 7.00 2.00
+Orbitals   (num,l):  4        0    1    2    0
+Atom SCF converged after  37 iterations to a total energy of   -146.10251041
+Adjusting orbital occupancies:
+Orbitals (num,spin,occ):  4  1     1.00 3.00 5.00 1.00
+Orbitals   (num,spin,l):  4  1        0    1    2    0
+Orbitals (num,spin,occ):  4  2     1.00 3.00 3.00 0.00
+Orbitals   (num,spin,l):  4  2        0    1    2    0
+
+WARNING: The number of FFT boxes in a batch is not a multiple of the number of
+OpenMP threads. Consider changing fftbox_batch_size.
+Calculating Ewald energy ...             1546.022822 Hartree
+
+============================= Charge Augmentation ==============================
+                           Aug box size:   33 x  33 x  33
+================================================================================
+
+================================= Core Density =================================
+               Core den box size:   33 x  33 x  33
+================================================================================
+Density kernel initialisation
+
+################################################################################
+###################### NGWF self-consistent optimisation #######################
+################################################################################
+|ITER|    RMS GRADIENT   |     TOTAL ENERGY    |   step   |     Epredicted      
+***** EDFT WARNING:
+* The Fermi-Dirac distribution is truncated
+  and the occupancies might be unphysical,
+  leading to wrong results.
+* Ensure you have a sufficient number of NGWFs to hold all your electrons -- examine the output from the atomsolver (look for 'Atom SCF Calculation' in the output).
+* It is recommended to increase edft_extra_bands.
+* If the problem persists, try setting edft_extra_bands = -1
+  to use all possible molecular orbitals.
+* If still it does not work, try adding more NGWFs per atom.
+   0     0.00104481746863  -1900.84236974784176   0.412454  -1901.58336749033401        
+   1     0.00055290950596  -1901.61078482958419   1.058517  -1902.15491637227251        
+   2     0.00061818391134  -1901.87479383162031   0.979170  -1902.15224970466579        
+   3     0.00065641730341  -1901.77365016044359   1.081216  -1902.05658098126264        
+   4     0.00071603013012  -1901.55762696189527   0.524248  -1901.99997061341992        
+   5     0.00043527679845  -1902.01272076767555   0.914687  -1902.30558516557721        
+   6     0.00044938996984  -1902.17906914913237   0.705658  -1902.30951915105857        
+   7     0.00029552497188  -1902.21315055456307   0.445027  -1902.25021292687961        
+   8     0.00021683296676  -1902.25282845456604   1.145894  -1902.34149420901349        
+   9     0.00026939217803  -1902.30540791051135   0.500317  -1902.34068706476955        
+  10     0.00014385852876  -1902.31999513496589   0.442734  -1902.32978605743574        
+  11     0.00012091497597  -1902.33001061524942   0.870387  -1902.35118779105278        
+  12     0.00012186160369  -1902.34187232874888   0.404805  -1902.35176560158811        
+  13     0.00004120365448  -1902.35254887535120   0.511457  -1902.35408305587362        
+  14     0.00002844043154  -1902.35400409338445   1.347215  -1902.35569124201288        
+  15     0.00003913852640  -1902.35398284183771   0.113025  -1902.35399572534152        
+  16     0.00003701031147  -1902.35397149263758   0.459781  -1902.35500796320025        
+  17     0.00002523766523  -1902.35510160521721   0.860287  -1902.35608486799697        
+  18     0.00002353341647  -1902.35585719362984   1.400728  -1902.35681584409645        
+  19     0.00003332077167  -1902.35620686789775   0.319968  -1902.35679151941576        
+  20     0.00001563213922  -1902.35685470164526   0.837656  -1902.35722815249801        
+  21     0.00000983185093  -1902.35701382359002   0.219527  -1902.35702662671542        
+  22     0.00000582570568  -1902.35702294166504   0.161575  -1902.35703107738186        
+  23     0.00000156108535  -1902.35702943323258   0.115446  -1902.35702989624360        
+  24     0.00000295725074  -1902.35702979964890   0.206040  -1902.35703276508070        
+  25     0.00000335925623  -1902.35703145173943   0.872595  -1902.35704765714559        
+  26     0.00000804504403  -1902.35702330372237   0.695577  -1902.35709739425670        
+  27     0.00000247844224  -1902.35707622418090   0.161431  -1902.35707785613045        
+  28     0.00000343060522  -1902.35707780499638   0.031590  -1902.35707863976995        
+
+================================================================================
+           ---------------- ENERGY COMPONENTS (Eh) ----------------
+           | Kinetic                    :      153.03916170479292 |
+           | Core Hartree               :    -7003.99230356449334 |
+           | CoreHart (non-coul chg cor):        0.00000000000000
+           | Hartree                    :     3108.66592541879436 |
+           | Exchange-correlation       :      -39.85962303896187 |
+           | Ewald                      :     1546.02282206798623 |
+           | Dij0                       :      418.76240439508598 |
+           | Dijhartree                 :      104.98994053899017 |
+           | Exc [AE core]              :     -769.06004815572578 |
+           | Exc DC [AE core]           :     -275.71189446667881 |
+           | Exc [PS core]              :      -33.76148771961624 |
+           | Exc DC [PS core]           :      -44.25131828110155 |
+           | Exc [Core]                 :     -545.34952823147160 |
+           | Total [Sphere]             :      333.80331272943823 |
+           | Total                      :    -1902.32070468244387 |
+           |------------------------------------------------------|
+           | Entropic contribution      :       -0.03637354651801 |
+           | Total free energy          :    -1902.35707822896188 |
+           --------------------------------------------------------
+           Integrated compensation chrg.:      130.63161639877234
+           Integrated density           :      220.99999999993679
+           Integrated spin density      :       27.61003295596885
+           Integrated |spin density|    :       10.98699013787735
+           Fermi level of spin Up       :       -0.09141991024663
+           Fermi level of spin Down     :       -0.09141991024663
+================================================================================
+
+  29     0.00000075857020  -1902.35707822896188  <-- CG                                 
+
+======================== Writing density and potential =========================
+Writing "Co_cluster_1_sp-ngwfs_F_ps_density.cube" ... done
+Writing "Co_cluster_1_sp-ngwfs_F_ps_spindensity.cube" ... done
+Writing "Co_cluster_1_sp-ngwfs_F_ae_density.cube" ... done
+Writing "Co_cluster_1_sp-ngwfs_F_ae_spindensity.cube" ... done
+Writing "Co_cluster_1_sp-ngwfs_F_potential.cube" ... done
+Writing "Co_cluster_1_sp-ngwfs_F_electrostatic_potential.cube" ... done
+================================================================================
+
+    Mulliken Atomic Populations
+    ---------------------------
+Species  Ion    Total   Charge (e)    Spin (hbar)
+=================================================
+  Co     1      16.878      0.122      0.85
+  Co     2      17.010     -0.010      1.08
+  Co     3      17.011     -0.011      1.08
+  Co     4      17.010     -0.010      1.08
+  Co     5      17.010     -0.010      1.08
+  Co     6      17.010     -0.010      1.08
+  Co     7      17.011     -0.011      1.08
+  Co     8      17.010     -0.010      1.08
+  Co     9      17.010     -0.010      1.08
+  Co    10      17.010     -0.010      1.08
+  Co    11      17.011     -0.011      1.08
+  Co    12      17.010     -0.010      1.08
+  Co    13      17.010     -0.010      1.08
+=================================================
+
+        Bond         Population      Spin       Length (bohr)
+=============================================================
+ Co    1 -- Co    3        0.02     -0.02      4.38784
+ Co    1 -- Co   11        0.02     -0.02      4.38785
+ Co    1 -- Co    7        0.02     -0.02      4.38786
+ Co    1 -- Co   10        0.02     -0.02      4.38789
+ Co    1 -- Co    2        0.02     -0.02      4.38789
+ Co    1 -- Co    6        0.02     -0.02      4.38790
+ Co    1 -- Co    9        0.02     -0.02      4.38799
+ Co    1 -- Co    5        0.02     -0.02      4.38799
+ Co    1 -- Co   13        0.02     -0.02      4.38801
+ Co    1 -- Co    8        0.02     -0.02      4.38814
+ Co    1 -- Co    4        0.02     -0.02      4.38814
+ Co    1 -- Co   12        0.02     -0.02      4.38815
+ Co   10 -- Co   11        0.02     -0.07      4.61111
+ Co    2 -- Co    3        0.02     -0.07      4.61111
+ Co    6 -- Co    7        0.02     -0.07      4.61112
+ Co    8 -- Co    9        0.02     -0.07      4.61152
+ Co    4 -- Co    5        0.02     -0.07      4.61152
+ Co   12 -- Co   13        0.02     -0.07      4.61152
+ Co    3 -- Co   11        0.02     -0.06      4.61402
+ Co    3 -- Co    7        0.02     -0.06      4.61403
+ Co    7 -- Co   11        0.02     -0.06      4.61403
+ Co    3 -- Co   10        0.02     -0.06      4.61416
+ Co    2 -- Co    7        0.02     -0.06      4.61417
+ Co    6 -- Co   11        0.02     -0.06      4.61417
+ Co    5 -- Co   11        0.02     -0.06      4.61431
+ Co    3 -- Co    9        0.02     -0.06      4.61431
+ Co    7 -- Co   13        0.02     -0.06      4.61432
+ Co    9 -- Co   10        0.02     -0.06      4.61434
+ Co    2 -- Co   13        0.02     -0.06      4.61435
+ Co    5 -- Co    6        0.02     -0.06      4.61435
+ Co    5 -- Co   10        0.02     -0.06      4.61441
+ Co    2 -- Co    9        0.02     -0.06      4.61441
+ Co    6 -- Co   13        0.02     -0.06      4.61442
+ Co    8 -- Co   10        0.02     -0.06      4.61453
+ Co    2 -- Co   12        0.02     -0.06      4.61453
+ Co    4 -- Co    6        0.02     -0.06      4.61454
+ Co    5 -- Co    8        0.02     -0.06      4.61464
+ Co    9 -- Co   12        0.02     -0.06      4.61464
+ Co    4 -- Co   13        0.02     -0.06      4.61465
+ Co    4 -- Co   12        0.02     -0.06      4.61479
+ Co    4 -- Co    8        0.02     -0.06      4.61479
+ Co    8 -- Co   12        0.02     -0.06      4.61479
+=============================================================
+
+
+============== Orbital energy and occupancy information for spin 1 =============
+
+      Total number of orbitals:     130
+        Occupancy sum (kernel):     124.305016478
+   Occupancy sum (eigenvalues):     124.305016478
+                 HOMO-LUMO gap:       0.030452958 Eh
+                 Mid-gap level:      -0.078578383 Eh
+
+                        Orbital | Energy (Eh) | Occupancy
+                            1    -3.642575560   1.0000000
+                        .......   ...........   .........
+                          117    -0.137662152   0.9999995
+                          118    -0.137662009   0.9999995
+                          119    -0.127783457   0.9999894
+                          120    -0.127783432   0.9999894
+                          121    -0.127780619   0.9999894
+                          122    -0.093842185   0.6613958
+                          123    -0.093842087   0.6613868
+                          124    -0.093813646   0.6609618
+                          125    -0.093813561   0.6609560
+                          126    -0.093804862   0.6602682
+                        ....... -- gap at 0K -- .........
+                          127    -0.063351904   0.0000827
+                          128     0.007251099   0.0000002
+                          129     0.007283454   0.0000003
+                          130     0.007283557   0.0000003
+
+================================================================================
+
+============== Orbital energy and occupancy information for spin 2 =============
+
+      Total number of orbitals:     130
+        Occupancy sum (kernel):      96.694983522
+   Occupancy sum (eigenvalues):      96.694983522
+                 HOMO-LUMO gap:      -0.000007203 Eh
+                 Mid-gap level:      -0.089969396 Eh
+
+                        Orbital | Energy (Eh) | Occupancy
+                            1    -3.571385829   1.0000000
+                        .......   ...........   .........
+                           86    -0.113967641   0.9991836
+                           87    -0.109894955   0.9970312
+                           88    -0.109881335   0.9970274
+                           89    -0.109881230   0.9970274
+                           90    -0.109864406   0.9970266
+                           91    -0.109864283   0.9970264
+                           92    -0.097072421   0.8488621
+                           93    -0.097046970   0.8489806
+                           94    -0.097046955   0.8489800
+                           95    -0.089972997   0.3869904
+                        ....... -- gap at 0K -- .........
+                           96    -0.089965795   0.3870427
+                           97    -0.089965724   0.3870374
+                           98    -0.089865256   0.3811867
+                           99    -0.087727203   0.2375322
+                          100    -0.087727181   0.2375308
+                          101    -0.087721553   0.2375331
+                          102    -0.087421910   0.2116590
+                          103    -0.087233921   0.2012125
+                          104    -0.087233874   0.2012103
+                          105    -0.087232529   0.2012071
+                        .......   ...........   .........
+                          130     0.047988745   0.0000005
+
+================================================================================
+
+===================== Writing canonical molecular orbitals =====================
+    Spin 1
+| Orbital  Energy (eV)  Norm     |
+| HOMO-5   -3.47708756  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-5_UP.cube" ... done
+| HOMO-4   -2.55357580  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-4_UP.cube" ... done
+| HOMO-3   -2.55357313  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-3_UP.cube" ... done
+| HOMO-2   -2.55279922  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-2_UP.cube" ... done
+| HOMO-1   -2.55279689  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-1_UP.cube" ... done
+| HOMO     -2.55256017  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO_UP.cube" ... done
+| LUMO     -1.72389302  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO_UP.cube" ... done
+| LUMO+1    0.19731244  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+1_UP.cube" ... done
+| LUMO+2    0.19819287  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+2_UP.cube" ... done
+| LUMO+3    0.19819566  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+3_UP.cube" ... done
+================================================================================
+
+===================== Writing canonical molecular orbitals =====================
+    Spin 2
+| Orbital  Energy (eV)  Norm     |
+| HOMO-5   -2.98956262  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-5_DN.cube" ... done
+| HOMO-4   -2.98955925  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-4_DN.cube" ... done
+| HOMO-3   -2.64147497  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-3_DN.cube" ... done
+| HOMO-2   -2.64078242  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-2_DN.cube" ... done
+| HOMO-1   -2.64078202  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO-1_DN.cube" ... done
+| HOMO     -2.44828984  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_HOMO_DN.cube" ... done
+| LUMO     -2.44809384  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO_DN.cube" ... done
+| LUMO+1   -2.44809192  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+1_DN.cube" ... done
+| LUMO+2   -2.44535803  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+2_DN.cube" ... done
+| LUMO+3   -2.38717867  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+3_DN.cube" ... done
+| LUMO+4   -2.38717807  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+4_DN.cube" ... done
+| LUMO+5   -2.38702492  1.000000 | Writing "Co_cluster_1_sp-ngwfs_F_LUMO+5_DN.cube" ... done
+================================================================================
+
+================== Local Density of States (LDOS) calculation ==================
+Writing "Co_cluster_1_sp-ngwfs_F_UP_LDOS.txt" ...  done
+================================================================================
+
+================== Local Density of States (LDOS) calculation ==================
+Writing "Co_cluster_1_sp-ngwfs_F_DN_LDOS.txt" ...  done
+================================================================================
+ 
+=============== Density of States (DOS) calculation for UP spin ================
+Writing "Co_cluster_1_sp-ngwfs_F_UP_DOS.txt" ...  done
+================================================================================
+ 
+============== Density of States (DOS) calculation for DOWN spin ===============
+Writing "Co_cluster_1_sp-ngwfs_F_DN_DOS.txt" ...  done
+================================================================================
+ 
+Writing bands to file "Co_cluster_1_sp-ngwfs_F.val_bands" ... done
+
+================================= Core Density =================================
+               Core den box size:   33 x  33 x  33
+================================================================================
+ 
+********************* Unconstrained **********************
+********************** Ewald forces **********************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00688871  -0.00675583  -0.00695042 *
+*    Co      2     61.99669329  -0.00053593 -38.46726875 *
+*    Co      3     61.99939696  -0.00056266  38.46788006 *
+*    Co      4    -61.99270003  -0.00050957 -38.46438296 *
+*    Co      5    -61.99577037  -0.00053836  38.46531902 *
+*    Co      6    -38.46721651  61.99663065  -0.00058858 *
+*    Co      7     38.46781448  61.99928680  -0.00061045 *
+*    Co      8    -38.46443547 -61.99276476  -0.00055608 *
+*    Co      9     38.46537737 -61.99577455  -0.00057726 *
+*    Co     10     -0.00056971 -38.46730837  61.99677944 *
+*    Co     11     -0.00059575  38.46790598  61.99931767 *
+*    Co     12     -0.00053941 -38.46436612 -61.99273037 *
+*    Co     13     -0.00056613  38.46529272 -61.99563132 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00000000   0.00000000   0.00000000
+ 
+********************* Unconstrained **********************
+***************** Local potential forces *****************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00682869   0.00669874   0.00688932 *
+*    Co      2    -62.12200194   0.00047494  38.54434936 *
+*    Co      3    -62.12451108   0.00075318 -38.54486599 *
+*    Co      4     62.11801529   0.00004212  38.54139597 *
+*    Co      5     62.12091239   0.00032225 -38.54275102 *
+*    Co      6     38.54429870 -62.12193891   0.00052485 *
+*    Co      7    -38.54480144 -62.12440203   0.00079818 *
+*    Co      8     38.54144645  62.11807789   0.00008587 *
+*    Co      9    -38.54280663  62.12091580   0.00035836 *
+*    Co     10      0.00050655  38.54438954 -62.12208438 *
+*    Co     11      0.00078424 -38.54489002 -62.12443305 *
+*    Co     12      0.00006998  38.54138109  62.11804272 *
+*    Co     13      0.00034820 -38.54272439  62.12077532 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00091061  -0.00089979  -0.00091450
+ 
+********************* Unconstrained **********************
+************** Compensation density forces ***************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00000591  -0.00000786  -0.00000521 *
+*    Co      2     -0.00225410   0.00002954   0.00216914 *
+*    Co      3     -0.00236030  -0.00011595  -0.00224542 *
+*    Co      4      0.00218674   0.00026481   0.00218712 *
+*    Co      5      0.00231774   0.00011943  -0.00198953 *
+*    Co      6      0.00216778  -0.00225331   0.00003071 *
+*    Co      7     -0.00224405  -0.00235855  -0.00011479 *
+*    Co      8      0.00218835   0.00218824   0.00026593 *
+*    Co      9     -0.00199068   0.00231821   0.00012055 *
+*    Co     10      0.00003043   0.00216967  -0.00225630 *
+*    Co     11     -0.00011509  -0.00224610  -0.00235912 *
+*    Co     12      0.00026565   0.00218666   0.00218798 *
+*    Co     13      0.00012026  -0.00198914   0.00231543 *
+*                                                        *
+**********************************************************
+TOTAL:              0.00030682   0.00030565   0.00030648
+ 
+********************* Unconstrained **********************
+*************** Non-local potential forces ***************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00005537   0.00005589   0.00005515 *
+*    Co      2      0.12697702   0.00007189  -0.07988289 *
+*    Co      3      0.12693399   0.00010049   0.08002281 *
+*    Co      4     -0.12691507   0.00002551  -0.07995519 *
+*    Co      5     -0.12686643   0.00005403   0.08003588 *
+*    Co      6     -0.07988323   0.12697608   0.00007311 *
+*    Co      7      0.08002231   0.12693321   0.00010175 *
+*    Co      8     -0.07995539  -0.12691541   0.00002679 *
+*    Co      9      0.08003528  -0.12686683   0.00005535 *
+*    Co     10      0.00007276  -0.07988419   0.12697676 *
+*    Co     11      0.00010133   0.08002165   0.12693408 *
+*    Co     12      0.00002633  -0.07995650  -0.12691414 *
+*    Co     13      0.00005482   0.08003488  -0.12686579 *
+*                                                        *
+**********************************************************
+TOTAL:              0.00065909   0.00065069   0.00066368
+ 
+********************* Unconstrained **********************
+************ NGWF non self-consistent forces *************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00000372   0.00000343   0.00000378 *
+*    Co      2      0.00100458  -0.00002538   0.00013861 *
+*    Co      3      0.00101310  -0.00012926  -0.00022861 *
+*    Co      4     -0.00096513   0.00014176   0.00024833 *
+*    Co      5     -0.00098177   0.00003809  -0.00013015 *
+*    Co      6      0.00013853   0.00100429  -0.00002511 *
+*    Co      7     -0.00022857   0.00101272  -0.00012900 *
+*    Co      8      0.00024835  -0.00096538   0.00014202 *
+*    Co      9     -0.00013023  -0.00098194   0.00003836 *
+*    Co     10     -0.00002514   0.00013838   0.00100471 *
+*    Co     11     -0.00012902  -0.00022882   0.00101307 *
+*    Co     12      0.00014200   0.00024812  -0.00096505 *
+*    Co     13      0.00003834  -0.00013040  -0.00098155 *
+*                                                        *
+**********************************************************
+TOTAL:              0.00012875   0.00012561   0.00012940
+ 
+********************* Unconstrained **********************
+********************** NLCC forces ***********************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1      0.00000000   0.00000000   0.00000000 *
+*    Co      2     -0.00000000  -0.00000000   0.00000000 *
+*    Co      3     -0.00000000  -0.00000000  -0.00000000 *
+*    Co      4      0.00000000  -0.00000000   0.00000000 *
+*    Co      5      0.00000000  -0.00000000  -0.00000000 *
+*    Co      6      0.00000000  -0.00000000  -0.00000000 *
+*    Co      7     -0.00000000  -0.00000000  -0.00000000 *
+*    Co      8      0.00000000   0.00000000  -0.00000000 *
+*    Co      9     -0.00000000   0.00000000  -0.00000000 *
+*    Co     10     -0.00000000   0.00000000  -0.00000000 *
+*    Co     11     -0.00000000  -0.00000000  -0.00000000 *
+*    Co     12     -0.00000000   0.00000000   0.00000000 *
+*    Co     13     -0.00000000  -0.00000000   0.00000000 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00000000  -0.00000000  -0.00000000
+ 
+********************* Unconstrained **********************
+****** Correction to ensure the total force is zero ******
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      2     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      3     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      4     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      5     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      6     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      7     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      8     -0.00001416  -0.00001401  -0.00001424 *
+*    Co      9     -0.00001416  -0.00001401  -0.00001424 *
+*    Co     10     -0.00001416  -0.00001401  -0.00001424 *
+*    Co     11     -0.00001416  -0.00001401  -0.00001424 *
+*    Co     12     -0.00001416  -0.00001401  -0.00001424 *
+*    Co     13     -0.00001416  -0.00001401  -0.00001424 *
+*                                                        *
+**********************************************************
+TOTAL:             -0.00018405  -0.00018217  -0.00018506
+
+********************* Unconstrained **********************
+************************* Forces *************************
+*                                                        *
+* Element  Atom         Cartesian components (Eh/a)      *
+* ------------------------------------------------------ *
+*                       x            y            z      *
+*                                                        *
+*    Co      1     -0.00002100  -0.00001964  -0.00002162 *
+*    Co      2      0.00040469   0.00000106  -0.00050876 *
+*    Co      3      0.00045850   0.00003177   0.00054861 *
+*    Co      4     -0.00039237  -0.00004939  -0.00052097 *
+*    Co      5     -0.00040259  -0.00001857   0.00046996 *
+*    Co      6     -0.00050889   0.00040478   0.00000073 *
+*    Co      7      0.00054858   0.00045814   0.00003146 *
+*    Co      8     -0.00052187  -0.00039342  -0.00004970 *
+*    Co      9      0.00047096  -0.00040333  -0.00001888 *
+*    Co     10      0.00000072  -0.00050898   0.00040599 *
+*    Co     11      0.00003156   0.00054868   0.00045841 *
+*    Co     12     -0.00004961  -0.00052076  -0.00039310 *
+*    Co     13     -0.00001868   0.00046966  -0.00040215 *
+*                                                        *
+**********************************************************
+* TOTAL:            0.00000000   0.00000000   0.00000000 *
+**********************************************************
+ 
+ 
+***********************************************************
+********** Summary of Forces (values in Eh/a) *************
+*                                                         *
+* ---------------------- Minimum ------------------------ *
+* Atom:         1, |F|min =    0.00003597                 *
+* Components:     Fx|min       Fy|min       Fz|min        *
+*              -0.00002100  -0.00001964  -0.00002162      *
+*                                                         *
+* ---------------------- Maximum ------------------------ *
+* Atom:         3, |F|max =    0.00071569                 *
+* Components:     Fx|max       Fy|max       Fz|max        *
+*               0.00045850   0.00003177   0.00054861      *
+*                                                         *
+* ---------------- Root Mean Square Force --------------- *
+*                  |F|rms =    0.00063508                 *
+* Components:     Fx|rms       Fy|rms       Fz|rms        *
+*               0.00036672   0.00036661   0.00036665      *
+***********************************************************
+ 
+
+------------------------------ TIMING INFORMATION ------------------------------
+AVERAGE TIME:    5226.503s on      7 proc(s)                                    
+TOTAL TIME:      5226.504s on      7 proc(s)                                    
+==================== AVERAGE TIMINGS FROM ALL PROCS (CUMULATIVE) =====================
+|| TAG                                         #calls     cpu time   %total  Gflops ||
+|| hash_table_free                            :    60        0.00s   0.000%  ------ ||
+|| ewald_calculate_forces_realspace           :     1        0.00s   0.000%  ------ ||
+|| onetep.F90 main loop imbalance             :     1        0.00s   0.000%  ------ ||
+|| onetep.F90 final imbalance                 :     1        0.00s   0.000%  ------ ||
+|| ewald_calculate_forces_recipspace          :     1        0.00s   0.000%  ------ ||
+|| ewald_calculate_energy                     :     1        0.00s   0.000%  ------ ||
+|| ewald_calculate_forces                     :     1        0.00s   0.000%  ------ ||
+|| sparse_set_to_garbage                      :   534        0.00s   0.000%  ------ ||
+|| sparse_init                                :     1        0.01s   0.000%  ------ ||
+|| sw_bessel_init_cpu                         :     1        0.06s   0.001%  ------ || (1 procs only)
+|| density_fftbox_interp_mult_imbal           : 40520        0.01s   0.000%  ------ ||
+|| paw_tcore_density                          :     1        0.01s   0.000%  ------ ||
+|| linalg_dgemv                               :    54        0.02s   0.000%  ------ ||
+|| pseudo_make_structure_factor               :     1        0.03s   0.001%  ------ ||
+|| paw_tcore_hartree_on_grid                  :     1        0.05s   0.001%  ------ ||
+|| sparse_blacstospam3_real_fast_imbal        :  3928        0.08s   0.002%  ------ ||
+|| augmentation_density_forces                :     1        0.12s   0.002%  ------ ||
+|| integrals_grad_spam3                       :     1        0.12s   0.002%  ------ ||
+|| nonsc_forces_ngwfs_calc                    :     1        0.12s   0.002%  ------ ||
+|| basis_extract_function_from_box            :  2228        0.13s   0.002%  ------ ||
+|| sw_init                                    :  2025        0.14s   0.003%  ------ ||
+|| paw_tcore_hartree_calc_forces              :     1        0.19s   0.004%  ------ ||
+|| paw_sphere_density_on_grid                 :     1        0.25s   0.005%  ------ ||
+|| sparse_spam3toblacs_real_fast_imbal        :  3973        0.26s   0.005%  ------ ||
+|| sparse_embed_array_hotelling_invert        :    60        0.28s   0.005%  ------ ||
+|| sparse_spam3toblacs_real_fast_B2           : 27811        0.37s   0.007%  ------ ||
+|| ngwfs_initialise_from_radial               :     1        0.61s   0.012%  ------ ||
+|| restart_hamiltonian_write                  :    30        0.70s   0.013%  ------ ||
+|| paw_dij_hartree                            :  1353        0.80s   0.015%  ------ ||
+|| sparse_spam3toblacs_real_fast_B1           : 27811        0.81s   0.016%  ------ ||
+|| paw_nlcc_calculate_forces                  :     1        0.82s   0.016%  ------ ||
+|| restart_kernel_write                       :    31        1.12s   0.022%  ------ ||
+|| projectors_func_grad_ovlp_box_spam3        :     3        1.36s   0.026%  ------ ||
+|| paw_dataset_init                           :     1        1.60s   0.031%  ------ ||
+|| aug_nl_calculate_forces                    :     1        1.86s   0.036%  ------ ||
+|| density_init_guess_real                    :     2        1.91s   0.037%  ------ ||
+|| sparse_spam3toblacs_real_fast              :  3973        2.24s   0.043%  ------ ||
+|| sparse_blacstospam3_real_fast              :  3928        2.75s   0.053%  ------ ||
+|| fourier_apply_box_pair                     :  2795        3.33s   0.064%  58.130 ||
+|| hamiltonian_energy_components              :     1        3.51s   0.067%  ------ ||
+|| sparse_trace                               : 25006        3.89s   0.074%  ------ ||
+|| paw_species_calc_proj_prec_mat             :    30        6.11s   0.117%  ------ ||
+|| energy_and_force_init_cell                 :     1        6.52s   0.125%  ------ ||
+|| function_ops_brappd_ketppd_spam3           :   119        7.43s   0.142%  ------ ||
+|| forces_calculate                           :     1        7.86s   0.150%  ------ ||
+|| eigenstates_calculate                      :     1        8.41s   0.161%  ------ ||
+|| integrals_kinetic_spam3                    :    60        9.20s   0.176%  ------ ||
+|| cell_grid_extract_box_real                 : 17838        9.50s   0.182%  ------ ||
+|| projectors_init_fftbox_recip               :   333       11.87s   0.227%  ------ ||
+|| ngwf_gradient_coeffs                       :    30       13.85s   0.265%  ------ ||
+|| dense_eigensolve                           :  1896       14.12s   0.270%  ------ ||
+|| basis_copy_function_to_box                 : 51368       14.70s   0.281%  ------ ||
+|| edft_diag_ngwf_ham                         :  1894       16.29s   0.312%  ------ ||
+|| sparse_product                             : 22287       23.59s   0.451%  ------ ||
+|| projectors_func_ovlp_box_spam3             :    60       25.50s   0.488%  ------ ||
+|| fourier_filter_cell                        :   688       30.80s   0.589%  10.727 ||
+|| edft_apply_smearing_operator               :   947       34.30s   0.656%  ------ ||
+|| density_fftbox_deposit_to_cell             : 40520       36.70s   0.702%  ------ ||
+|| cell_grid_deposit_box_real                 : 45026       43.38s   0.830%  ------ ||
+|| basis_dot_function_with_box                : 1.863M      70.25s   1.344%  ------ ||
+|| hartree_on_grid_single                     :  1012       72.42s   1.386%  ------ ||
+|| augmentation_screen_dij_spam3              :  1011      100.39s   1.921%  ------ ||
+|| projectors_grad_precond_batch              :   120      110.32s   2.111%  ------ ||
+|| fourier_interpolate_cell                   :  2026      111.12s   2.126%   8.756 ||
+|| projectors_gradient_batch                  :   120      117.43s   2.247%  ------ ||
+|| properties_calculate                       :     1      137.87s   2.638%  ------ ||
+|| integrals_locpot_mat_els_batch             :  1256      172.35s   3.298%  ------ ||
+|| aug_density_on_grid_spam3                  :  1013      256.56s   4.909%  ------ ||
+|| fourier_apply_cell_backward                :  9109      256.91s   4.916%  15.350 ||
+|| basis_add_function_to_box                  : 5.471M     263.59s   5.043%  ------ ||
+|| potential_apply_to_ngwf_batch              :  1256      267.96s   5.127%  ------ ||
+|| ngwf_gradient_build_batch                  :   120      279.69s   5.351%  ------ ||
+|| fourier_apply_cell_forward                 :  9109      326.55s   6.248%  12.077 ||
+|| fourier_apply_box                          : 130.1k     426.59s   8.162%  89.503 ||
+|| ngwf_gradient_batch                        :   120      433.72s   8.298%  ------ ||
+|| integrals_locpot_dbl_grid                  :   628      441.78s   8.453%  ------ ||
+|| density_batch_row_sums                     :  4052      471.05s   9.013%  ------ ||
+|| ngwf_gradient_lnv                          :    30      471.44s   9.020%  ------ ||
+|| restart_ngwfs_tightbox_output              :    29      472.64s   9.043%  ------ ||
+|| aug_nonlocal_mat_spam3_embed_array         :  1322      587.13s  11.234%  ------ ||
+|| paw_dij_xc                                 :  1353      593.48s  11.355%  ------ ||
+|| density_fftbox_interpolate_multiply        : 40520      676.79s  12.949%  ------ ||
+|| xc_energy_potential                        :  1012      800.06s  15.308%  ------ ||
+|| density_batch_interp_deposit               :  4052      841.56s  16.102%  ------ ||
+|| density_on_dbl_grid                        :  2026     1461.69s  27.967%  ------ ||
+|| hamiltonian_lhxc_calculate                 :  1009     2970.86s  56.842%  ------ ||
+|| edft_calculate                             :    30     3965.59s  75.875%  ------ ||
+|| ngwf_cg_optimise                           :     1     5066.08s  96.931%  ------ ||
+|| energy_and_forces                          :     1     5219.22s  99.861%  ------ ||
+|| total_time                                 :     1     5226.50s 100.000%  ------ ||
+======================================================================================
+Overhead of generating timer report: 
+- 0 ms averaging over threads,
+- 0 ms ensuring consistency across MPI ranks,
+- 1 ms printing in order.
+
+Job completed: 26-03-2025 19:16 (+0000)
+
