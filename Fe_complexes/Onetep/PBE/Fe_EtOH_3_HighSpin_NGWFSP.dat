@@ -19,10 +19,6 @@ write_tightbox_ngwfs : T
 xc_functional : pbe
 ngwfs_spin_polarised: T
 
-%BLOCK HUBBARD
-Fe 2 4.0 0 -10 0 0
-%ENDBLOCK HUBBARD
-
 %BLOCK LATTICE_CART
 ang
      27.84119898       0.00000000       0.00000000
