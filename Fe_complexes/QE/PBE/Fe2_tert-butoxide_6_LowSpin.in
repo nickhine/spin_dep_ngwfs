@@ -1,11 +1,11 @@
 &CONTROL
   calculation = 'scf'
   prefix = 'Fe2_tert-butoxide_6_LowSpin'
-  restart_mode     = 'from_scratch'
+  restart_mode     = 'restart'
   tstress          = .true.
   tprnfor          = .true.
   outdir = './out'
-  pseudo_dir = '/work/e89/e89/phsmea/CASTEP_TO_QS_ARCHER_PBE/'
+  pseudo_dir = '/storage/nanosim/JTH_PBE/'
 /
 
 &SYSTEM
@@ -14,17 +14,19 @@
  nspin = 2
  ntyp = 4
  ecutwfc = 58.80
- starting_magnetization(1) = 1.00  ! Spin polarization
+ starting_magnetization(1) = 0.062  ! Spin polarization
  tot_charge = 0    
- tot_magnetization = 2
+ tot_magnetization = 2.00
 /
 
 &ELECTRONS
 diago_david_ndim = 8
 electron_maxstep = 1000
-conv_thr = 1.0d-9
+conv_thr = 1.0d-6
 mixing_beta = 0.1
-/
+startingpot = 'file'
+startingwfc = 'atomic+random'
+ /
 
 CELL_PARAMETERS angstrom
      30.10785296       0.00000000       0.00000000
@@ -128,3 +130,5 @@ ATOMIC_POSITIONS angstrom
 K_POINTS automatic
 1 1 1 0 0 0  ! Gamma point only
 
+HUBBARD ortho-atomic
+U Fe-3d 0.00001
